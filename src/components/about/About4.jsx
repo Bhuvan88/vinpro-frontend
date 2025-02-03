@@ -20,9 +20,9 @@ function About4() {
         <div className="banner-right-content">
           <div className="section-title-4">
             <span>CREATIVE VISION</span>
-            <h2>Ensure Superlative <span>Support</span> with Technology.</h2>
-            <p>Maecenas euismod viverra purus, volutpat posuere mauris tristique quisokaft. Mauris facilisis consequat dolor, et luctus tortor imperdiet eget. Nulla europeai venenatis libero. Proin nec nisi auctor, pulvinar massa at, eleifend nisl. Nullaga facilisi. Aliquam ac nisi sed enim ullamcorper condimentum.</p>
-            <p>Donec et tortor vel lacus placerat pellentesque id et mi. Aenean consequat and interdum tincidunt. Donec eget lorem non ligula sodales hendrerit. Donec utrot scelerisque urna. Aenean et feugiat massa.</p>
+            <h2>Empowering Success Through Strategic <span>Consulting</span> Since 2014</h2>
+            <p>Our Consulting Services Are Customized To Suit The Unique Needs And Goals Of Each Client, Ensuring Precise Alignment With Their Business Objectives.</p>
+            <p>We Believe In Fostering Strong Partnerships With Our Clients, Working Closely With Them To Understand Their Challenges, Identify Opportunities.</p>
             <div className="about-btn">
               <Link legacyBehavior href="/about">
                 <a className="primary-btn5">
@@ -49,8 +49,8 @@ function About4() {
         <div className="col-lg-6 wow animate fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
           <div className="about-left-content">
             <div className="section-title-4">
-              <h2>Unlock the <span>potential</span> of your business.</h2>
-              <p>Maecenas euismod viverra purus, volutpat posuere mauris tristique quisokaft. Mauris facilisis consequat dolor, et luctus tortor imperdiet eget. Nulla europeai facilisi. Aliquam ac nisi sed enim ullamcorper condimentum.</p>
+              <h2>The Global <span>HR Platform </span> You Deserve!.</h2>
+              <p>Complete Your To-Do List Without Opening A Second Tab. The Only All-In-One Platform You Need To Manage Your Entire Team From Marseille To Manilla. Enjoy The Ultimate Flexibility By Managing All Your Global HR With Remote. EOR Employees In Estonia? Payroll In Peru? Contractors In Costa Rica? It’s All In One Place, So You Can Spend Less ¯Time Tracking Down Documents And More Time Giving Your Global Team The Experience They Deserve.</p>
             </div>
             <div className="about-feature">
               <ul>

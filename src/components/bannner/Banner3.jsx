@@ -56,10 +56,10 @@ function Banner3() {
             <SwiperSlide className="swiper-slide">
                 <div className="banner-wrapper">
                 <div className="banner-content">
-                    <h1>Grow Your Business With Innovative Ideas.</h1>
-                    <p>Duis a orci nunc. Suspendisse ac convallis sapien, quis commodo libero. Donec nec duomoi luctus, pellentesque lacus sed, mollis going leo.</p>
+                    <h1>Set Your Record Of Record</h1>
+                    <p>With our Comprehensive HR solutions build a strong business in India without investing time and resources into it.</p>
                     <div className="banner-btn-group">
-                    <Link legacyBehavior href="/contact"><a className="primary-btn3">Free Consultancy</a></Link>
+                    <Link legacyBehavior href="/contact"><a className="primary-btn3">Employer Of Record</a></Link>
                     <Link legacyBehavior href="/about">
                         <a className="primary-btn4">
                         <span>
@@ -90,10 +90,10 @@ function Banner3() {
             <SwiperSlide className="swiper-slide">
                 <div className="banner-wrapper">
                 <div className="banner-content">
-                    <h1>Grow Your Business With Innovative Ideas.</h1>
-                    <p>Duis a orci nunc. Suspendisse ac convallis sapien, quis commodo libero. Donec nec duomoi luctus, pellentesque lacus sed, mollis going leo.</p>
+                    <h1>Staffing Solutions</h1>
+                    <p>Talent Acquistion Services Tailormade of your Business</p>
                     <div className="banner-btn-group">
-                    <Link legacyBehavior href="/contact"><a className="primary-btn3">Free Consultancy</a></Link>
+                    <Link legacyBehavior href="/contact"><a className="primary-btn3">Staffing Solutions</a></Link>
                     <Link legacyBehavior href="/about">
                         <a className="primary-btn4">
                         <span>
@@ -124,10 +124,10 @@ function Banner3() {
             <SwiperSlide className="swiper-slide">
                 <div className="banner-wrapper">
                 <div className="banner-content">
-                    <h1>Grow Your Business With Innovative Ideas.</h1>
-                    <p>Duis a orci nunc. Suspendisse ac convallis sapien, quis commodo libero. Donec nec duomoi luctus, pellentesque lacus sed, mollis going leo.</p>
+                    <h1>Global Payroll</h1>
+                    <p>Tired of managing complex payroll tasks on your own?</p>
                     <div className="banner-btn-group">
-                    <Link legacyBehavior href="/contact"><a className="primary-btn3">Free Consultancy</a></Link>
+                    <Link legacyBehavior href="/contact"><a className="primary-btn3">HR & Payroll</a></Link>
                     <Link legacyBehavior href="/about">
                         <a className="primary-btn4">
                         <span>

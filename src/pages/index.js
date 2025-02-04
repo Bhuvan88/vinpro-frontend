@@ -10,6 +10,7 @@ import Footer3 from "@/components/footer/Footer3";
 import Header from "@/components/header/Header";
 import Partner3 from "@/components/partner/Partner3";
 import PricingPlan3 from "@/components/pricingplan/PricingPlan3";
+import Pricing from "@/components/pricingplan/Pricing4";
 import Solution3 from "@/components/solutions/Solution3";
 import SuccessStory3 from "@/components/successStorys/SuccessStory3";
 import Testimonial3 from "@/components/testimonial/Testimonial3";
@@ -33,7 +34,7 @@ export default function Home() {
       <Header />
       <Banner3 />
       <About4 />
-
+      <Pricing />
       {/* <Partner3 /> 
       <Solution3 />
       <About3 />

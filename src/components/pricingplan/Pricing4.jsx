@@ -2,19 +2,20 @@ import React from 'react'
 
 function Pricing4() {
   return (
-    <div className="home4-pricing-plan">
+    <div className="home4-pricing-plan" style={{backgroundColor:'#fff'}}>
     <div className="container-fluid">
       <div className="row wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
         <div className="col-lg-12">
           <div className="section-title-4 two text-center">
-            <h2>Choose Your Plan</h2>
-            <nav>
+            <h2>Hire and expand globally at a fraction of the cost</h2>
+            <p>Best pricing in the EOR and global employment market. No hidden costs, no surprises.</p>
+            {/* <nav>
               <div className="nav nav-tabs" id="nav-tab" role="tablist">
                 <button className="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Billed Monthly</button>
                 <button className="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Billed Yearly
                   <span>-20 Off</span></button>
               </div>
-            </nav>
+            </nav> */}
           </div>
         </div>
       </div>

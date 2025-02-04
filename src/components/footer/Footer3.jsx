@@ -24,7 +24,7 @@ function Footer3() {
               </div>
               <div className="content">
                 <span>Call Any Time</span>
-                <h6><a href="tel: 29658718617">2-965-871-8617</a></h6>
+                <h6><a href="tel: 29658718617">+91 9884882693</a></h6>
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@ function Footer3() {
               </svg>
               Address
             </h4>
-            <a href="#">House 168/170, Avenue 01, Mirpur DOHS, Dhaka Bangladesh</a>
+            <a href="#"> 5/4, Valluvar Salai, Ramapuram, Chennai - 600 089</a>
           </div>
           <div className="footer-contact mb-40">
             <h4>
@@ -52,8 +52,7 @@ function Footer3() {
               </svg>
               Say Hello
             </h4>
-            <a href="mailto:ifo@example.com">ifo@example.com</a><br />
-            <a href="mailto:info@support.com">info@support.com</a>
+            <a href="mailto:ifo@example.com">Hr@vinproglobal.com</a>
           </div>
           <div className="footer-contact">
             <h6>See Our New updates</h6>
@@ -73,17 +72,15 @@ function Footer3() {
       <div className="col-lg-3 col-sm-6 d-flex justify-content-lg-start justify-content-sm-end">
         <div className="footer-widget">
           <div className="widget-title">
-            <h4>Our Solutions</h4>
+            <h4>About Us</h4>
           </div>
           <div className="menu-container">
-            <ul>
-              <li><Link legacyBehavior href="/service"><a>Web Development</a></Link></li>
-              <li><Link legacyBehavior href="/service"><a>Mobile Development</a></Link></li>
-              <li><Link legacyBehavior href="/service"><a>Cloud Services</a></Link></li>
-              <li><Link legacyBehavior href="/service"><a>Network Connectivity</a></Link></li>
-              <li><Link legacyBehavior href="/service"><a>Data analytics</a></Link></li>
-              <li><Link legacyBehavior href="/service"><a>Software Development</a></Link></li>
-            </ul>
+            <p>Expert accounting and bookkeeping to 
+              vital tax advisory and consulting, 
+              our team is dedicated to taking the hassle out of compliance and legal
+              documentation. Trust us to keep your 
+              business financially sound and fully 
+              compliant so you can focus on growing  your company.</p>
           </div>
         </div>
       </div>
@@ -95,10 +92,10 @@ function Footer3() {
           <div className="menu-container">
             <ul>
               <li><Link legacyBehavior href="/about"><a>About Us</a></Link></li>
-              <li><Link legacyBehavior href="/case-study"><a>Case Study</a></Link></li>
-              <li><Link legacyBehavior href="/blog"><a>News &amp  Article;</a></Link></li>
-              <li><Link legacyBehavior href="/team1"><a>Our Team</a></Link></li>
-              <li><Link legacyBehavior href="/project"><a>All Portfolio</a></Link></li>
+              <li><Link legacyBehavior href="/case-study"><a>Employer of Records</a></Link></li>
+              <li><Link legacyBehavior href="/blog"><a>Staffing Solutions</a></Link></li>
+              <li><Link legacyBehavior href="/team1"><a>HR & Payroll Outsourcing</a></Link></li>
+              <li><Link legacyBehavior href="/project"><a>Contact Us</a></Link></li>
               <li><Link legacyBehavior href="/pricing"><a>Pricing Plan</a></Link></li>
             </ul>
           </div>
@@ -129,7 +126,7 @@ function Footer3() {
         <div className="col-lg-12">
           <div className="footer-btn-content">
             <div className="copyright-area">
-              <p>©Copyright 2023 <a href="#">Softconic</a> | Design By <a href="https://www.egenslab.com/">Egens Lab</a></p>
+              <p>©Copyright 2025 <a href="#">Vinpro Connect</a> all rights Reserved</p>
             </div>
             <div className="footer-social">
               <ul>

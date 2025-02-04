@@ -78,7 +78,7 @@ function Header() {
       <div
         className={`header-sidebar ${state.isLeftSidebarOpen ? "slide" : ""}`}
       >
-        <div className="siderbar-top">
+        <div className="siderbar-top" style={{marginBottom: 20}}>
           <div className="sidebar-log">
             <Link legacyBehavior href="/">
               <a>
@@ -87,14 +87,12 @@ function Header() {
             </Link>
           </div>
           <div className="close-btn" onClick={toggleLeftSidebar}>
-            <i className="bi bi-x-lg" />
+            <i className="bi bi-x-lg" style={{color: '#000'}}/>
           </div>
         </div>
         <div className="sidebar-content">
           <p>
-            Duis a orci nunc. Suspendisse ac convallis sapien, quis commodo
-            libero. Donec nec duomoi luctus, pellentesque lacus sed, mollis
-            going leo.
+          At Vinpro Connect, we are dedicated to simplifying the complexities of global employment and HR management. Since our inception in 2011.
           </p>
         </div>
         <div className="address-card">
@@ -106,8 +104,8 @@ function Header() {
                 </div>
                 <div className="info">
                   <p>
-                    168/170, Avenue 01, Old York Drive Rich Mirpur DOHS,
-                    Bangladesh
+                  5/4, Valluvar Salai, Ramapuram,
+                  Chennai - 600 089,
                   </p>
                 </div>
               </div>
@@ -116,8 +114,7 @@ function Header() {
                   <i className="fas fa-phone-alt" />
                 </div>
                 <div className="info">
-                  <a href="tel:05661111985">+880 566 1111 985</a>
-                  <a href="tel:06571111576">+880 657 1111 576</a>
+                  <a href="tel:05661111985">+91 98848 82693</a>
                 </div>
               </div>
               <div className="single-info">
@@ -125,8 +122,7 @@ function Header() {
                   <i className="far fa-envelope" />
                 </div>
                 <div className="info">
-                  <a href="mailto: info@example.com">info@example.com</a>
-                  <a href="mailto: info@support.com">info@support.com</a>
+                  <a href="mailto: info@example.com">Hr@vinproglobal.com</a>
                 </div>
               </div>
             </div>
@@ -241,7 +237,7 @@ function Header() {
                 <div className="hotline-info">
                   <span>Call Us Now</span>
                   <h6>
-                    <a href="tel:29658718617">2-965-871-8617</a>
+                    <a href="tel:+919884882693">+91 9884882693</a>
                   </h6>
                 </div>
               </div>
@@ -279,7 +275,7 @@ function Header() {
           </div>
           <div className="header-btn d-xl-flex d-none">
             <Link legacyBehavior href="/contact">
-              <a className="primary-btn3">Get A Quote</a>
+              <a className="primary-btn3">Get Started</a>
             </Link>
           </div>
           <div

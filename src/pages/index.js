@@ -1,6 +1,7 @@
 import Home3Team from "@/components/Team/Home3Team";
 import About3 from "@/components/about/About3";
 import Banner3 from "@/components/bannner/Banner3";
+import Banner4 from "@/components/bannner/Banner4";
 import About4 from "@/components/about/About4";
 
 import Home3Blog from "@/components/blog/Home3Blog";

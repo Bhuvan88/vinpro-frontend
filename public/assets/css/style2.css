@@ -1810,7 +1810,7 @@ video {
 }
 .banner-area3 .banner-wrapper .banner-content h1 {
   font-family: var(--font-saira);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 75px;
   line-height: 1.32;
   letter-spacing: 0.03em;
@@ -2180,6 +2180,8 @@ video {
 .banner-area4 .banner-img {
   position: relative;
   display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 @media (max-width: 1399px) {
   .banner-area4 .banner-img {
@@ -7303,13 +7305,15 @@ video {
 }
 
 footer {
-  background-image: url(../img/footer/footer-bg.png), linear-gradient(#ffffff, #ffffff);
+  background-color: #000, 
+  linear-gradient(#ffffff, #ffffff);
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 footer.two {
-  background-image: url(../img/footer/footer-bg.png), linear-gradient(#1d2125, #1d2125);
+  background-image: url(../img/footer/footer-bg.png), 
+  linear-gradient(#1d2125, #1d2125);
 }
 @media (max-width: 767px) {
   footer.two {
@@ -7435,7 +7439,7 @@ footer .footer-widget .footer-contact .form-inner {
 }
 footer .footer-widget .footer-contact .form-inner input {
   width: 100%;
-  background: rgba(27, 31, 35, 0.8);
+  background: rgb(228, 228, 228);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px 0px 0px 5px;
   font-family: var(--font-saira);
@@ -11177,3 +11181,22 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   display: none;
   visibility: hidden;
 }/*# sourceMappingURL=style2.css.map */
+
+.banner-area3 .banner-wrapper .banner-content h1 {
+color: #0D3069;
+}
+
+.banner-area3 .banner-wrapper .banner-content h1 span.text_color2 {
+  color: #00B690;
+  }
+
+  .banner-area6 .banner-wrapper.staff{
+    padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 75px;
+  }
+
+  .banner-img-wrap{
+    width: 100%;
+    text-align: end;
+  }

@@ -19,7 +19,7 @@ function About4() {
       <div className="col-lg-6 wow animate fadeInRight" data-wow-delay="500ms" data-wow-duration="1500ms">
         <div className="banner-right-content">
           <div className="section-title-4">
-            <span>CREATIVE VISION</span>
+            <span>VINPRO CONNECT</span>
             <h2>Empowering Success Through Strategic <span>Consulting</span> Since 2014</h2>
             <p>Our Consulting Services Are Customized To Suit The Unique Needs And Goals Of Each Client, Ensuring Precise Alignment With Their Business Objectives.</p>
             <p>We Believe In Fostering Strong Partnerships With Our Clients, Working Closely With Them To Understand Their Challenges, Identify Opportunities.</p>

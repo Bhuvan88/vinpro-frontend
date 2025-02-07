@@ -1,5 +1,7 @@
 import Breadcrumb from "@/components/common/Breadcrumb";
 import Layout from "@/components/layout/Layout";
+import Pricing from "@/components/pricingplan/Pricing4";
+
 import React from "react";
 
 function Contactpage() {
@@ -29,8 +31,9 @@ function Contactpage() {
                     </div>
                     <div className="info">
                       <p>
-                        168/170, Avenue 01, Old York <br /> Drive Rich Mirpur
-                        DOHS, Bangladesh
+                      5/4, Valluvar Salai,5/4, Valluvar Salai,<br/>
+                      Ramapuram, Chennai - 600 089
+
                       </p>
                     </div>
                   </div>
@@ -39,8 +42,7 @@ function Contactpage() {
                       <i className="fas fa-phone-alt" />
                     </div>
                     <div className="info">
-                      <a href="tel:05661111985">+880 566 1111 985</a>
-                      <a href="tel:06571111576">+880 657 1111 576</a>
+                      <a href="tel:+919884882693">+91 98848 82693</a>
                     </div>
                   </div>
                   <div className="single-info">
@@ -48,8 +50,7 @@ function Contactpage() {
                       <i className="far fa-envelope" />
                     </div>
                     <div className="info">
-                      <a href="mailto: info@example.com">info@example.com</a>
-                      <a href="mailto: info@support.com">info@support.com</a>
+                      <a href="mailto: hr@vinproglobal.com">hr@vinproglobal.com</a>
                     </div>
                   </div>
                 </div>
@@ -86,7 +87,7 @@ function Contactpage() {
             <div className="col-lg-6">
               <div className="contact-form-wrap">
                 <div className="form-tltle">
-                  <h5>Make a Free Consulting</h5>
+                  <h5>For Any Query</h5>
                 </div>
                 <div className="contact-form">
                   <form>
@@ -94,37 +95,37 @@ function Contactpage() {
                       <div className="col-md-6 mb-20">
                         <div className="form-inner">
                           <label>first name</label>
-                          <input type="text" />
+                          <input type="text" placeholder="First Name"/>
                         </div>
                       </div>
                       <div className="col-md-6 mb-20">
                         <div className="form-inner">
                           <label>Last name</label>
-                          <input type="text" />
+                          <input type="text" placeholder="Last Name"/>
                         </div>
                       </div>
                       <div className="col-lg-12 mb-20">
                         <div className="form-inner">
                           <label>Company/Organization</label>
-                          <input type="text" />
+                          <input type="text" placeholder="Company/Organization"/>
                         </div>
                       </div>
                       <div className="col-lg-12 mb-20">
                         <div className="form-inner">
                           <label>Email</label>
-                          <input type="email" />
+                          <input type="email" placeholder="Email"/>
                         </div>
                       </div>
                       <div className="col-lg-12 mb-20">
                         <div className="form-inner">
                           <label>Phone</label>
-                          <input type="email" />
+                          <input type="email" placeholder="Phone"/>
                         </div>
                       </div>
                       <div className="col-lg-12 mb-20">
                         <div className="form-inner">
                           <label>Message</label>
-                          <textarea defaultValue={""} />
+                          <textarea defaultValue={""} placeholder="Additional Message" />
                         </div>
                       </div>
                       <div className="col-lg-12">
@@ -142,6 +143,7 @@ function Contactpage() {
           </div>
         </div>
       </div>
+      <Pricing />
     </Layout>
   );
 }

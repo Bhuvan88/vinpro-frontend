@@ -8888,9 +8888,10 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
 
 .breadcrumbs {
   position: relative;
-  background-image: url(../img/inner-pages/inner-page-bg.png), linear-gradient(#1d1d1d, #1d1d1d);
+  /* background-image: url(../img/inner-pages/inner-page-bg.png), linear-gradient(#1d1d1d, #1d1d1d);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
+  background-color: #0ad8890a;
   z-index: 1;
 }
 .breadcrumbs .inner-banner-1 {
@@ -10881,7 +10882,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
 }
 .contact-page-wrap .contact-content p {
   font-family: var(--font-saira);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.03em;
@@ -10967,7 +10968,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   border-color: var(--theme-color);
 }
 .contact-page-wrap .contact-form-wrap {
-  background-image: url(../img/home-4/pricing-bg-3.png), linear-gradient(#161A1E, #161A1E);
+  background-image: url(../img/home-4/pricing-bg-3.png), linear-gradient(#0D3069, #0D3069);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -10986,7 +10987,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   font-family: var(--font-saira);
   font-weight: 500;
   font-size: 22px;
-  color: var(--white-color);
+  color: #ffffff;
   margin-bottom: 0;
   text-align: center;
 }
@@ -11004,13 +11005,13 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   font-size: 14px;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: var(--white-color);
+  color: #ffffff;
   margin-bottom: 8px;
 }
 .contact-page-wrap .contact-form-wrap .contact-form form input, .contact-page-wrap .contact-form-wrap .contact-form form textarea {
   width: 100%;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgb(255 251 251);
+  border: 1px solid rgb(255 251 251);;
   border-radius: 5px;
   height: 41px;
   font-family: var(--font-saira);

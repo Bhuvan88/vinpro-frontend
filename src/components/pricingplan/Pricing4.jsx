@@ -27,19 +27,19 @@ function Pricing4() {
                 <div className="col-xl-4 col-md-6 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                   <div className="pricing-card">
                     <div className="pricing-top">
-                      <span>Basic Plan</span>
-                      <h2><sup>$</sup>29<sub>/month</sub></h2>
+                      <span>Contracts</span>
+                      <h2><sup>$</sup>19<sub>/Starting from</sub></h2>
                     </div>
                     <div className="pricing-content">
                       <ul>
-                        <li>Email &amp; communication services<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Basic data backup and storage<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Standard security measuresimg<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Limited software support<img src="assets/img/home-4/cross.svg" alt="" /></li>
-                        <li>Suitable for small businesses<img src="assets/img/home-4/cross.svg" alt="" /></li>
+                        <li>Hire and pay contractors globally<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Payments in 100+ currencies<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Perks, benefits, time-off and expenses<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Milestone, hourly, or fixed invoicing<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Multi-channel support and guidance<img src="assets/img/home-4/check.svg" alt="" /></li>
                       </ul>
                       <div className="pay-btn">
-                        <a className="primary-btn3" href="#">Pay Now</a>
+                        <a className="primary-btn3" href="#">Request Demo</a>
                       </div>
                     </div>
                   </div>
@@ -47,19 +47,21 @@ function Pricing4() {
                 <div className="col-xl-4 col-md-6 wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                   <div className="pricing-card two">
                     <div className="pricing-top">
-                      <span>Premium Plan </span>
-                      <h2><sup>$</sup>49<sub>/month</sub></h2>
+                      <span>Full-Time Employees</span>
+                      <h2><sup>$</sup>199<sub>/Starting From</sub></h2>
+                      <h5 style={{fontWeight:'300', fontSize:12, color:'#ffffff', marginTop:20}}>Unlock bigger discounts<br/>
+                      More onboardings, more savings!</h5>
                     </div>
                     <div className="pricing-content">
                       <ul>
-                        <li>Email &amp; communication services<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Basic data backup and storage<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Standard security measuresimg<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Limited software support<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Suitable for small businesses<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Hire full-time employees anywhere<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Payroll in 100+ currencies<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Contracts tailored to local laws<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Perks, benefits, time-off and expenses<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Employee tax management<img src="assets/img/home-4/check.svg" alt="" /></li>
                       </ul>
                       <div className="pay-btn">
-                        <a className="primary-btn3" href="#">Pay Now</a>
+                        <a className="primary-btn3" href="#">Request Demo</a>
                       </div>
                     </div>
                   </div>
@@ -67,25 +69,26 @@ function Pricing4() {
                 <div className="col-xl-4 col-md-6 wow animate fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
                   <div className="pricing-card">
                     <div className="pricing-top">
-                      <span>Enterprise Plan</span>
-                      <h2><sup>$</sup>89<sub>/month</sub></h2>
+                      <span>Enterprise</span>
+                      <h2 style={{fontSize:50}}>Get a Quote</h2>
                     </div>
                     <div className="pricing-content">
                       <ul>
-                        <li>Email &amp; communication services<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Basic data backup and storage<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Standard security measuresimg<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Limited software support<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Suitable for small businesses<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Localized employment agreements<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Payroll in 100+ currencies, taxes and deductions<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Benefits, time-off, expenses and bonuses<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Dedicated employee and employer manager<img src="assets/img/home-4/check.svg" alt="" /></li>
+                        <li>Customized systems integrations and reporting<img src="assets/img/home-4/check.svg" alt="" /></li>
                       </ul>
                       <div className="pay-btn">
-                        <a className="primary-btn3" href="#">Pay Now</a>
+                        <a className="primary-btn3" href="#">Talk to our experts</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            {/*
             <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabIndex={0}>
               <div className="row g-4 align-items-center justify-content-center">
                 <div className="col-xl-4 col-md-6">
@@ -150,6 +153,7 @@ function Pricing4() {
                 </div>
               </div>
             </div>
+            */}
           </div>
         </div>
       </div>

@@ -50,8 +50,11 @@ export default function Home() {
                         <div className="form-inner">
                           <select className="form-select" id="country" aria-label="Select a country you want hire">
                             <option value="1">Select a country you want hire</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="2">India</option>
+                            <option value="3">Bahrain</option>
+                            <option value="4">UAE</option>
+                            <option value="5">UK</option>
+                            <option value="6">USA</option>
                           </select>
                         </div>
                       </div>
@@ -59,8 +62,9 @@ export default function Home() {
                         <div className="form-inner">
                           <select className="form-select" id="currency" aria-label="Currency">
                             <option value="1">Currency</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="2">INR</option>
+                            <option value="3">BHD</option>
+                            <option value="3">USD</option>
                           </select>
                         </div>
                       </div>

@@ -21,6 +21,86 @@ import Head from "next/head";
 export default function Home() {
   useBodyClass("home-dark2");
 
+  const CalculatorSection = () =>
+    <div className="home3-solution-section sec-mar">
+      <div className="container">
+        <div className="row justify-content-center g-4">
+          <div
+            className="col-lg-6 col-md-6 col-sm-10 wow animate fadeInUp"
+            data-wow-delay="300ms"
+            data-wow-duration="1500ms"
+          >
+            <div className="section-title-4">
+            <span>Higring Insights</span>
+            <h2>Calculate the cost too hire an employee in a new country</h2>
+            </div>
+          </div>
+          <div
+            className="col-lg-6 col-md-6 col-sm-10 wow animate fadeInUp"
+            data-wow-delay="400ms"
+            data-wow-duration="1500ms"
+          >
+            <div className="faq-page">
+              <div className="contact-form-wrap">
+               
+                <div className="contact-form">
+                  <form>
+                    <div className="row">
+                      <div className="col-md-12 mb-20">
+                        <div className="form-inner">
+                          <select className="form-select" id="country" aria-label="Select a country you want hire">
+                            <option value="1">Select a country you want hire</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 mb-20">
+                        <div className="form-inner">
+                          <select className="form-select" id="currency" aria-label="Currency">
+                            <option value="1">Currency</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 mb-20">
+                        <div className="form-inner">
+                          <input type="text" placeholder="gross Annual salary"/>
+                        </div>
+                      </div>
+                      <div className="col-lg-12 mb-20 ">
+                        <div className="d-flex flex-row">
+                        <p>Eligible to work in India?</p>
+                          <div className="form-check">
+                            <input className="radio-btn" type="radio" name="inlineCheckbox" />
+                            <label className="form-check-label" for="inlineCheckbox">Yes</label>
+                          </div>
+                          <div class="form-check">
+                            <input className="radio-btn" type="radio" name="inlineCheckbox"  />
+                            <label className="form-check-label" for="inlineCheckbox">No</label>
+                          </div>
+                      </div>
+                      </div>
+                                          
+                      <div className="col-lg-12 text-center">
+                        <div className="form-inner">
+                          <button className="primary-btn3" type="submit">
+                            Calculate
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>;
+
+
   return (
     <>
       <Head>
@@ -34,8 +114,12 @@ export default function Home() {
 
       <Header />
       <Banner3 />
+      <CalculatorSection />
+
       <About4 />
       <Pricing />
+      <Home3Contact />
+
       {/* <Partner3 /> 
       <Solution3 />
       <About3 />

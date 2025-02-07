@@ -634,7 +634,7 @@ video {
   height: 36px;
   width: 36px;
   border-radius: 15px;
-  border: 1px solid var(--white-color);
+  border: 1px solid #cdcdcd;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5646,12 +5646,14 @@ video {
 }
 
 .home3-contact-area {
-  background-image: url(../img/home-3/home3-contact-bg.png);
+  /*background-image: url(../img/home-3/home3-contact-bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  */
+  background-color: #ffffff;
   overflow: hidden;
-  min-height: 575px;
+  min-height: 675px;
   position: relative;
   z-index: 1;
 }
@@ -5662,7 +5664,7 @@ video {
   top: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(0deg, rgba(15, 15, 15, 0.22) 0%, #0F0F0F 100%);
+  /* background: linear-gradient(0deg, rgba(15, 15, 15, 0.22) 0%, #ffffff 100%); */
   z-index: -1;
 }
 .home3-contact-area::before {
@@ -5672,13 +5674,13 @@ video {
   bottom: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(180deg, rgba(15, 15, 15, 0.13) 0%, #0F0F0F 100%);
+  background: linear-gradient(90deg, rgba(164, 163, 163, 0.13) 0%, #fdfdfd 100%); 
   z-index: -1;
 }
 .home3-contact-area .contact-wrapper {
   position: relative;
   z-index: 1;
-  padding-top: 115px;
+  padding-top: 105px;
 }
 .home3-contact-area .contact-wrapper .marquee_text {
   font-family: var(--font-saira);
@@ -5686,9 +5688,9 @@ video {
   font-size: 100px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  z-index: -1;
+  z-index: 22;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.12);
   margin-bottom: 0;
   overflow: hidden;
 }
@@ -5697,12 +5699,12 @@ video {
   z-index: 9;
   display: flex;
   justify-content: center;
-  margin-top: -50px;
+  margin-top: 45px;
 }
 .home3-contact-area .contact-wrapper .contact-btn a {
   width: 250px;
   height: 250px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5712,9 +5714,11 @@ video {
   text-transform: capitalize;
   color: var(--white-color);
   border-radius: 50%;
-  background-image: url(../img/home-4/contact-btn-bg.png), linear-gradient(#1b1f23, #1b1f23);
+  /* background-image: url(../img/home-4/contact-btn-bg.png), linear-gradient(#1b1f23, #1b1f23);
   background-size: cover;
   background-repeat: no-repeat;
+  */
+  background-color: var(--theme-color);
   padding: 50px;
   transition: 0.8s;
   text-align: start;
@@ -7348,8 +7352,9 @@ footer.four {
   }
 }
 footer .footer-top {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  margin-bottom: 80px;
+  border-top: 1px solid rgb(235 230 230 / 81%);
+  border-bottom: 1px solid rgb(235 230 230 / 81%);
+  margin-bottom: 60px;
 }
 footer .footer-top .footer-top-content {
   display: flex;
@@ -7502,8 +7507,10 @@ footer .footer-widget .menu-container ul li a:hover {
   color: var(--theme-color);
 }
 footer .footer-btm {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  margin-top: 80px;
+  /*border-top: 1px solid rgba(255, 255, 255, 0.08); */
+  border-top: 1px solid rgb(235 230 230 / 81%);
+
+  margin-top: 40px;
 }
 footer .footer-btm .footer-btn-content {
   display: flex;
@@ -11117,12 +11124,16 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   padding: 20px 20px 30px;
 }
 .faq-page .contact-form-wrap {
+  /*
   background-image: url(../img/home-4/pricing-bg-3.png), linear-gradient(#161A1E, #161A1E);
   background-size: cover;
   background-repeat: no-repeat;
+  */
+  box-shadow: 0px 10px 22px rgb(10 216 137 / 31%);
   position: relative;
-  border-radius: 10px;
-  margin-top: 50px;
+  border-radius: 30px;
+  padding: 15px;
+  margin-top: 0px;
 }
 .faq-page .contact-form-wrap .form-tltle {
   padding: 25px;
@@ -11148,19 +11159,28 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   color: var(--white-color);
   margin-bottom: 8px;
 }
-.faq-page .contact-form-wrap .contact-form form input, .faq-page .contact-form-wrap .contact-form form textarea {
+.radio-btn{
+  padding: 2px !important;
+  width: 20px !important;
+  height: 20px !important; 
+  margin-right: 5px !important;
+}
+
+.faq-page .contact-form-wrap .contact-form form input, .contact-form form select, 
+.faq-page .contact-form-wrap .contact-form form textarea {
   width: 100%;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 5px;
+  background: rgb(245 245 245 / 85%);
+  border: 1px solid rgb(196 196 196 / 34%);
+  border-radius: 12px;
   height: 41px;
   font-family: var(--font-saira);
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.02em;
-  color: #dedada;
+  color: #0F0F0F;
   padding: 10px 15px;
 }
+
 .faq-page .contact-form-wrap .contact-form form textarea {
   height: 140px;
 }

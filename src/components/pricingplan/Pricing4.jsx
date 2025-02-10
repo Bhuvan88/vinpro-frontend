@@ -3,6 +3,9 @@ import React from 'react'
 function Pricing4() {
   return (
     <div className="home4-pricing-plan" style={{backgroundColor:'#fff'}}>
+       <div className="gradiant-img">
+                <img className="img-fluid" src="assets/img/Gradient.png" alt="" />
+            </div>
     <div className="container-fluid">
       <div className="row wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
         <div className="col-lg-12">

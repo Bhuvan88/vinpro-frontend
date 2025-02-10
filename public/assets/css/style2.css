@@ -11221,3 +11221,30 @@ color: #0D3069;
     width: 100%;
     text-align: end;
   }
+
+/* Custom styles for */
+.group-btn{
+  height: 30px !important;
+}
+.group-btn label{
+  font-size: 12px !important;
+}
+.group-btn button{
+  height: 30px !important;
+  font-size: 13px;
+  border-radius: 15px;
+}
+.group-btn .btn-check:active+.btn-outline-primary, 
+.group-btn .btn-check:checked+.btn-outline-primary, 
+.group-btn .btn-outline-primary.active, 
+.group-btn .btn-outline-primary.dropdown-toggle.show, 
+.group-btn .btn-outline-primary:active {
+  color: #fff;
+  background-color: #49d889;
+  border-color: #49d889;
+}
+
+.group-btn .btn-outline-primary{
+  color: #49d889;
+  border-color: #49d889;
+}

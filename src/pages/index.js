@@ -1,25 +1,54 @@
-import Home3Team from "@/components/Team/Home3Team";
-import About3 from "@/components/about/About3";
-import Banner3 from "@/components/bannner/Banner3";
-import Banner4 from "@/components/bannner/Banner4";
+import React, { useState, useEffect } from 'react';
 import About4 from "@/components/about/About4";
-
-import Home3Blog from "@/components/blog/Home3Blog";
-import Preloader from "@/components/common/Preloader";
+import Banner3 from "@/components/bannner/Banner3";
 import Home3Contact from "@/components/contact/Home3Contact";
 import Footer3 from "@/components/footer/Footer3";
 import Header from "@/components/header/Header";
-import Partner3 from "@/components/partner/Partner3";
-import PricingPlan3 from "@/components/pricingplan/PricingPlan3";
 import Pricing from "@/components/pricingplan/Pricing4";
-import Solution3 from "@/components/solutions/Solution3";
-import SuccessStory3 from "@/components/successStorys/SuccessStory3";
-import Testimonial3 from "@/components/testimonial/Testimonial3";
 import useBodyClass from "@/hooks/useBodyClass";
 import Head from "next/head";
 
 export default function Home() {
   useBodyClass("home-dark2");
+  const [showEdit, setShowEdit] = useState(false);
+
+  const Estimation = () => <div>
+    <div className="d-flex justify-content-between group-btn mt-2">
+      <div class="btn-group btn-small" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked />
+        <label class="btn btn-outline-primary" for="btnradio1" >MONTHLY</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
+        <label class="btn btn-outline-primary" for="btnradio2">ANNUAL</label>
+      </div>
+      <div>
+        <button type="button" class="btn btn-outline-primary"> <i className="bi bi-download" /><span> </span>Download</button>
+      </div>
+    </div>
+
+    <div className="d-flex justify-content-between mt-3">
+      <h6>Gross Monthly Pay</h6>
+      <h6>INR 10,000</h6>
+    </div>
+    <div className="d-flex justify-content-between">
+      <h6>Employee Cost</h6>
+      <h6>INR 500</h6>
+    </div>
+    <div className="d-flex justify-content-between">
+      <h6>Skuad fee</h6>
+      <h6>INR 500</h6>
+    </div>
+    <div className="d-flex justify-content-between">
+      <h6>Total monthly cost of employee</h6>
+      <h6>INR 24,500</h6>
+    </div>
+    <hr />
+    <div className="d-flex align-items-center justify-content-between">
+      <h6 className="mt-3">Want more detailed information?</h6>
+      <div className="learn-btn"><a class="primary-btn8" href="/service-details">TAlK TO EXPERT<svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 1H12M12 1V13M12 1L0.5 12"></path></svg></a></div>
+    </div>
+  </div>;
+
 
   const CalculatorSection = () =>
     <div className="home3-solution-section sec-mar">
@@ -31,9 +60,10 @@ export default function Home() {
             data-wow-duration="1500ms"
           >
             <div className="section-title-4">
-            <span>Higring Insights</span>
-            <h2>Calculate the cost too hire an employee in a new country</h2>
+              <span>Higring Insights</span>
+              <h2>Calculate the cost too hire an employee in a new country</h2>
             </div>
+            {showEdit && <Estimation />}
           </div>
           <div
             className="col-lg-6 col-md-6 col-sm-10 wow animate fadeInUp"
@@ -41,8 +71,8 @@ export default function Home() {
             data-wow-duration="1500ms"
           >
             <div className="faq-page">
-              <div className="contact-form-wrap">
-               
+              <div className="contact-form-wrap" style={{ width: '70%', margin: '0 auto' }}>
+
                 <div className="contact-form">
                   <form>
                     <div className="row">
@@ -70,26 +100,26 @@ export default function Home() {
                       </div>
                       <div className="col-lg-6 mb-20">
                         <div className="form-inner">
-                          <input type="text" placeholder="gross Annual salary"/>
+                          <input type="text" placeholder="gross Annual salary" />
                         </div>
                       </div>
                       <div className="col-lg-12 mb-20 ">
                         <div className="d-flex flex-row">
-                        <p>Eligible to work in India?</p>
+                          <p>Eligible to work in India?</p>
                           <div className="form-check">
                             <input className="radio-btn" type="radio" name="inlineCheckbox" />
                             <label className="form-check-label" for="inlineCheckbox">Yes</label>
                           </div>
                           <div class="form-check">
-                            <input className="radio-btn" type="radio" name="inlineCheckbox"  />
+                            <input className="radio-btn" type="radio" name="inlineCheckbox" />
                             <label className="form-check-label" for="inlineCheckbox">No</label>
                           </div>
+                        </div>
                       </div>
-                      </div>
-                                          
+
                       <div className="col-lg-12 text-center">
                         <div className="form-inner">
-                          <button className="primary-btn3" type="submit">
+                          <button className="primary-btn3" type="submit" onClick={() => setShowEdit(true)}>
                             Calculate
                           </button>
                         </div>

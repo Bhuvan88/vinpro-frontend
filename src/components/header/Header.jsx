@@ -192,28 +192,28 @@ function Header() {
             </li>
 
             <li>
-              <Link legacyBehavior href="/about">
+              <Link legacyBehavior href="/">
                 <a>About Us</a>
               </Link>
             </li>
 
             <li>
-              <Link legacyBehavior href="/blog">
+              <Link legacyBehavior href="/">
                 <a>Employee Of Record</a>
               </Link>
             </li>
             <li>
-              <Link legacyBehavior href="/blog-standard">
+              <Link legacyBehavior href="/">
                 <a>Staffing  Solution</a>
               </Link>
             </li>
             <li>
-              <Link legacyBehavior href="/blog-sidebar">
+              <Link legacyBehavior href="/">
                 <a>HR & Payroll</a>
               </Link>
             </li>
             <li>
-              <Link legacyBehavior href="/blog-masonary">
+              <Link legacyBehavior href="/contact">
                 <a>Contact Us</a>
               </Link>
             </li>

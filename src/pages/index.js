@@ -71,7 +71,7 @@ export default function Home() {
             data-wow-duration="1500ms"
           >
             <div className="faq-page">
-              <div className="contact-form-wrap" style={{ width: '70%', margin: '0 auto' }}>
+              <div className="contact-form-wrap">
 
                 <div className="contact-form">
                   <form>

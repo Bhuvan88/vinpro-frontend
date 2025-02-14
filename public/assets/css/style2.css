@@ -176,7 +176,9 @@ video {
 .pt-30 {
   padding-top: 30px;
 }
-
+.mt-40 {
+  margin-top: 40px !important;
+}
 .mb-40 {
   margin-bottom: 40px !important;
 }
@@ -8704,7 +8706,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   letter-spacing: 0.03em;
   color: var(--paragraph-color);;
 }
-.home6-what-we-do-section .what-we-do-content .about-featue {
+.what-we-do-content .about-featue {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -8713,36 +8715,36 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   padding-top: 35px;
 }
 @media (max-width: 576px) {
-  .home6-what-we-do-section .what-we-do-content .about-featue {
+  .what-we-do-content .about-featue {
     -moz-columns: 1;
          columns: 1;
   }
 }
-.home6-what-we-do-section .what-we-do-content .about-featue li {
+.what-we-do-content .about-featue li {
   display: flex;
   align-items: center;
   gap: 10px;
   font-family: var(--font-saira);
-  font-weight: 400;
-  font-size: 17px;
+  font-weight: 500;
+  font-size: 15px;
   letter-spacing: 0.02em;
-  color: #D7D7D7;
-  margin-bottom: 30px;
+  color: #272727;
+  margin-bottom: 15px;
 }
-.home6-what-we-do-section .what-we-do-content .about-featue li:nth-child(even) {
+.what-we-do-content .about-featue li:nth-child(even) {
   margin-bottom: 0;
 }
 @media (max-width: 576px) {
-  .home6-what-we-do-section .what-we-do-content .about-featue li:nth-child(even) {
+  .what-we-do-content .about-featue li:nth-child(even) {
     margin-bottom: 30px;
   }
 }
 @media (max-width: 576px) {
-  .home6-what-we-do-section .what-we-do-content .about-featue li:last-child {
+  .what-we-do-content .about-featue li:last-child {
     margin-bottom: 0;
   }
 }
-.home6-what-we-do-section .what-we-do-content .about-featue li svg {
+.what-we-do-content .about-featue li svg {
   fill: var(--theme-color);
 }
 
@@ -9978,7 +9980,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   font-family: var(--font-saira);
   font-weight: 500;
   font-size: 15px;
-  line-height: 32px;
+  /*line-height: 32px;*/
   letter-spacing: 0.03em;
   color: var(--paragraph-color);;
   margin-bottom: 15px;
@@ -11285,4 +11287,29 @@ color: #0D3069;
 
 .section-title-4.home p{
   color: #000 !important;
+}
+
+.whyIndia{
+  background-color: #0C3069;
+  padding: 40px;
+}
+.whyIndia h2,
+.whyIndia h3,
+.whyIndia p{
+  color: var(--black-color) !important;
+}
+.whyIndia h3{
+  margin-top: 10px;
+  line-height: 32px;
+  font-weight: 600 !important;
+  font-size: 20px !important;
+}
+
+.whyIndia .work-icon {
+  background: #49d889;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    /* margin: 0 auto; */
+    padding: 10px;
 }

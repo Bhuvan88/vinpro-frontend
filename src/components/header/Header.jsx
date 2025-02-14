@@ -197,9 +197,9 @@ function Header() {
               </Link>
             </li>
 
-            <li>
-              <Link legacyBehavior href="/">
-                <a>Employee Of Record</a>
+            <li className={`${currentRoute === "/employer-of-records"?"active":""}`}>
+              <Link  legacyBehavior href="/employer-of-records">
+                <a>Employer Of Record</a>
               </Link>
             </li>
             <li>

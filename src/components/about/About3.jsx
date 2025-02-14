@@ -9,16 +9,16 @@ function About3() {
     <div className="row g-lg-4 gy-5">
       <div className="col-lg-9">
         <div className="section-title-3 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-          <h2>Our Approach</h2>
-          <p>Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
+          <h2>Welcome to Vinpro Connect!</h2>
+          <p>At Vinpro Connect, we are dedicated to simplifying the complexities of global employment and HR management. Since our inception in 2011, we have been committed to providing seamless professional services across verticals, including Employer on Record (EOR), Payroll Services, Recruitment Services and comprehensive Accounting, Tax and Advisory services to businesses of all sizes. </p>
         </div>
         <div className="about-left">
           <div className="about-img  wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
             <img className="img-fluid magnetic-item" src="assets/img/home-3/home3-about-1.png" alt="" />
           </div>
           <div className="about-content wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-            <h2>Unlock the potential of your business.</h2>
-            <p>We believe in delivering tailored solutions that are designed to address your unique requirements. We take the time to understand your business and provide personalized services that align with your goals.</p>
+            <h2>Our Story</h2>
+            <p>Our journey began with a vision to bridge the gap between businesses and their global workforce. Founded by a team of HR professionals, legal experts and finance professionals, we recognized the challenges companies face when expanding internationally. Over the years, we have grown into a trusted partner for businesses looking to navigate the intricacies of global employment with ease and confidence. </p>
             <div className="devider" />
             <ul className="about-feature">
               <li>
@@ -43,7 +43,7 @@ function About3() {
               <img src="assets/img/home-3/rotate-text.png" alt="" />
             </div>
             <div className="years">
-              <h2>10<br /><span>Years</span></h2>
+              <h2>14<br /><span>Years</span></h2>
             </div>
           </div>
         </div>

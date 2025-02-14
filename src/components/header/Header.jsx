@@ -185,14 +185,14 @@ function Header() {
           </div>
           <ul className="menu-list">
 
-            <li>
+          <li className={`${currentRoute === "/"?"active":""}`}>
               <Link legacyBehavior href="/">
                 <a>Home</a>
               </Link>
             </li>
 
-            <li>
-              <Link legacyBehavior href="/">
+            <li className={`${currentRoute === "/about"?"active":""}`}>
+              <Link legacyBehavior href="/about">
                 <a>About Us</a>
               </Link>
             </li>
@@ -212,7 +212,7 @@ function Header() {
                 <a>HR & Payroll</a>
               </Link>
             </li>
-            <li>
+            <li className={`${currentRoute === "/contact"?"active":""}`}>
               <Link legacyBehavior href="/contact">
                 <a>Contact Us</a>
               </Link>

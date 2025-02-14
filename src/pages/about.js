@@ -14,17 +14,20 @@ function AboutPage() {
     <Layout>
       <Breadcrumb
         pageList="About"
-        title="Get To Know About Softconic"
+        title="Get To Know About Vinpro"
         pageName="ABOUT"
       />
       <About3 />
       <Choose6 />
       <Feature4 />
       <Partnar4 />
-      <Testimonial3 />
+    
       <Home3Team />
       <Home3Contact />
-      <Home3Blog />
+
+      {/* 
+      <Testimonial3 />
+      <Home3Blog /> */}
     </Layout>
   );
 }

@@ -22,7 +22,7 @@ function Choose6() {
                 <div className="choose-right-img magnetic-item">
                   <img
                     className="img-fluid"
-                    src="assets/img/home-6/choose-img-1.png"
+                    src="assets/img/home-3/3.png"
                     alt=""
                   />
                 </div>
@@ -46,17 +46,15 @@ function Choose6() {
                     />
                   </div>
                   <div className="icon">
-                    <img src="assets/img/logo.svg" alt="" />
+                    <img src="assets/img/logo1.png" alt="" />
                   </div>
                   <h4>
-                    Best Creative IT Agency And Solutions <br />
-                    <span>Since 2005.</span>
+                      At Vinpro Connect, we are dedicated to simplifying the complexities of global employment and HR management. <br />
+                    <span>Since 2011.</span>
                   </h4>
                   <p>
-                    Morbi interdum pellentesque nunc, luctus pretium nullagoneq
-                    luctus at. Aliquam cursus nunc arcu, condimentum
-                    efficiturunt tellus iaculis faucibus Quisque gravida.
-                  </p>
+                  Our team is our greatest asset. Comprising experienced HR specialists, legal advisors, and payroll experts, we bring a wealth of knowledge and expertise to every client engagement. We are passionate about helping businesses succeed by managing their HR needs efficiently and effectively. </p>
+                  
                   <div className="sl">
                     <h2>#1</h2>
                   </div>
@@ -85,14 +83,13 @@ function Choose6() {
                       <div className="single-feature">
                         <div className="progress">
                           <h3>
-                            <span className="counter">70</span>%
+                            <span className="counter">100</span>%
                           </h3>
                         </div>
                         <div className="content">
-                          <h4>Strategy</h4>
+                          <h4>Payroll Management</h4>
                           <p>
-                            Morbi interdum pellentesque nunc, luctuso pretium
-                            nullagoneq luctus at. Aliquam one cursus nunc arcu
+                          Ensuring accurate and timely payroll processing across multiple jurisdictions. 
                           </p>
                         </div>
                       </div>
@@ -101,14 +98,13 @@ function Choose6() {
                       <div className="single-feature">
                         <div className="progress">
                           <h3>
-                            <span className="counter">98</span>%
+                            <span className="counter">100</span>%
                           </h3>
                         </div>
                         <div className="content">
-                          <h4>Audience</h4>
+                          <h4>Employee Benefits Administration</h4>
                           <p>
-                            Morbi interdum pellentesque nunc, luctuso pretium
-                            nullagoneq luctus at. Aliquam one cursus nunc arcu
+                          Offering competitive benefits packages tailored to each market. 
                           </p>
                         </div>
                       </div>
@@ -117,14 +113,28 @@ function Choose6() {
                       <div className="single-feature">
                         <div className="progress">
                           <h3>
-                            <span className="counter">85</span>%
+                            <span className="counter">100</span>%
                           </h3>
                         </div>
                         <div className="content">
-                          <h4>Keyword</h4>
+                          <h4>HR Consulting</h4>
                           <p>
-                            Morbi interdum pellentesque nunc, luctuso pretium
-                            nullagoneq luctus at. Aliquam one cursus nunc arcu
+                          Providing strategic HR advice to optimize your workforce management. 
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="single-feature">
+                        <div className="progress">
+                          <h3>
+                            <span className="counter">100</span>%
+                          </h3>
+                        </div>
+                        <div className="content">
+                          <h4>Compliance and Legal Support</h4>
+                          <p>
+                          Navigating the complexities of local labor laws and regulations. 
                           </p>
                         </div>
                       </div>

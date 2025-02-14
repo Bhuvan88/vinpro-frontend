@@ -8,7 +8,7 @@ function Feature4() {
         <div className="col-xl-3 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
           <div className="section-title-4">
             <h2>Our States</h2>
-            <p>Maecenas euismod viverra purus, volutpat posuere mauris tristique quisokaft.</p>
+            <p>Our journey began with a vision to bridge the gap between businesses and their global workforce.</p>
           </div>
         </div>
         <div className="col-xl-9 d-flex justify-content-end">
@@ -35,7 +35,7 @@ function Feature4() {
                   </div>
                   <div className="content">
                     <div className="number">
-                      <h3 className="counter">5</h3>
+                      <h3 className="counter">15</h3>
                       <span>Years</span>
                     </div>
                     <p>Working With Passion</p>

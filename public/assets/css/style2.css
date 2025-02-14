@@ -278,7 +278,7 @@ video {
   line-height: 1.4;
   letter-spacing: 0.03em;
   text-transform: capitalize;
-  color: var(--white-color);
+  color: var(--black-color);
 }
 @media (max-width: 767px) {
   .section-title-4 h2 {
@@ -324,7 +324,7 @@ video {
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.03em;
-  color: var(--paragraph-color);;
+  color: var(--black-color);;
   margin-bottom: 0;
   padding-top: 20px;
 }
@@ -3757,7 +3757,7 @@ video {
 }
 
 .home4-feature-area {
-  background: #1B1F23;
+  background: #0C3069;
   padding: 120px 7% 270px;
 }
 @media (max-width: 1399px) {
@@ -3831,7 +3831,7 @@ video {
   font-weight: 600;
   font-size: 38px;
   text-transform: capitalize;
-  color: var(--white-color);
+  color: var(--black-color);
   margin-bottom: 0;
 }
 .home4-feature-area .counter-area .single-counter .content .number span {
@@ -3840,7 +3840,7 @@ video {
   font-size: 20px;
   line-height: 1;
   text-transform: capitalize;
-  color: var(--white-color);
+  color: var(--black-color);
 }
 .home4-feature-area .counter-area .single-counter .content p {
   font-family: var(--font-saira);
@@ -3848,7 +3848,7 @@ video {
   font-size: 15px;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: var(--paragraph-color);;
+  color: var(--black-color);;
   margin-bottom: 0;
 }
 
@@ -3856,7 +3856,7 @@ video {
   margin-left: 8%;
   margin-right: 8%;
   margin-top: -150px;
-  background: #161A1E;
+  background: #133D80;
   border-radius: 10px;
   padding: 50px;
   overflow: hidden;
@@ -3870,11 +3870,11 @@ video {
 }
 .home4-trusted-client-area p {
   font-family: var(--font-saira);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 20px;
   text-align: center;
   text-transform: capitalize;
-  color: var(--paragraph-color);;
+  color: var(--black-color);;
   margin-bottom: 70px;
 }
 .home4-trusted-client-area .js-marquee {
@@ -4959,7 +4959,7 @@ video {
 }
 .home3-about-section .about-left .about-content > p {
   font-family: var(--theme-color);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
   line-height: 32px;
   letter-spacing: 0.03em;
@@ -8052,7 +8052,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   font-size: 45px;
   line-height: 1.3;
   text-transform: capitalize;
-  color: #FFFFFF;
+  color: #000;
 }
 @media (max-width: 1199px) {
   .home6-choose-section .choose-top .choose-title h2 {
@@ -8086,7 +8086,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   padding-top: 50px;
 }
 .home6-choose-section .choose-btm .choose-left-content {
-  background-image: url(../img/home-6/choose-bg-1.png), linear-gradient(#1e1c22, #1e1c22);
+  background-image: url(../img/home-6/choose-bg-1.png), linear-gradient(#0C3069, #0C3069);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 65px 75px 65px 85px;
@@ -8114,7 +8114,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   font-size: 24px;
   line-height: 1.46;
   letter-spacing: 0.03em;
-  color: var(--paragraph-color);
+  color: var(--black-color);
   margin-bottom: 25px;
 }
 .home6-choose-section .choose-btm .choose-left-content h4 span {
@@ -8136,7 +8136,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   font-size: 15px;
   line-height: 32px;
   letter-spacing: 0.03em;
-  color: var(--paragraph-color);;
+  color: var(--black-color);;
   padding-left: 60px;
 }
 @media (max-width: 1199px) {
@@ -8189,12 +8189,12 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   font-size: 12px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--white-color);
+  color: var(--black-color);
   gap: 5px;
   transition: 0.7s;
 }
 .home6-choose-section .choose-btm .choose-left-content .about-btn a svg {
-  stroke: var(--white-color);
+  stroke: var(--black-color);
   transition: 0.7s;
 }
 .home6-choose-section .choose-btm .choose-left-content .about-btn a:hover {

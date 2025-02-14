@@ -8,7 +8,8 @@ function Home3Team() {
         <div className="col-lg-12 d-flex justify-content-center">
           <div className="section-title-3 text-center">
             <h2>Team Members</h2>
-            <p>Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
+            <p>Services are professional offerings provided by businesses to meet specific needs or solve
+            problems for their customers. Services can range from your budject.</p>
           </div>
         </div>
       </div> 
@@ -16,7 +17,7 @@ function Home3Team() {
         <div className="col-lg-3 col-sm-6 experts wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
           <div className="experts-card magnetic-item">
             <div className="experts-img">
-              <img className="img-fluid" src="assets/img/home-4/experts-01.png" alt="" />
+              <img className="img-fluid" src="assets/img/home-4/11.png" alt="" />
               <div className="expert-social">
                 <ul>
                   <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
@@ -27,15 +28,15 @@ function Home3Team() {
               </div>
             </div>
             <div className="experts-content">
-              <h4>Mateo Daniel</h4>
-              <span>Founder, CTO</span>
+              <h4>Varunkumar K</h4>
+              <span>Group CEO</span>
             </div>
           </div>
         </div>
         <div className="col-lg-3 col-sm-6 experts wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
           <div className="experts-card magnetic-item">
             <div className="experts-img">
-              <img className="img-fluid" src="assets/img/home-4/experts-02.png" alt="" />
+              <img className="img-fluid" src="assets/img/home-4/12.png" alt="" />
               <div className="expert-social">
                 <ul>
                   <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
@@ -46,15 +47,15 @@ function Home3Team() {
               </div>
             </div>
             <div className="experts-content">
-              <h4>Elias Josiah</h4>
-              <span>Co-Founder, CEO</span>
+              <h4>Vignesh SG</h4>
+              <span>Director</span>
             </div>
           </div>
         </div>
         <div className="col-lg-3 col-sm-6 experts wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
           <div className="experts-card magnetic-item">
             <div className="experts-img">
-              <img className="img-fluid" src="assets/img/home-4/experts-03.png" alt="" />
+              <img className="img-fluid" src="assets/img/home-4/13.png" alt="" />
               <div className="expert-social">
                 <ul>
                   <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
@@ -65,15 +66,15 @@ function Home3Team() {
               </div>
             </div>
             <div className="experts-content">
-              <h4>Miles Jaxon</h4>
-              <span>Head of HR &amp; Manager</span>
+              <h4>Naresh B</h4>
+              <span>Managing  &amp; Director</span>
             </div>
           </div>
         </div>
         <div className="col-lg-3 col-sm-6 experts wow animate fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
           <div className="experts-card magnetic-item">
             <div className="experts-img">
-              <img className="img-fluid" src="assets/img/home-4/experts-04.png" alt="" />
+              <img className="img-fluid" src="assets/img/home-4/14.png" alt="" />
               <div className="expert-social">
                 <ul>
                   <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
@@ -84,8 +85,8 @@ function Home3Team() {
               </div>
             </div>
             <div className="experts-content">
-              <h4>Silas Nicholas</h4>
-              <span>Software Engineer</span>
+              <h4>Visesh PV</h4>
+              <span>Executive &amp; Director</span>
             </div>
           </div>
         </div>

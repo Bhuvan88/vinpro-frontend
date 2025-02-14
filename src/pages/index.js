@@ -59,7 +59,7 @@ export default function Home() {
             data-wow-delay="300ms"
             data-wow-duration="1500ms"
           >
-            <div className="section-title-4">
+            <div className="section-title-4 home">
               <span>Higring Insights</span>
               <h2>Calculate the cost too hire an employee in a new country</h2>
             </div>

@@ -9,7 +9,7 @@ function Pricing4() {
     <div className="container-fluid">
       <div className="row wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
         <div className="col-lg-12">
-          <div className="section-title-4 two text-center">
+          <div className="section-title-4 home two text-center">
             <h2>Hire and expand globally at a fraction of the cost</h2>
             <p>Best pricing in the EOR and global employment market. No hidden costs, no surprises.</p>
             {/* <nav>

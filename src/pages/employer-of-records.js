@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/common/Breadcrumb";
 import Layout from "@/components/layout/Layout";
 import Home3Contact from "@/components/contact/Home3Contact";
+import Citylist from "./citylist"
 import React from "react";
 
 function CaseStudyDetailsPage() {
@@ -142,6 +143,7 @@ function CaseStudyDetailsPage() {
             </div>
           </div>
         </div>
+        {/*
         <div className="whyIndia">
           <div className="container">
             <div className="row mb-120">
@@ -284,6 +286,10 @@ function CaseStudyDetailsPage() {
             </div>
           </div>
         </div>
+        */}
+         <div className="gradiant-img">
+                <img className="img-fluid" src="assets/img/Gradient.png" alt="" />
+            </div>
         <div className="home4-about-section sec-mar">
           <div className="container">
             <div className="row">
@@ -312,6 +318,8 @@ function CaseStudyDetailsPage() {
             </div>
           </div>
         </div>
+
+        <Citylist />
       </div>
       <Home3Contact />
      

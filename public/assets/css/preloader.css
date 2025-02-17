@@ -90,9 +90,9 @@
 
 #particles-background {
     background: #2c2d44;
-    background-image: -moz-linear-gradient(45deg, #1d1d1d 2%, #002025 100%);
-    background-image: -webkit-linear-gradient(45deg, #1d1d1d 2%, #002025 100%);
-    background-image: linear-gradient(45deg, #1d1d1d 2%, #002025 100%);
+    background-image: -moz-linear-gradient(4deg, #fff 57%, #3db690 180%);
+    background-image: -webkit-linear-gradient(4deg, #fff 57%, #3db690 180%);
+    background-image: linear-gradient(4deg, #fff 57%, #3db690 180%);
 }
 
 @keyframes rotate {

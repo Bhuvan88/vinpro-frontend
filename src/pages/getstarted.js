@@ -106,23 +106,23 @@ function Contactpage() {
                 <div className="blog-img">
                   <img
                     className="img-fluid"
-                    src="assets/img/home-3/home3-blog-01.png"
+                    src="assets/img/home-3/get.png"
                     alt=""
                   />
                 </div>
                 <br />
                 <h2>The HR Management is Always Ahead with Us</h2>
-                <ul>
+                {/* <ul>
                   <li>Instantly onboard new hires anywhere in the world</li>
                   <li>Run global payroll securely and with a single click</li>
                   <li>Stay 100% compliant with local employment laws</li>
                   <li>Manage benefits, work permits, timesheets, and more</li>
-                </ul>
-
+                </ul> */}
+                <p>Instantly onboard new hires anywhere in the world. Run global payroll securely and with a single click. Stay 100% compliant with local employment laws. Manage benefits, work permits, timesheets, and more</p>
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="contact-form-wrap" style={{ background: '#f1f1f1' }}>
+              <div className="contact-form-wrap" style={{ background: '#fff', borderRadius:'30px' }}>
                
                 <div className="contact-form">
                 <h3 className="text-center">Schedule a demo</h3><br/>
@@ -221,7 +221,7 @@ function Contactpage() {
                           )}
                         </div>
                       </div>
-                      <p style={{fontSize:12}}>We respect your data. By submitting the form, you agree that we will contact you about our products and services, in accordance with our </p>
+                      <p style={{fontSize:14}}>We respect your data. By submitting the form, you agree that we will contact you about our products and services, in accordance with our </p>
 
                       <div className="col-lg-12 text-center mt-3">
                         <div className="form-inner">

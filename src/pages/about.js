@@ -13,7 +13,7 @@ function AboutPage() {
   return (
     <Layout>
       <Breadcrumb
-        pageList="About"
+        // pageList="About"
         title="Get To Know About Vinpro"
         pageName="ABOUT"
       />

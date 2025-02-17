@@ -28,7 +28,7 @@ function Pricing4() {
             <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabIndex={0}>
               <div className="row g-4 align-items-center justify-content-center">
                 <div className="col-xl-4 col-md-6 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                  <div className="pricing-card">
+                  <div className="pricing-card two">
                     <div className="pricing-top">
                       <span>Contracts</span>
                       <h2><sup>$</sup>19<sub>/Starting from</sub></h2>
@@ -41,7 +41,7 @@ function Pricing4() {
                         <li>Milestone, hourly, or fixed invoicing<img src="assets/img/home-4/check.svg" alt="" /></li>
                         <li>Multi-channel support and guidance<img src="assets/img/home-4/check.svg" alt="" /></li>
                       </ul>
-                      <div className="pay-btn">
+                      <div className="pay-btn one">
                         <a className="primary-btn3" href="#">Request Demo</a>
                       </div>
                     </div>
@@ -63,14 +63,14 @@ function Pricing4() {
                         <li>Perks, benefits, time-off and expenses<img src="assets/img/home-4/check.svg" alt="" /></li>
                         <li>Employee tax management<img src="assets/img/home-4/check.svg" alt="" /></li>
                       </ul>
-                      <div className="pay-btn">
+                      <div className="pay-btn two">
                         <a className="primary-btn3" href="#">Request Demo</a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="col-xl-4 col-md-6 wow animate fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
-                  <div className="pricing-card">
+                  <div className="pricing-card two">
                     <div className="pricing-top">
                       <span>Enterprise</span>
                       <h2 style={{fontSize:50}}>Get a Quote</h2>
@@ -83,7 +83,7 @@ function Pricing4() {
                         <li>Dedicated employee and employer manager<img src="assets/img/home-4/check.svg" alt="" /></li>
                         <li>Customized systems integrations and reporting<img src="assets/img/home-4/check.svg" alt="" /></li>
                       </ul>
-                      <div className="pay-btn">
+                      <div className="pay-btn three">
                         <a className="primary-btn3" href="#">Talk to our experts</a>
                       </div>
                     </div>

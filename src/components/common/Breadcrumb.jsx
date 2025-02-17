@@ -17,10 +17,10 @@ function Breadcrumb({ title, pageName, pageList }) {
           <div className="col-12">
             <div className="breadcrumb-wrapper">
               <div className="breadcrumb-cnt">
-                <span>{pageName}</span>
+                {/* <span>{pageName}</span> */}
                 <h1>"{title}"</h1>
                 <div className="breadcrumb-list">
-                  <Link legacyBehavior href="/"><a>Home</a></Link>
+                  {/* <Link legacyBehavior href="/"><a>Home</a></Link> */}
                   <img
                     src="assets/img/inner-pages/breadcrumb-arrow.svg"
                     alt=""

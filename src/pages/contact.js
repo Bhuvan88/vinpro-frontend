@@ -82,7 +82,7 @@ function Contactpage() {
   return (
     <Layout>
       <Breadcrumb
-        pageList="Contact"
+        // pageList="Contact"
         title="For Any Querry"
         pageName="CONTACT"
       />

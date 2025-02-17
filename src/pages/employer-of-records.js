@@ -8,9 +8,9 @@ function CaseStudyDetailsPage() {
   return (
     <Layout>
       <Breadcrumb
-        pageList="Employer of Record"
+        // pageList="Employer of Record"
         title="Employer of Record."
-        pageName="Employer of Record"
+        // pageName="Employer of Record"
       />
       <div className="case-study-details sec-mar mt-40">
         <div className="container">
@@ -40,7 +40,7 @@ function CaseStudyDetailsPage() {
                   <div className="case-img magnetic-item">
                     <img
                       className="img-fluid"
-                      src="assets/img/inner-pages/case-study-img-03.png"
+                      src="assets/img/inner-pages/eor1.png"
                       alt=""
                     />
                   </div>
@@ -69,7 +69,7 @@ function CaseStudyDetailsPage() {
                   <div className="case-img magnetic-item">
                     <img
                       className="img-fluid"
-                      src="assets/img/inner-pages/case-study-img-02.png"
+                      src="assets/img/inner-pages/eor2.png"
                       alt=""
                     />
                   </div>
@@ -81,7 +81,7 @@ function CaseStudyDetailsPage() {
                   <div className="case-img magnetic-item">
                     <img
                       className="img-fluid"
-                      src="assets/img/inner-pages/case-study-img-03.png"
+                      src="assets/img/inner-pages/eor3.png"
                       alt=""
                     />
                   </div>
@@ -136,7 +136,7 @@ function CaseStudyDetailsPage() {
                 </div>
                 <div className="col-lg-6 wow animate fadeInRight" data-wow-delay="500ms" data-wow-duration="1500ms">
                   <div className="about-right-img d-flex justify-content-center  magnetic-item">
-                    <img className="img-fluid" src="assets/img/home-4/about-image-03.png" alt="" />
+                    <img className="img-fluid" src="assets/img/inner-pages/eor4.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -297,7 +297,7 @@ function CaseStudyDetailsPage() {
               <div className="col-lg-6 wow animate fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
                 <div className="about-left-img-wrap">
                   <div className="big-img magnetic-item">
-                    <img className="img-fluid" src="assets/img/home-4/about-image-01.png" alt="" />
+                    <img className="img-fluid" src="assets/img/inner-pages/eor6.png" alt="" />
                   </div>
                   <div className="sm-img  magnetic-item">
                     <img className="img-fluid" src="assets/img/home-4/about-image-02.png" alt="" />

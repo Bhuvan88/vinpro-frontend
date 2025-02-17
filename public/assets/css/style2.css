@@ -1336,7 +1336,7 @@ video {
   font-size: 13px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #e5e5e5;
+  color: #06d889;
   display: inline-block;
   gap: 7px;
   position: relative;
@@ -1421,7 +1421,7 @@ video {
   height: 12px;
   width: 12px;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid #0D3069;
   opacity: 1;
   position: relative;
 }
@@ -4124,6 +4124,7 @@ video {
   background-repeat: no-repeat;
   */
   background-color: #0D3066;
+  min-height: 715px;
   position: relative;
   border-radius: 10px;
 }
@@ -4206,7 +4207,10 @@ video {
 .home4-pricing-plan .pricing-card .pricing-content .pay-btn {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
 }
 .home4-pricing-plan .pricing-card .pricing-content .pay-btn a {
   font-size: 17px;
@@ -10891,7 +10895,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   margin-bottom: 5px;
   font-family: var(--font-saira);
   font-weight: 700;
-  font-size: 42px;
+  font-size: 40px;
   line-height: 1.4;
   letter-spacing: 0.03em;
   text-transform: capitalize;
@@ -11037,10 +11041,10 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
 }
 .contact-page-wrap .contact-form-wrap .contact-form form input, .contact-page-wrap .contact-form-wrap .contact-form form textarea {
   width: 100%;
-  background: rgb(255 251 251);
-  border: 1px solid rgb(255 251 251);;
+  background: #F6F9FB;
+  border: 1px solid #EFEFEF;
   border-radius: 5px;
-  height: 41px;
+  height: 50px;
   font-family: var(--font-saira);
   font-weight: 400;
   font-size: 14px;
@@ -11197,16 +11201,16 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
 .faq-page .contact-form-wrap .contact-form form input, .contact-form form select, 
 .faq-page .contact-form-wrap .contact-form form textarea {
   width: 100%;
-  background: rgb(245 245 245 / 85%);
-  border: 1px solid rgb(196 196 196 / 34%);
-  border-radius: 12px;
-  height: 41px;
-  font-family: var(--font-saira);
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  color: #0F0F0F;
-  padding: 10px 15px;
+    background: rgb(245 245 245 / 85%);
+    border: 1px solid rgb(6 216 137);
+    border-radius: 10px;
+    height: 50px;
+    font-family: var(--font-saira);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #0F0F0F;
+    padding: 10px 15px;
 }
 
 .faq-page .contact-form-wrap .contact-form form textarea {
@@ -11217,7 +11221,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   font-weight: 700;
   padding: 12px 62px;
   border: none;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .fancybox-infobar {
@@ -11313,3 +11317,11 @@ color: #0D3069;
     /* margin: 0 auto; */
     padding: 10px;
 }
+
+/* .pay-btn.one{
+  padding-top: 80px !important;
+}
+
+.pay-btn.three{
+  padding-top: 80px !important;
+} */

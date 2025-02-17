@@ -27,7 +27,7 @@ function Citylist() {
                     <div className="case-img magnetic-item">
                       <img
                         className="img-fluid"
-                        src="assets/img/home-5/home5-case-01.png"
+                        src="assets/img/home-5/city1.png"
                         alt=""
                       />
                     </div>
@@ -69,7 +69,7 @@ function Citylist() {
                     <div className="case-img magnetic-item">
                       <img
                         className="img-fluid"
-                        src="assets/img/home-5/home5-case-02.png"
+                        src="assets/img/home-5/city2.png"
                         alt=""
                       />
                     </div>
@@ -110,7 +110,7 @@ function Citylist() {
                     <div className="case-img magnetic-item">
                       <img
                         className="img-fluid"
-                        src="assets/img/home-5/home5-case-03.png"
+                        src="assets/img/home-5/city3.png"
                         alt=""
                       />
                     </div>

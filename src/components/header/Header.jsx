@@ -274,7 +274,7 @@ function Header() {
             <img src="assets/img/home-3/sidebar-btn.svg" alt="" />
           </div>
           <div className="header-btn d-xl-flex d-none">
-            <Link legacyBehavior href="/contact">
+            <Link legacyBehavior href="/getstarted">
               <a className="primary-btn3">Get Started</a>
             </Link>
           </div>

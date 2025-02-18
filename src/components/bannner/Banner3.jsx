@@ -68,7 +68,7 @@ function Banner3() {
                                 <h1>Set Your <span class="text_color2">Employer</span> of Record</h1>
                                 <p>With our Comprehensive HR solutions build a strong business in India without investing time and resources into it.</p>
                                 <div className="banner-btn-group">
-                                    <Link legacyBehavior href="/contact"><a className="primary-btn3 primary-btn4">Employer of Record<span>
+                                    <Link legacyBehavior href="/employer-of-records"><a className="primary-btn3 primary-btn4">Employer of Record<span>
                                                 <svg width={13} height={13} viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M0 1H12M12 1V13M12 1L0.5 12" />
                                                 </svg>

@@ -207,8 +207,8 @@ function Header() {
                 <a>Staffing Solution</a>
               </Link>
             </li>
-            <li>
-              <Link legacyBehavior href="/">
+            <li className={`${currentRoute === "/hr-payroll"?"active":""}`}>
+              <Link legacyBehavior href="/hr-payroll">
                 <a>HR & Payroll</a>
               </Link>
             </li>

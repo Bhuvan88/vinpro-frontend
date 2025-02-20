@@ -1,50 +1,34 @@
 [
     {
         "id": "1",
-        "category": "Web development",
         "img": "/assets/img/home-3/home3-blog-01.png",
-        "date": "May 20, 2023",
-        "count_comment": 5,
-        "title": "Donec Finibus Laoreet Exte Eu Pellentesque."
+        "hint": "Human Resource information system.",
+        "title" : "HRIS",
+        "paragraph":"An HRIS (Human Resources Information System) is a software or online platform used by organizations to manage and automate various human resources (HR) functions and processes. It serves as a central database that stores employee data and streamlines HR tasks, from recruitment to payroll, benefits management, performance evaluations, and compliance with labor laws.",
+        "link":""
     },
     {
         "id": "2",
-        "category": "Cloud Solutions",
-        "img": "/assets/img/home-3/home3-blog-02.png",
-        "date": "May 20, 2023",
-        "count_comment": 5,
-        "title": "Feugiat Varius Mattis Mass Enim Est Egestas."
+        "img": "/assets/img/home-3/home3-blog-01.png",
+        "hint": "HIRING",
+        "title" : "CONTRACTOR MANAGEMENT",
+        "paragraph": "Managing contractors and freelancers around the world involves overseeing payments, ensuring compliance, handling communication, and maintaining an organized workflow. Here’s a detailed breakdown of key areas you should cover for successful contractor management",
+        "link": ""
     },
     {
         "id": "3",
-        "category": "Web development",
-        "img": "/assets/img/home-3/home3-blog-03.png",
-        "date": "May 20, 2023",
-        "count_comment": 5,
-        "title": "Navigating The Journey Off Cloud Solution."
+        "img": "/assets/img/home-3/home3-blog-01.png",
+        "hint": "LOCATION",
+        "title" : "REMOTE TALENT",
+        "paragraph": "Remote talent refers to workers who are employed or contracted to perform their job duties from a location outside of the employer’s office, often from their home or any location of their choosing. With the rise of digital work tools, a growing number of businesses are looking to hire qualified candidates from around the world, regardless of geographical constraints. This approach enables organizations to access a global talent pool and hire the best candidates for their needs, regardless of location.",
+        "link": ""
     },
     {
         "id": "4",
-        "category": "Web development",
-        "img": "/assets/img/home-3/home3-blog-04.png",
-        "date": "May 20, 2023",
-        "count_comment": 5,
-        "title": "Donec Finibus Laoreet Exte Eu Pellentesque."
-    },
-    {
-        "id": "5",
-        "category": "Cloud Solutions",
-        "img": "/assets/img/home-3/home3-blog-05.png",
-        "date": "May 20, 2023",
-        "count_comment": 5,
-        "title": "Feugiat Varius Mattis Mass Enim Est Egestas."
-    },
-    {
-        "id": "6",
-        "category": "Web development",
-        "img": "/assets/img/home-3/home3-blog-06.png",
-        "date": "May 20, 2023",
-        "count_comment": 5,
-        "title": "Navigating The Journey Off Cloud Solution."
+        "img": "/assets/img/home-3/home3-blog-01.png",
+        "hint": "API",
+        "title" : "REMOTE EMBEDDED & APIs",
+        "paragraph": "APIs are sets of rules and protocols that allow different software applications to communicate with each other. They allow businesses to integrate third-party services or functionalities into their platforms without building them from scratch.",
+        "link": ""
     }
 ]

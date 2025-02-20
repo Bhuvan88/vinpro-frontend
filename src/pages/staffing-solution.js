@@ -2,7 +2,6 @@ import Breadcrumb from "@/components/common/Breadcrumb";
 import Layout from "@/components/layout/Layout";
 import Home3Contact from "@/components/contact/Home3Contact";
 import Service4 from "@/components/services/Service4";
-import Citylist from "./citylist"
 import React from "react";
 
 function StaffingSolutionPage() {

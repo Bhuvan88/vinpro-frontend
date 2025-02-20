@@ -441,7 +441,8 @@ video {
   font-size: 110px;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: rgba(6, 216, 137, 0.03);
+  color: rgba(6, 216, 137, 0.15);
+
   width: 100%;
   position: absolute;
   left: 50%;
@@ -3641,6 +3642,7 @@ video {
   border-radius: 5px;
   padding: 40px 30px;
   transition: 0.5s;
+  min-height: 450px;
 }
 @media (max-width: 576px) {
   .home4-services-section .single-service-card {
@@ -3655,6 +3657,7 @@ video {
 }
 .home4-services-section .single-service-card .services-content h3 {
   margin-bottom: 10px;
+  color: #115a39;
 }
 .home4-services-section .single-service-card .services-content h3 a {
   font-family: var(--font-saira);
@@ -3672,7 +3675,7 @@ video {
   font-family: var(--font-saira);
   font-weight: 500;
   font-size: 14px;
-  line-height: 30px;
+  line-height: 26px;
   letter-spacing: 0.03em;
   color: var(--paragraph-color);
 }

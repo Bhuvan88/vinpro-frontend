@@ -202,9 +202,9 @@ function Header() {
                 <a>Employer Of Record</a>
               </Link>
             </li>
-            <li>
-              <Link legacyBehavior href="/">
-                <a>Staffing  Solution</a>
+            <li className={`${currentRoute === "/staffing-solution"?"active":""}`}>
+              <Link legacyBehavior href="/staffing-solution">
+                <a>Staffing Solution</a>
               </Link>
             </li>
             <li>

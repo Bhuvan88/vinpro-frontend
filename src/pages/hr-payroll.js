@@ -266,7 +266,7 @@ function BlogPgage() {
                         </div>
                       </div>
                       <div className="case-content">
-                    <p>
+                    <p style={{paddingTop:20}}>
                       Join the thousands of satisfied clients from diverse industries who have chosen us for our responsive, knowledgeable, and personalized service. With us as your trusted partner, you can confidently entrust your payroll responsibilities to our capable hands.
                     </p>
                     </div>

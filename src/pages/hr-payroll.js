@@ -106,7 +106,7 @@ function BlogPgage() {
                 <div className="row g-lg-4 gy-5 mb-120">
                 <div className="col-lg-6">
                     <div className="case-img magnetic-item">
-                      <img className="img-fluid" src="assets/img/inner-pages/case-study-img-02.png" alt="" />
+                      <img className="img-fluid" src="assets/img/inner-pages/hr1.png" alt="" />
                     </div>
                   </div>
                   <div className="col-lg-6 d-flex align-items-center">
@@ -135,7 +135,7 @@ function BlogPgage() {
                     <div className="case-img magnetic-item">
                       <img
                         className="img-fluid"
-                        src="assets/img/inner-pages/case-study-img-02.png"
+                        src="assets/img/inner-pages/hr2.png"
                         alt=""
                       />
                     </div>
@@ -171,7 +171,7 @@ function BlogPgage() {
                         <div className="case-img magnetic-item">
                           <img
                             className="img-fluid"
-                            src="assets/img/inner-pages/case-img-01.png"
+                            src="assets/img/inner-pages/hr3.png"
                             alt=""
                           />
                         </div>
@@ -202,7 +202,7 @@ function BlogPgage() {
                         <div className="case-img magnetic-item">
                           <img
                             className="img-fluid"
-                            src="assets/img/inner-pages/case-img-02.png"
+                            src="assets/img/inner-pages/hr4.png"
                             alt=""
                           />
                         </div>
@@ -227,7 +227,7 @@ function BlogPgage() {
                         <div className="case-img magnetic-item">
                           <img
                             className="img-fluid"
-                            src="assets/img/inner-pages/case-img-03.png"
+                            src="assets/img/inner-pages/hr5.png"
                             alt=""
                           />
                         </div>
@@ -251,7 +251,7 @@ function BlogPgage() {
                         <div className="case-img magnetic-item">
                           <img
                             className="img-fluid"
-                            src="assets/img/inner-pages/case-img-03.png"
+                            src="assets/img/inner-pages/hr6.png"
                             alt=""
                           />
                         </div>

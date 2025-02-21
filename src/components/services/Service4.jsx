@@ -15,7 +15,7 @@ function Service4() {
       </div> */}
       <div className="row g-4 justify-content-center">
         <div className="col-lg-3 col-md-6 col-sm-10 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-          <div className="single-service-card magnetic-item" style={{background: '#06d889'}}>
+          <div className="single-service-card magnetic-item" style={{background: '#00B690'}}>
             <div className="icon">
               <svg style={{fill:'#fff'}} width={60} height={60} viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
                 <path d="M23.6731 41.5094C23.438 41.5095 23.2106 41.4256 23.0318 41.2728L16.6219 35.8148C16.5126 35.7218 16.4249 35.6062 16.3648 35.476C16.3046 35.3458 16.2734 35.204 16.2734 35.0606C16.2734 34.9171 16.3046 34.7754 16.3648 34.6452C16.4249 34.5149 16.5126 34.3993 16.6219 34.3063L23.0318 28.8483C23.2318 28.678 23.4912 28.594 23.7531 28.6149C24.0149 28.6358 24.2577 28.7599 24.4281 28.9598C24.7824 29.3767 24.7326 30.0018 24.3159 30.3561L18.7921 35.0603L24.3159 39.7643C24.4704 39.8957 24.5808 40.0714 24.6322 40.2676C24.6837 40.4637 24.6737 40.671 24.6036 40.8613C24.5335 41.0516 24.4066 41.2158 24.2402 41.3317C24.0738 41.4476 23.876 41.5097 23.6731 41.5094ZM36.3269 41.5094C36.0467 41.5094 35.7682 41.3911 35.5725 41.1606C35.4022 40.9606 35.3183 40.7012 35.3392 40.4394C35.3602 40.1775 35.4842 39.9347 35.6842 39.7643L41.208 35.0603L35.6842 30.3561C35.4914 30.1838 35.3736 29.9429 35.356 29.6848C35.3384 29.4268 35.4224 29.1722 35.5901 28.9753C35.7577 28.7784 35.9958 28.6549 36.2533 28.6311C36.5108 28.6074 36.7674 28.6853 36.9682 28.8482L43.3782 34.3062C43.4874 34.3992 43.5751 34.5148 43.6353 34.645C43.6955 34.7752 43.7266 34.917 43.7266 35.0604C43.7266 35.2039 43.6955 35.3456 43.6353 35.4759C43.5751 35.6061 43.4874 35.7217 43.3782 35.8147L36.9682 41.2727C36.7895 41.4255 36.5622 41.5094 36.3271 41.5094H36.3269ZM27.7309 45.6033C27.5834 45.6035 27.4377 45.5707 27.3044 45.5074C27.1711 45.444 27.0537 45.3517 26.9607 45.2372C26.8676 45.1227 26.8014 44.9888 26.7667 44.8454C26.732 44.702 26.7298 44.5526 26.7602 44.4083L30.755 25.4409C30.8092 25.1838 30.9632 24.9588 31.1833 24.8153C31.4034 24.6718 31.6715 24.6217 31.9286 24.6758C32.1857 24.73 32.4107 24.8841 32.5542 25.1042C32.6977 25.3243 32.7478 25.5924 32.6937 25.8494L28.6989 44.8167C28.6521 45.0388 28.5304 45.2382 28.3542 45.3814C28.178 45.5246 27.958 45.603 27.7309 45.6033Z" />
@@ -47,7 +47,7 @@ function Service4() {
           </div>
         </div>
         <div className="col-lg-3 col-md-6 col-sm-10 wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-          <div className="single-service-card magnetic-item"  style={{background: '#06d889'}}>
+          <div className="single-service-card magnetic-item"  style={{background: '#00B690'}}>
             <div className="icon">
               <svg style={{fill:'#fff'}} width={60} height={60} viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_1453_763)">
@@ -83,7 +83,7 @@ function Service4() {
           </div>
         </div>
         <div className="col-lg-3 col-md-6 col-sm-10 wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-          <div className="single-service-card magnetic-item"  style={{background: '#06d889'}}>
+          <div className="single-service-card magnetic-item"  style={{background: '#00B690'}}>
             <div className="icon">
               <svg style={{fill:'#fff'}} width={60} height={60} viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_1453_782)">
@@ -121,7 +121,7 @@ function Service4() {
           </div>
         </div>
         <div className="col-lg-3 col-md-6 col-sm-10 wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-          <div className="single-service-card magnetic-item"  style={{background: '#06d889'}}>
+          <div className="single-service-card magnetic-item"  style={{background: '#00B690'}}>
             <div className="icon">
               <svg style={{fill:'#fff'}} width={60} height={60} viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_1453_801)">

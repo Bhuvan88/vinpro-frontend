@@ -32,7 +32,7 @@ function StaffingSolutionPage() {
               <div className="row g-lg-4 gy-5 mb-120">
                 <div className="col-lg-6 d-flex align-items-center">
                   <div className="section-title-4 home case-content">
-                    <h2>Our Staffing <span>Service</span> Include </h2>
+                    <h2>Our Staffing <span>Services</span> Include </h2>
                     <h5 style={{ marginBottom: 0 }}>1.Temporary Staffing</h5>
                     <p style={{ marginBottom: 30 }}>Need additional support for a short-term project or during peak seasons? Our temporary staffing solutions are tailored to provide your business with skilled professionals quickly and efficiently, ensuring you never miss a beat.</p>
                     <h5 style={{ marginBottom: 0 }}>2.Permanent Placement</h5>
@@ -41,7 +41,7 @@ function StaffingSolutionPage() {
                 </div>
                 <div className="col-lg-6">
                   <div className="case-img magnetic-item">
-                    <img className="img-fluid" src="assets/img/inner-pages/case-study-img-02.png" alt="" />
+                    <img className="img-fluid" src="assets/img/inner-pages/staff1.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -51,7 +51,7 @@ function StaffingSolutionPage() {
                   <div className="case-img magnetic-item">
                     <img
                       className="img-fluid"
-                      src="assets/img/inner-pages/case-study-img-02.png"
+                      src="assets/img/inner-pages/staff2.png"
                       alt=""
                     />
                   </div>
@@ -120,7 +120,7 @@ function StaffingSolutionPage() {
                 <div className="faq-img magnetic-item">
                   <img
                     className="img-fluid"
-                    src="assets/img/inner-pages/service-faq-img-01.png"
+                    src="assets/img/inner-pages/staff3.png"
                     alt=""
                   />
                 </div>

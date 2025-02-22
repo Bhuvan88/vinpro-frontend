@@ -134,7 +134,6 @@ export default function Home() {
       </div>
     </div>;
 
-
   return (
     <>
       <Head>

@@ -2,15 +2,18 @@ import Breadcrumb from "@/components/common/Breadcrumb";
 import Layout from "@/components/layout/Layout";
 import Home3Contact from "@/components/contact/Home3Contact";
 import Citylist from "./citylist"
-import React from "react";
+import EORcalculator from "./EORcalculator";
+import React, { useEffect, useState } from "react";
 
 function CaseStudyDetailsPage() {
+  const [show, setShow] = useState(false);
+
   return (
     <Layout>
       <Breadcrumb
         // pageList="Employer of Record"
         title="Employer of Record."
-        // pageName="Employer of Record"
+      // pageName="Employer of Record"
       />
       <div className="case-study-details sec-mar mt-40">
         <div className="container">
@@ -143,157 +146,14 @@ function CaseStudyDetailsPage() {
             </div>
           </div>
         </div>
-        {/*
-        <div className="whyIndia">
-          <div className="container">
-            <div className="row mb-120">
-              <div className="col-lg-12">
-                <div className="case-content mb-60">
-                  <h2>why India?</h2>
-                  <p>Availability of suitable human resources have made India one of the hotspots of KPO/IT industry, Finance/Banking, Shared Service Centers, back office etc. India is home to a vast pool of human resources consisting of educated, English speaking, tech-savvy personnel.
-                    Every year, more than 30 million graduates are enrolled in higher education in India. These figures very well give the idea of human resources availability in India
-                    Onboard Talents in India with VINPRO</p>
-                </div>
-                <div className="how-we-work-section ">
-                  <div className="work-item">
-                    <div className="container-fluid">
-                      <div className="row row-cols-xl-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 gy-5 justify-content-center">
-                        <div
-                          className="col magnetic-item wow animate fadeInUp"
-                          data-wow-delay="200ms"
-                          data-wow-duration="1500ms"
-                        >
-                          <div className="single-work">
-                            <div className="work-icon">
-                              <img
-                                src="assets/img/inner-pages/work-icon-01.svg"
-                                alt=""
-                              />
-                            </div>
-                            <div className="work-content">
-                              <h3>Hire Remote Employees</h3>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className="col magnetic-item wow animate fadeInUp"
-                          data-wow-delay="300ms"
-                          data-wow-duration="1500ms"
-                        >
-                          <div className="single-work">
-                            <div className="work-icon">
-                              <img
-                                src="assets/img/inner-pages/work-icon-02.svg"
-                                alt=""
-                              />
-                            </div>
-                            <div className="work-content">
-                              <h3>Full India Coverage, No Compliance Risk</h3>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className="col magnetic-item wow animate fadeInUp"
-                          data-wow-delay="400ms"
-                          data-wow-duration="1500ms"
-                        >
-                          <div className="single-work">
-                            <div className="work-icon">
-                              <img
-                                src="assets/img/inner-pages/work-icon-03.svg"
-                                alt=""
-                              />
-                            </div>
-                            <div className="work-content">
-                              <h3>Skilled Resources At Very Competitive Salary In India</h3>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className="col magnetic-item wow animate fadeInUp"
-                          data-wow-delay="500ms"
-                          data-wow-duration="1500ms"
-                        >
-                          <div className="single-work">
-                            <div className="work-icon">
-                              <img
-                                src="assets/img/inner-pages/work-icon-04.svg"
-                                alt=""
-                              />
-                            </div>
-                            <div className="work-content">
-                              <h3>No Transfer Pricing.</h3>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className="col magnetic-item wow animate fadeInUp"
-                          data-wow-delay="600ms"
-                          data-wow-duration="1500ms"
-                        >
-                          <div className="single-work">
-                            <div className="work-icon">
-                              <img
-                                src="assets/img/inner-pages/work-icon-05.svg"
-                                alt=""
-                              />
-                            </div>
-                            <div className="work-content">
-                              <h3>Hire The Best Full-Time Talent Without Setting Up A New Entity.</h3>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className="col magnetic-item wow animate fadeInUp"
-                          data-wow-delay="600ms"
-                          data-wow-duration="1500ms"
-                        >
-                          <div className="single-work">
-                            <div className="work-icon">
-                              <img
-                                src="assets/img/inner-pages/work-icon-05.svg"
-                                alt=""
-                              />
-                            </div>
-                            <div className="work-content">
-                              <h3>Access To Local Tax And Employment Expertise</h3>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className="col magnetic-item wow animate fadeInUp"
-                          data-wow-delay="600ms"
-                          data-wow-duration="1500ms"
-                        >
-                          <div className="single-work">
-                            <div className="work-icon">
-                              <img
-                                src="assets/img/inner-pages/work-icon-05.svg"
-                                alt=""
-                              />
-                            </div>
-                            <div className="work-content">
-                              <h3>Reduce Admin And Skip Costly Legal And Payroll Set-Up</h3>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
-              </div>
-            </div>
-          </div>
+        <div className="gradiant-img">
+          <img className="img-fluid" src="assets/img/Gradient.png" alt="" />
         </div>
-        */}
-         <div className="gradiant-img">
-                <img className="img-fluid" src="assets/img/Gradient.png" alt="" />
-            </div>
         <div className="home4-about-section sec-mar">
           <div className="container">
             <div className="row">
-              
+
               <div className="col-lg-6 wow animate fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
                 <div className="about-left-img-wrap">
                   <div className="big-img magnetic-item">
@@ -310,7 +170,7 @@ function CaseStudyDetailsPage() {
                     <h2>Retain Employee Ownership​</h2>
                     <p>We help you build the perfect Indian team without giving up employee ownership!  Employee IP, day to day communication, and management are owned and managed by you</p>
                     <p>Vinpro  doesn't manage, direct, or even have access to any work your hires are doing. They work exclusively for you, acting like any team member, following your tools and processes. Zpro only does the finding, hiring, local laws compliance, social security, office and ensures they have the conditions to perform.</p>
-                    
+
                   </div>
                 </div>
               </div>
@@ -319,10 +179,136 @@ function CaseStudyDetailsPage() {
           </div>
         </div>
 
-        <Citylist />
+        {show ?
+          <div>
+            <div className="whyIndia">
+              <div className="container">
+                <div className="row mb-60">
+                  <div className="col-lg-12">
+                    <div className="case-content mb-60">
+                      <div className="d-flex justify-content-between mt-3">
+                        <h2>why India?</h2>
+                        <a className="closeicon" onClick={()=>setShow(!show)}>X</a>
+                      </div>
+                      <p>Availability of suitable human resources have made India one of the hotspots of KPO/IT industry, Finance/Banking, Shared Service Centers, back office etc. India is home to a vast pool of human resources consisting of educated, English speaking, tech-savvy personnel.
+                        Every year, more than 30 million graduates are enrolled in higher education in India. These figures very well give the idea of human resources availability in India
+                        Onboard Talents in India with VINPRO</p>
+                    </div>
+                    <div className="row justify-content-center">
+                      <div className="col-xl-3 col-sm-6">
+                        <div className="single-process magnetic-item" >
+                          <div className="icon">
+                            <img src="assets/img/inner-pages/research.svg" alt="" />
+                          </div>
+                          <div className="work-icon">
+                            <img
+                              src="assets/img/inner-pages/work-icon-01.svg"
+                              alt=""
+                            />
+                          </div>
+                          <h3>Hire Remote Employees</h3>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-6">
+                        <div className="single-process magnetic-item" >
+                          <div className="icon">
+                            <img src="assets/img/inner-pages/devlopment.svg" alt="" />
+                          </div>
+                          <div className="work-icon">
+                              <img
+                                src="assets/img/inner-pages/work-icon-02.svg"
+                                alt=""
+                              />
+                            </div>
+                          <h3>Full India Coverage, No Compliance Risk</h3>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-6">
+                        <div className="single-process magnetic-item" >
+                          <div className="icon">
+                            <img src="assets/img/inner-pages/testing.svg" alt="" />
+                          </div>
+                          <div className="work-icon">
+                              <img
+                                src="assets/img/inner-pages/work-icon-03.svg"
+                                alt=""
+                              />
+                            </div>
+                          <h3>Skilled Resources At Very Competitive Salary In India</h3>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-6">
+                        <div className="single-process magnetic-item" >
+                          <div className="icon">
+                            <img src="assets/img/inner-pages/deploy.svg" alt="" />
+                          </div>
+                          <div className="work-icon">
+                                  <img
+                                    src="assets/img/inner-pages/work-icon-04.svg"
+                                    alt=""
+                                  />
+                                </div>
+                          <h3>No Transfer Pricing.</h3>
+                        </div>
+                      </div>
+
+                      <div className="col-xl-3 col-sm-6">
+                        <div className="single-process magnetic-item" >
+                          <div className="icon">
+                            <img src="assets/img/inner-pages/devlopment.svg" alt="" />
+                          </div>
+                          <div className="work-icon">
+                              <img
+                                src="assets/img/inner-pages/work-icon-02.svg"
+                                alt=""
+                              />
+                            </div>
+                          <h3>Hire The Best Full-Time Talent Without Setting Up A New Entity</h3>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-6">
+                        <div className="single-process magnetic-item" >
+                          <div className="icon">
+                            <img src="assets/img/inner-pages/testing.svg" alt="" />
+                          </div>
+                          <div className="work-icon">
+                              <img
+                                src="assets/img/inner-pages/work-icon-03.svg"
+                                alt=""
+                              />
+                            </div>
+                          <h3>Access To Local Tax And Employment Expertise</h3>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-6">
+                        <div className="single-process magnetic-item" >
+                          <div className="icon">
+                            <img src="assets/img/inner-pages/deploy.svg" alt="" />
+                          </div>
+                          <div className="work-icon">
+                                  <img
+                                    src="assets/img/inner-pages/work-icon-04.svg"
+                                    alt=""
+                                  />
+                                </div>
+                          <h3>Reduce Admin And Skip Costly Legal And Payroll Set-Up</h3>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <EORcalculator />
+          </div>
+          :
+          <Citylist show={setShow} />
+        }
       </div>
       <Home3Contact />
-     
+
     </Layout>
   );
 }

@@ -1,9 +1,17 @@
 import Breadcrumb from "@/components/common/Breadcrumb";
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-function Citylist() {
+function Citylist(props) {
+  const [view, setView] = useState(false);
+
+   useEffect(() => {
+    if(view){
+      props.show(view);
+    }
+    }, [view]);
+
   return (
     <div className="home5-case-study sec-mar">
       <div className="container">
@@ -32,8 +40,8 @@ function Citylist() {
                       />
                     </div>
                     <div className="learn-more-btn">
-                      <Link legacyBehavior href="#">
-                        <a className="primary-btn8">
+                      
+                        <a className="primary-btn8" onClick={()=>setView(true)}>
                           <svg
                             width={12}
                             height={12}
@@ -45,7 +53,7 @@ function Citylist() {
                           </svg>
                           LEARN MORE
                         </a>
-                      </Link>
+                      
                     </div>
                   </div>
                 </div>
@@ -74,8 +82,7 @@ function Citylist() {
                       />
                     </div>
                     <div className="learn-more-btn">
-                      <Link legacyBehavior href="#">
-                        <a className="primary-btn8">
+                        <a className="primary-btn8" onClick={()=>setView(true)}>
                           <svg
                             width={12}
                             height={12}
@@ -87,7 +94,7 @@ function Citylist() {
                           </svg>
                           LEARN MORE
                         </a>
-                      </Link>
+                    
                     </div>
                   </div>
                 </div>
@@ -115,8 +122,7 @@ function Citylist() {
                       />
                     </div>
                     <div className="learn-more-btn">
-                      <Link legacyBehavior href="#">
-                        <a className="primary-btn8">
+                        <a className="primary-btn8" onClick={()=>setView(true)}>
                           <svg
                             width={12}
                             height={12}
@@ -128,7 +134,6 @@ function Citylist() {
                           </svg>
                           LEARN MORE
                         </a>
-                      </Link>
                     </div>
                   </div>
                 </div>

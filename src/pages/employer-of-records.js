@@ -197,9 +197,9 @@ function CaseStudyDetailsPage() {
                     <div className="row justify-content-center">
                       <div className="col-xl-3 col-sm-6">
                         <div className="single-process magnetic-item" >
-                          <div className="icon">
+                          {/* <div className="icon">
                             <img src="assets/img/inner-pages/research.svg" alt="" />
-                          </div>
+                          </div> */}
                           <div className="work-icon">
                             <img
                               src="assets/img/inner-pages/work-icon-01.svg"
@@ -211,9 +211,9 @@ function CaseStudyDetailsPage() {
                       </div>
                       <div className="col-xl-3 col-sm-6">
                         <div className="single-process magnetic-item" >
-                          <div className="icon">
+                          {/* <div className="icon">
                             <img src="assets/img/inner-pages/devlopment.svg" alt="" />
-                          </div>
+                          </div> */}
                           <div className="work-icon">
                               <img
                                 src="assets/img/inner-pages/work-icon-02.svg"
@@ -225,9 +225,9 @@ function CaseStudyDetailsPage() {
                       </div>
                       <div className="col-xl-3 col-sm-6">
                         <div className="single-process magnetic-item" >
-                          <div className="icon">
+                          {/* <div className="icon">
                             <img src="assets/img/inner-pages/testing.svg" alt="" />
-                          </div>
+                          </div> */}
                           <div className="work-icon">
                               <img
                                 src="assets/img/inner-pages/work-icon-03.svg"
@@ -239,9 +239,9 @@ function CaseStudyDetailsPage() {
                       </div>
                       <div className="col-xl-3 col-sm-6">
                         <div className="single-process magnetic-item" >
-                          <div className="icon">
+                          {/* <div className="icon">
                             <img src="assets/img/inner-pages/deploy.svg" alt="" />
-                          </div>
+                          </div> */}
                           <div className="work-icon">
                                   <img
                                     src="assets/img/inner-pages/work-icon-04.svg"
@@ -254,9 +254,9 @@ function CaseStudyDetailsPage() {
 
                       <div className="col-xl-3 col-sm-6">
                         <div className="single-process magnetic-item" >
-                          <div className="icon">
+                          {/* <div className="icon">
                             <img src="assets/img/inner-pages/devlopment.svg" alt="" />
-                          </div>
+                          </div> */}
                           <div className="work-icon">
                               <img
                                 src="assets/img/inner-pages/work-icon-02.svg"
@@ -268,9 +268,9 @@ function CaseStudyDetailsPage() {
                       </div>
                       <div className="col-xl-3 col-sm-6">
                         <div className="single-process magnetic-item" >
-                          <div className="icon">
+                          {/* <div className="icon">
                             <img src="assets/img/inner-pages/testing.svg" alt="" />
-                          </div>
+                          </div> */}
                           <div className="work-icon">
                               <img
                                 src="assets/img/inner-pages/work-icon-03.svg"
@@ -282,9 +282,9 @@ function CaseStudyDetailsPage() {
                       </div>
                       <div className="col-xl-3 col-sm-6">
                         <div className="single-process magnetic-item" >
-                          <div className="icon">
+                          {/* <div className="icon">
                             <img src="assets/img/inner-pages/deploy.svg" alt="" />
-                          </div>
+                          </div> */}
                           <div className="work-icon">
                                   <img
                                     src="assets/img/inner-pages/work-icon-04.svg"

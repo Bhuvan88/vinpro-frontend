@@ -25,31 +25,42 @@ function Contactpage() {
 
   const [error, setError] = useState({});
 
-  const handleSubmit = async(e) => {
-    e.preventDefault();
-    setError(validate(formValue));
 
-    //demo_users
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    const validationErrors = validate(formValue);
+    setError(validationErrors);
+    //alert(JSON.stringify(validationErrors))
+    // Prevent form submission if there are validation errors
+    if (Object.keys(validationErrors).length > 0) {
+      alert("Please fill in all the required fields.");
+      return;
+    }
+  
     let encryptObj = {
       first_name: formValue.first_name,
       last_name: formValue.last_name,
-      company_mail: formValue.email,
-      phone_number: formValue.phone,
-      help_description: formValue.message,
-      company_name: formValue.company,
+      email: formValue.email,
+      phone: formValue.phone,
+      message: formValue.message,
+      company: formValue.company,
     };
-//alert(API_URL+'demo_users')
-    let respData = await axios({
-      method: "post",
-      url: `${API_URL}demo_users`,
-      data: encryptObj,
-    });
-    if(respData.status==200){
-      setFormValue(intialFormValue)
-      alert("Submitted Successfully")
+  
+    try {
+      let respData = await axios.post(`${API_URL}contactus`, encryptObj);
+      console.log(respData);
+      
+      if (respData.status === 200) {
+        setFormValue(intialFormValue);
+        
+        alert("Submitted Successfully");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Submission failed. Please try again.");
     }
-
-   
   };
 
   useEffect(() => {
@@ -61,18 +72,14 @@ function Contactpage() {
     if (!values.first_name) {
       errors.first_name = "First name is required";
     }
-    if (!values.last_name) {
-      errors.last_name = "Last name is required";
-    }
+ 
     if (!values.email) {
       errors.email = "Email is required";
     }
     if (!values.phone) {
       errors.phone = "Phone is required";
     }
-    if (!values.message) {
-      errors.message = "Message is required";
-    }
+
     if (!values.company) {
       errors.company = "Company is required";
     }

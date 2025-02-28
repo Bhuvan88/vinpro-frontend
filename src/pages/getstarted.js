@@ -11,12 +11,16 @@ const intialFormValue = {
   phone: "",
   message: "",
   company: "",
+  country: "",
+  company_size: "",
+  help_description: "",
 };
 const API_URL = "http://localhost:8055/items/"
 function Contactpage() {
   const [state, dispatch] = useReducer();
 
   const [formValue, setFormValue] = useState(intialFormValue);
+  const [countryList, setCountryList] = useState([]);
   const handleChange = (e) => {
     // alert("hii")
     e.preventDefault();
@@ -28,31 +32,75 @@ function Contactpage() {
 
   const [error, setError] = useState({});
 
+  useEffect(() => {
+    GetCountryList();
+    //console.log(error);
+  }, []);
+
+const handleCountryChange = (e) => {
+  e.preventDefault();
+  let { id, value } = e.target;
+  // alert(value)
+  let formData = { ...formValue, ...{ [id]: value } };
+  setError({});
+  setFormValue(formData);
+};
+
+const handleSizechange = (e) => {
+  e.preventDefault();
+  let { id, value } = e.target;
+  let formData = { ...formValue, ...{ [id]: value } };
+  setError({});
+  setFormValue(formData);
+};
+
+  const GetCountryList = async () => {
+    let respData = await axios({
+      method: "get",
+      url: `${API_URL}countries`,
+    });
+    //console.log(respData.data);
+    setCountryList(respData?.data?.data);
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(validate(formValue));
-
-    //demo_users
+  
+    const validationErrors = validate(formValue);
+    setError(validationErrors);
+  
+    // Prevent form submission if there are validation errors
+    if (Object.keys(validationErrors).length > 0) {
+      //alert("Please fill in all the required fields.");
+      return;
+    }
+  
     let encryptObj = {
       first_name: formValue.first_name,
       last_name: formValue.last_name,
       company_mail: formValue.email,
       phone_number: formValue.phone,
-      help_description: formValue.message,
+      help_description: formValue.help_description,
       company_name: formValue.company,
+      country: formValue.country,
+      company_size: formValue.company_size,
+      
     };
-    //alert(API_URL+'demo_users')
-    let respData = await axios({
-      method: "post",
-      url: `${API_URL}demo_users`,
-      data: encryptObj,
-    });
-    if (respData.status == 200) {
-      setFormValue(intialFormValue)
-      alert("Submitted Successfully")
+  
+    try {
+      let respData = await axios.post(`${API_URL}demo_users`, encryptObj);
+      
+      if (respData.status === 200) {
+        setFormValue(intialFormValue);
+        
+        alert("Submitted Successfully");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Submission failed. Please try again.");
     }
-
   };
+  
 
   useEffect(() => {
     console.log(error);
@@ -63,21 +111,18 @@ function Contactpage() {
     if (!values.first_name) {
       errors.first_name = "First name is required";
     }
-    if (!values.last_name) {
-      errors.last_name = "Last name is required";
-    }
+  
     if (!values.email) {
       errors.email = "Email is required";
     }
     if (!values.phone) {
       errors.phone = "Phone is required";
     }
-    if (!values.message) {
-      errors.message = "Message is required";
+    if(!values.country){
+      errors.country = "Country is required"
     }
-    if (!values.company) {
-      errors.company = "Company is required";
-    }
+   
+  
     return errors;
   };
 
@@ -179,21 +224,21 @@ function Contactpage() {
                       </div>
                       <div className="col-lg-12 mb-20">
                         <div className="form-inner">
-                          <select class="form-select" aria-label="Default select example">
+                          <select class="form-select" aria-label="Default select example" id="company_size" onChange={handleCountryChange}>
                             <option selected>Select company size</option>
                             <option value="1">1 to 10</option>
                             <option value="2">11 to 50</option>
                             <option value="3">51 to 100</option>
                           </select>
                           {error.message && (
-                            <span className="text-danger">{error.message}</span>
+                            <span className="text-danger">{error.company_size}</span>
                           )}
                         </div>
                       </div>
 
                       <div className="col-lg-12 mb-20">
                         <div className="form-inner">
-                          <select id="how_can_we_help_you_new-input" name="how_can_we_help_you_new" >
+                          <select id="help_description" name="how_can_we_help_you_new"  onChange={handleCountryChange}>
                             <option value="" selected="true" disabled="true">How can we help you?</option>
                             <option value="Hire employees with Skuad as the legal employer (EoR)">Hire employees with Skuad as the legal employer (EoR)</option>
                             <option value="Recruitment of employees/contractors (Recruitment + EoR)">Recruitment of employees/contractors (Recruitment + EoR)</option>
@@ -202,22 +247,21 @@ function Contactpage() {
                             <option value="Seamlessly manage your freelancer network (FMS)">Seamlessly manage your freelancer network (FMS)</option>
                             <option value="Other">Other</option>
                           </select>
-                          {error.message && (
-                            <span className="text-danger">{error.message}</span>
-                          )}
+                         
                         </div>
                       </div>
 
                       <div className="col-lg-12 mb-20">
                         <div className="form-inner">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected>Which countries do you want to hire in?</option>
-                            <option value="1">India</option>
-                            <option value="2">Dubai</option>
-                            <option value="3">Behrain</option>
+                          <select class="form-select" aria-label="Default select example" id="country" onChange={handleCountryChange}>
+                            <option selected>Country</option>
+                            {
+                              countryList && countryList.map((country, index) => (
+                                <option key={index} value={country.name}>{country.name}</option>
+                            ))}
                           </select>
                           {error.message && (
-                            <span className="text-danger">{error.message}</span>
+                            <span className="text-danger">{error.country}</span>
                           )}
                         </div>
                       </div>
@@ -226,7 +270,7 @@ function Contactpage() {
                       <div className="col-lg-12 text-center mt-3">
                         <div className="form-inner">
                           <button className="primary-btn3 " type="submit"
-                          //onClick={(e) => handleSubmit(e, "user")}
+                          onClick={(e) => handleSubmit(e, "user")}
                           >
                             Submit
                           </button>

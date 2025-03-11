@@ -3,7 +3,7 @@
 ===========================*/
 :root {
   --font-saira: "Saira", sans-serif;
-  --white-color: #1D1D1D;
+  --white-color: #102b71;
   /*
   --white-color: #fff;
   --black-color: #000;
@@ -11,7 +11,8 @@
   --black-color: #fff;
   --black-color2: #f1f1f1;
   --gray-color: #f7f7fd;
-  --paragraph-color: #272727;
+  --paragraph-color: #102b71;
+  --paragraph-col: #102b71;
   --theme-color: #06D889;
   --body-color: #eaf1f5;
   --border-color: #232323;
@@ -100,6 +101,7 @@ h6 {
   font-family: var(--font-saira);
   font-weight: 700;
   margin-bottom: 15px;
+  color: #102b71;
 }
 
 img {
@@ -116,7 +118,7 @@ ol {
 
 p {
   margin: 0;
-  color: #272727;
+  color: #102b71;
   line-height: 1.8;
 }
 
@@ -8740,7 +8742,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 0.02em;
-  color: #272727;
+  color: #102b71;
   margin-bottom: 15px;
 }
 .what-we-do-content .about-featue li:nth-child(even) {
@@ -11298,11 +11300,11 @@ color: #0D3069;
 }
 
 .section-title-4.home h2{
-  color: #000 !important;
+  color: #102b71;
 }
 
 .section-title-4.home p{
-  color: #000 !important;
+  color: #102b71 !important;
 }
 
 .whyIndia{
@@ -11387,4 +11389,14 @@ color: #0D3069;
     border-radius: 18px;
     padding: 6px 7px;
     cursor: pointer;
+}
+.calculationSection{
+	padding: 160px 0 !important;
+  background-color: #102b71;
+  margin-bottom: 120px !important;
+}
+
+.estimateText{
+  color: #ffffff;
+  font-family: var(--font-saira);
 }

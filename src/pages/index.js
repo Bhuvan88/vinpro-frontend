@@ -12,7 +12,7 @@ export default function Home() {
   useBodyClass("home-dark2");
   const [showEdit, setShowEdit] = useState(false);
 
-  const Estimation = () => <div>
+  const Estimation = () => <div className='estimateText'>
     <div className="d-flex justify-content-between group-btn mt-2">
       <div class="btn-group btn-small" role="group" aria-label="Basic radio toggle button group">
         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked />
@@ -51,7 +51,7 @@ export default function Home() {
 
 
   const CalculatorSection = () =>
-    <div className="home3-solution-section sec-mar">
+    <div className="home3-solution-section calculationSection">
       <div className="container">
         <div className="row justify-content-center g-4">
           <div
@@ -61,7 +61,7 @@ export default function Home() {
           >
             <div className="section-title-4 home">
               <span>Higring Insights</span>
-              <h2>Calculate the cost too hire an employee in a new country</h2>
+              <h2 style={{color:'#ffffff'}}>Calculate the cost too hire an employee in a new country</h2>
             </div>
             {showEdit && <Estimation />}
           </div>
@@ -71,7 +71,7 @@ export default function Home() {
             data-wow-duration="1500ms"
           >
             <div className="faq-page">
-              <div className="contact-form-wrap">
+              <div className="contact-form-wrap" style={{backgroundColor:'#f1f1f1'}}>
 
                 <div className="contact-form">
                   <form>

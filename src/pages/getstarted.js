@@ -15,7 +15,9 @@ const intialFormValue = {
   company_size: "",
   help_description: "",
 };
-const API_URL = "http://localhost:8055/items/"
+//const API_URL = "http://localhost:8055/items/"
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 function Contactpage() {
   const [state, dispatch] = useReducer();
 
@@ -57,7 +59,7 @@ const handleSizechange = (e) => {
   const GetCountryList = async () => {
     let respData = await axios({
       method: "get",
-      url: `${API_URL}countries`,
+      url: `${API_URL}items/countries`,
     });
     //console.log(respData.data);
     setCountryList(respData?.data?.data);

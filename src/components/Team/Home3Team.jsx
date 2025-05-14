@@ -1,6 +1,27 @@
-import React from 'react'
+import React, { use, useEffect, useState } from "react";
+import axios from "axios";
 
 function Home3Team() {
+  const [members, setMembers] = useState(null);
+    
+    useEffect(() => {
+      getTeamlist();
+    }, []);
+  
+    const API_URL = process.env.NEXT_PUBLIC_API_URL; //"http://localhost:8055/";
+    const getTeamlist = async() => {
+      try {
+        let respData = await axios.get(`${API_URL}items/team_members`);
+        console.log(respData);
+        
+        if (respData.status === 200 && respData.data.data.length > 0) {
+          setMembers(respData.data.data);
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+      }
+  }
+  
   return (
     <div className="home3-team-area sec-mar">
     <div className="container">
@@ -14,25 +35,29 @@ function Home3Team() {
         </div>
       </div> 
       <div className="row">
-        <div className="col-lg-3 col-sm-6 experts wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+      {members && members.map((item,i) =>{
+        var delay = (100 * i) + 100;
+        return <div className="col-lg-3 col-sm-6 experts wow animate fadeInUp" data-wow-delay={delay+"ms"} data-wow-duration="1500ms">
           <div className="experts-card magnetic-item">
             <div className="experts-img">
-              <img className="img-fluid" src="assets/img/home-4/11.png" alt="" />
-              <div className="expert-social">
+              <img className="img-fluid" src={API_URL+'assets/'+item?.image} alt="" />
+              {/* <div className="expert-social">
                 <ul>
                   <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
                   <li><a href="https://twitter.com/"><i className="bx bxl-twitter" /></a></li>
                   <li><a href="https://www.instagram.com/"><i className="bx bxl-pinterest-alt" /></a></li>
                   <li><a href="https://www.pinterest.com/"><i className="bx bxl-instagram" /></a></li>
                 </ul>
-              </div>
+              </div> */}
             </div>
             <div className="experts-content">
-              <h4>Varunkumar K</h4>
-              <span>Group CEO</span>
+              <h4>{item?.first_name + ' ' + item?.last_name}</h4>
+              <span>{item?.designation}</span>
             </div>
           </div>
-        </div>
+        </div> }
+      )}
+        {/*}
         <div className="col-lg-3 col-sm-6 experts wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
           <div className="experts-card magnetic-item">
             <div className="experts-img">
@@ -90,6 +115,7 @@ function Home3Team() {
             </div>
           </div>
         </div>
+        */}
       </div> 
     </div>
   </div>

@@ -11,7 +11,7 @@ const intialFormValue = {
   message: "",  
   company: "",
 };
-const API_URL = "http://localhost:8055/items/"
+const API_URL = process.env.NEXT_PUBLIC_API_URL; //"http://localhost:8055/";
 function Contactpage() {
   const [formValue, setFormValue] = useState(intialFormValue);
   const handleChange = (e) => {
@@ -25,15 +25,12 @@ function Contactpage() {
 
   const [error, setError] = useState({});
 
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
   
     const validationErrors = validate(formValue);
     setError(validationErrors);
-    //alert(JSON.stringify(validationErrors))
-    // Prevent form submission if there are validation errors
+    
     if (Object.keys(validationErrors).length > 0) {
       alert("Please fill in all the required fields.");
       return;
@@ -49,7 +46,7 @@ function Contactpage() {
     };
   
     try {
-      let respData = await axios.post(`${API_URL}contactus`, encryptObj);
+      let respData = await axios.post(`${API_URL}items/contactus`, encryptObj);
       console.log(respData);
       
       if (respData.status === 200) {

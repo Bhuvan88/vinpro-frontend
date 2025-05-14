@@ -1,6 +1,27 @@
-import React from 'react'
+import React, { use, useEffect, useState } from "react";
+import axios from "axios";
 
 function Pricing4() {
+   const [pricelist, setPricelist] = useState(null);
+      
+      useEffect(() => {
+        getTeamlist();
+      }, []);
+    
+      const API_URL = process.env.NEXT_PUBLIC_API_URL; //"http://localhost:8055/";
+      const getTeamlist = async() => {
+        try {
+          let respData = await axios.get(`${API_URL}items/price_list`);
+          console.log(respData);
+          
+          if (respData.status === 200 && respData.data.data.length > 0) {
+            //console.log(respData.data.data);
+            setPricelist(respData.data.data);
+          }
+        } catch (error) {
+          console.error("Error submitting form:", error);
+        }
+    }
   return (
     <div className="home4-pricing-plan" style={{backgroundColor:'#fff'}}>
        <div className="gradiant-img">
@@ -27,27 +48,31 @@ function Pricing4() {
           <div className="tab-content" id="nav-tabContent">
             <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabIndex={0}>
               <div className="row g-4 align-items-center justify-content-center">
-                <div className="col-xl-4 col-md-6 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+              {pricelist && pricelist.map((item,i) =>{
+                var iteminfo = JSON.parse(item.details);
+                return <div className="col-xl-4 col-md-6 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                   <div className="pricing-card two">
                     <div className="pricing-top">
-                      <span>Contracts</span>
-                      <h2><sup>$</sup>19<sub>/Starting from</sub></h2>
+                      <span>{item.title}</span>
+                      <h2><sup>$</sup>{item.price}<sub>/{item.pricetitle}</sub></h2>
                     </div>
                     <div className="pricing-content">
                       <ul>
-                        <li>Hire and pay contractors globally<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Payments in 100+ currencies<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Perks, benefits, time-off and expenses<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Milestone, hourly, or fixed invoicing<img src="assets/img/home-4/check.svg" alt="" /></li>
-                        <li>Multi-channel support and guidance<img src="assets/img/home-4/check.svg" alt="" /></li>
-                      </ul>
+                      {iteminfo.map((info,j) =><li>{info}<img src="assets/img/home-4/check.svg" alt="" /></li>
+                      )}
+                       </ul>
                       <div className="pay-btn one">
-                        <a className="primary-btn3" href="#">Request Demo</a>
+                        <a className="primary-btn3" href={item.buttonlink}>{item.buttontext}</a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="col-xl-4 col-md-6 wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+              })}
+               
+              </div>
+            </div>
+            {/*
+             <div className="col-xl-4 col-md-6 wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                   <div className="pricing-card two">
                     <div className="pricing-top">
                       <span>Full-Time Employees</span>
@@ -89,9 +114,7 @@ function Pricing4() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            {/*
+
             <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabIndex={0}>
               <div className="row g-4 align-items-center justify-content-center">
                 <div className="col-xl-4 col-md-6">
@@ -154,7 +177,7 @@ function Pricing4() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>  
             </div>
             */}
           </div>

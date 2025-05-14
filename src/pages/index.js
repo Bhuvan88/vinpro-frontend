@@ -7,132 +7,74 @@ import Header from "@/components/header/Header";
 import Pricing from "@/components/pricingplan/Pricing4";
 import useBodyClass from "@/hooks/useBodyClass";
 import Head from "next/head";
+import axios from "axios";
 
 export default function Home() {
   useBodyClass("home-dark2");
   const [showEdit, setShowEdit] = useState(false);
+  const [countries, setCountries] = useState(null);
+  const [country, setCountry] = useState(null);
+  const [countryName, setCountryName] = useState(null);
 
-  const Estimation = () => <div className='estimateText'>
-    <div className="d-flex justify-content-between group-btn mt-2">
-      <div class="btn-group btn-small" role="group" aria-label="Basic radio toggle button group">
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked />
-        <label class="btn btn-outline-primary" for="btnradio1" >MONTHLY</label>
+  const [currency, setCurrency] = useState(null);
+  const [currencylist, setCurrencyList] = useState(null);
+  const [ctc, setCTC] = useState(null);
+  const [mode, setMode] = useState('yearly');
+  const [ctcCalculation, setCtcCalculation] = useState(null);
+  const [invoice, setInvoice] = useState(null);
+  const API_URL = process.env.NEXT_PUBLIC_API_URL; //"http://localhost:8055/";
 
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
-        <label class="btn btn-outline-primary" for="btnradio2">ANNUAL</label>
-      </div>
-      <div>
-        <button type="button" class="btn btn-outline-primary"> <i className="bi bi-download" /><span> </span>Download</button>
-      </div>
-    </div>
+  useEffect(() => {
+    getCountries();
+  }, []);
 
-    <div className="d-flex justify-content-between mt-3">
-      <h6>Gross Monthly Pay</h6>
-      <h6>INR 10,000</h6>
-    </div>
-    <div className="d-flex justify-content-between">
-      <h6>Employee Cost</h6>
-      <h6>INR 500</h6>
-    </div>
-    <div className="d-flex justify-content-between">
-      <h6>Skuad fee</h6>
-      <h6>INR 500</h6>
-    </div>
-    <div className="d-flex justify-content-between">
-      <h6>Total monthly cost of employee</h6>
-      <h6>INR 24,500</h6>
-    </div>
-    <hr />
-    <div className="d-flex align-items-center justify-content-between">
-      <h6 className="mt-3">Want more detailed information?</h6>
-      <div className="learn-btn"><a class="primary-btn8" href="/service-details">TAlK TO EXPERT<svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 1H12M12 1V13M12 1L0.5 12"></path></svg></a></div>
-    </div>
-  </div>;
+  useEffect(() => {
+    if (country) {
+      countries.map((item, i) => {
+        if (item.id == country) {
+          setCurrencyList(item.currency);
+        }
+      });
 
+    }
+  }, [country]);
 
-  const CalculatorSection = () =>
-    <div className="home3-solution-section calculationSection">
-      <div className="container">
-        <div className="row justify-content-center g-4">
-          <div
-            className="col-lg-6 col-md-6 col-sm-10 wow animate fadeInUp"
-            data-wow-delay="300ms"
-            data-wow-duration="1500ms"
-          >
-            <div className="section-title-4 home">
-              <span>Higring Insights</span>
-              <h2 style={{color:'#ffffff'}}>Calculate the cost too hire an employee in a new country</h2>
-            </div>
-            {showEdit && <Estimation />}
-          </div>
-          <div
-            className="col-lg-6 col-md-6 col-sm-10 wow animate fadeInUp"
-            data-wow-delay="400ms"
-            data-wow-duration="1500ms"
-          >
-            <div className="faq-page">
-              <div className="contact-form-wrap" style={{backgroundColor:'#f1f1f1'}}>
+  useEffect(() => {
+    if (ctc) {
+      ctcCalcuation();
+    }
+  }, [mode, currency]);
 
-                <div className="contact-form">
-                  <form>
-                    <div className="row">
-                      <div className="col-md-12 mb-20">
-                        <div className="form-inner">
-                          <select className="form-select" id="country" aria-label="Select a country you want hire">
-                            <option value="1">Select a country you want hire</option>
-                            <option value="2">India</option>
-                            <option value="3">Bahrain</option>
-                            <option value="4">UAE</option>
-                            <option value="5">UK</option>
-                            <option value="6">USA</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 mb-20">
-                        <div className="form-inner">
-                          <select className="form-select" id="currency" aria-label="Currency">
-                            <option value="1">Currency</option>
-                            <option value="2">INR</option>
-                            <option value="3">BHD</option>
-                            <option value="3">USD</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 mb-20">
-                        <div className="form-inner">
-                          <input type="text" placeholder="gross Annual salary" />
-                        </div>
-                      </div>
-                      <div className="col-lg-12 mb-20 ">
-                        <div className="d-flex flex-row">
-                          <p>Eligible to work in India?</p>
-                          <div className="form-check">
-                            <input className="radio-btn" type="radio" name="inlineCheckbox" />
-                            <label className="form-check-label" for="inlineCheckbox">Yes</label>
-                          </div>
-                          <div class="form-check">
-                            <input className="radio-btn" type="radio" name="inlineCheckbox" />
-                            <label className="form-check-label" for="inlineCheckbox">No</label>
-                          </div>
-                        </div>
-                      </div>
+  const getCountries = async () => {
+    try {
+      let countryParams = process.env.NEXT_PUBLIC_API_URL+'items/countries?fields[]=*&fields[]=currency.name&fields[]=currency.rate';
+      console.log('countryParams', countryParams);
+      let respData = await axios.get(countryParams);
+      if (respData.status === 200 && respData.data.data.length > 0) {
+        setCountries(respData.data.data);
+      }
+    } catch (error) {
+      console.error("Error ", error);
+    }
+  }
 
-                      <div className="col-lg-12 text-center">
-                        <div className="form-inner">
-                          <button className="primary-btn3" type="submit" onClick={() => setShowEdit(true)}>
-                            Calculate
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>;
+  const ctcCalcuation = async () => {
+    try {
+      let params = 'country=' + country + '&salary=' + ctc + '&mode=' + mode + '&currency=' + currency;
+      let respData = await axios.get(`${API_URL}calculation/salaryCalc?${params}`);
+
+      if (respData.status === 200) {
+        setCtcCalculation(respData.data.data);
+        setInvoice(API_URL+'invoice/invoicepdf?country=' + country + '&salary=' + ctc + '&mode=' + mode + '&currency=' + currency)
+        setShowEdit(true);
+      } else {
+        console.log('tstt not ok')
+      }
+
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  }
 
   return (
     <>
@@ -147,7 +89,153 @@ export default function Home() {
 
       <Header />
       <Banner3 />
-      <CalculatorSection />
+
+      <div className="home3-solution-section calculationSection">
+        <div className="container">
+          <div className="row justify-content-center g-4">
+            <div
+              className="col-lg-6 col-md-6 col-sm-10 wow animate fadeInUp"
+              data-wow-delay="300ms"
+              data-wow-duration="1500ms"
+              
+            >
+              <div className="section-title-4 home">
+                <span>Higring Insights</span>
+                <h2 style={{ color: '#ffffff' }}>Calculate the cost too hire an employee in a new country</h2>
+              </div>
+              {showEdit &&
+
+                <div className='estimateText mt-3'>
+                  <div className="d-flex justify-content-between group-btn mt-2 mb-3">
+                    <div class="btn-group btn-small" role="group" aria-label="Basic radio toggle button group">
+                      <input type="radio" class="btn-check" onClick={(e) => setMode(e.target.value)} name="btnradio" id="btnradio1" value="monthly" autocomplete="off" checked={mode == "monthly" ? "checked" : ''} />
+                      <label class="btn btn-outline-primary" for="btnradio1" >MONTHLY</label>
+
+                      <input type="radio" class="btn-check" onClick={(e) => setMode(e.target.value)} name="btnradio" id="btnradio2" autocomplete="off" value="yearly" checked={mode == "yearly" ? "checked" : ''} />
+                      <label class="btn btn-outline-primary" for="btnradio2">ANNUAL</label>
+                    </div>
+                    <div>
+                      <a href={invoice} target='_blank'><button type="button" class="btn btn-outline-primary"> <i className="bi bi-download" /><span> </span>Download</button></a>
+                    </div>
+                  </div>
+                  {ctcCalculation && <div className="d-flex justify-content-between mt-3">
+                    <h6 style={{ color: '#fff' }} >Gross Salary</h6>
+                    <h6 style={{ color: '#fff' }}>{currency} {ctcCalculation.salary}</h6>
+                  </div>
+                  }
+                  {ctcCalculation && <div className="d-flex justify-content-between">
+                    <h6 style={{ color: '#fff' }} >Employeer Contribution</h6>
+                    <h6 style={{ color: '#fff' }}>{currency} {ctcCalculation.contribution}</h6>
+                  </div>
+                  }
+
+                  {ctcCalculation && <div className="d-flex justify-content-between">
+                    <h6 style={{ color: '#fff' }}>Vinpro Management Fee</h6>
+                    <h6 style={{ color: '#fff' }}>{currency} {ctcCalculation.managementfee}</h6>
+                  </div>
+                  }
+                  <hr />
+                  {ctcCalculation && <div className="d-flex justify-content-between">
+                    <h6 style={{ color: '#fff' }} >Total cost of employee</h6>
+                    <h6 style={{ color: '#fff' }}>{currency} {ctcCalculation.takeHome}</h6>
+                  </div>
+                  }
+
+
+                  {/*}  <div className="d-flex justify-content-between mt-3">
+                    <h6>Gross Monthly Pay</h6>
+                    <h6>INR 10,000</h6>
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <h6>Employee Cost</h6>
+                    <h6>INR 500</h6>
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <h6>Skuad fee</h6>
+                    <h6>INR 500</h6>
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <h6>Total monthly cost of employee</h6>
+                    <h6>INR 24,500</h6>
+                  </div>
+                  */}
+                  <hr />
+                  <div className="d-flex align-items-center justify-content-between">
+                    <h6 className="mt-3" style={{color:'#ffffff'}}>Want more detailed information?</h6>
+                    <div className="learn-btn"><a class="primary-btn8" href="#">TAlK TO EXPERT<svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 1H12M12 1V13M12 1L0.5 12"></path></svg></a></div>
+                  </div>
+                </div>
+
+              }
+            </div>
+            <div
+              className="col-lg-6 col-md-6 col-sm-10 wow animate fadeInUp"
+              data-wow-delay="400ms"
+              data-wow-duration="1500ms"
+              style={{margin:'auto'}}
+            >
+              <div className="faq-page">
+                <div className="contact-form-wrap" style={{ backgroundColor: '#f1f1f1' }}>
+
+                  <div className="contact-form">
+                    <form>
+                      <div className="row">
+                        <div className="col-md-12 mb-20">
+                          <div className="form-inner">
+                            <select onChange={(e) => { setCountry(e.target.value); setCountryName(e.target[e.target.selectedIndex].getAttribute('name')) }} className="form-select" id="country" aria-label="Select a country you want hire">
+                              <option>Select a country you want hire</option>
+                              {countries &&
+                                countries.map((item, i) => <option value={item.id} name={item.name}>{item.name}</option>)}
+                            </select>
+                          </div>
+                        </div>
+                        <div className="col-lg-6 mb-20">
+                          <div className="form-inner">
+                            <select onChange={(e) => setCurrency(e.target.value)} className="form-select" id="currency" aria-label="Currency">
+                              <option >Currency</option>
+                              {currencylist &&
+                                currencylist.map((item, i) => <option value={item.name}>{item.name}</option>)}
+                            </select>
+                          </div>
+                        </div>
+                        <div className="col-lg-6 mb-20">
+                          <div className="form-inner">
+                            <input type="text" onChange={(e) => setCTC(e.target.value)} placeholder="gross Annual salary" />
+                          </div>
+                        </div>
+                        <div className="col-lg-12 mb-20 ">
+                          <div className="d-flex flex-row">
+                            <p>Eligible to work in {countryName}?</p>
+                            <div className="form-check">
+                              <input className="radio-btn" type="radio" name="inlineCheckbox" />
+                              <label className="form-check-label" for="inlineCheckbox">Yes</label>
+                            </div>
+                            <div class="form-check">
+                              <input className="radio-btn" type="radio" name="inlineCheckbox" />
+                              <label className="form-check-label" for="inlineCheckbox">No</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="col-lg-12 text-center">
+                          <div className="form-inner">
+                            { currency && country && ctc ? 
+                              <button className="primary-btn3" type="button" onClick={() => ctcCalcuation()}>
+                                Calculate
+                              </button> : 
+                              <button className="primary-btn1" type="button" disabled >Calculate</button>
+                            }
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <About4 />
       <Pricing />

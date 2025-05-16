@@ -32,7 +32,19 @@ export default function Home() {
     if (country) {
       countries.map((item, i) => {
         if (item.id == country) {
-          setCurrencyList(item.currency);
+          console.log('item.currencynew', item);
+        
+          let currenyArray=[]
+          if(item.currencynew.length > 0){
+            item.currencynew.map((item2, i) => {
+              currenyArray.push({
+                name: item2.currency_id.name,
+                rate: item2.currency_id.rate
+              })
+            });
+            
+          }
+          setCurrencyList(currenyArray);
         }
       });
 
@@ -47,10 +59,11 @@ export default function Home() {
 
   const getCountries = async () => {
     try {
-      let countryParams = process.env.NEXT_PUBLIC_API_URL+'items/countries?fields[]=*&fields[]=currency.name&fields[]=currency.rate';
-      console.log('countryParams', countryParams);
+      let countryParams = process.env.NEXT_PUBLIC_API_URL+'items/countries?fields[]=*&fields[]=currency.name&fields[]=currency.rate&fields[]=currencynew.currency_id.name&fields[]=currencynew.currency_id.rate';
+    
       let respData = await axios.get(countryParams);
       if (respData.status === 200 && respData.data.data.length > 0) {
+        console.log('respData', respData);
         setCountries(respData.data.data);
       }
     } catch (error) {

@@ -32,8 +32,7 @@ export default function Home() {
     if (country) {
       countries.map((item, i) => {
         if (item.id == country) {
-          console.log('item.currencynew', item);
-        
+          //console.log('item.currencynew', item);
           let currenyArray=[]
           if(item.currencynew.length > 0){
             item.currencynew.map((item2, i) => {
@@ -63,7 +62,7 @@ export default function Home() {
     
       let respData = await axios.get(countryParams);
       if (respData.status === 200 && respData.data.data.length > 0) {
-        console.log('respData', respData);
+        //console.log('respData', respData);
         setCountries(respData.data.data);
       }
     } catch (error) {

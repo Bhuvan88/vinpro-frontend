@@ -20,26 +20,38 @@ export default function CalculatorSection() {
     getCountries();
   }, []);
 
-  useEffect(() => {
-    if (country) {
-      countries.map((item, i) => {
-        if (item.id == country) {
-          setCurrencyList(item.currency);
-        }
-      });
-
-    }
-  }, [country]);
+    useEffect(() => {
+      if (country) {
+        countries.map((item, i) => {
+          if (item.id == country) {
+            //console.log('item.currencynew', item);
+            let currenyArray=[]
+            if(item.currencynew.length > 0){
+              item.currencynew.map((item2, i) => {
+                currenyArray.push({
+                  name: item2.currency_id.name,
+                  rate: item2.currency_id.rate
+                })
+              });
+              
+            }
+            setCurrencyList(currenyArray);
+          }
+        });
+      }
+    }, [country]);
 
   useEffect(() => {
     if (ctc) {
       ctcCalcuation();
     }
-  }, [mode]);
+  }, [mode, currency]);
 
   const getCountries = async () => {
     try {
-      let respData = await axios.get(`${API_URL}items/countries?fields[]=*&fields[]=currency.name&fields[]=currency.rate`);
+      let countryParams = process.env.NEXT_PUBLIC_API_URL+'items/countries?fields[]=*&fields[]=currency.name&fields[]=currency.rate&fields[]=currencynew.currency_id.name&fields[]=currencynew.currency_id.rate';
+
+      let respData = await axios.get(countryParams);
       if (respData.status === 200 && respData.data.data.length > 0) {
         setCountries(respData.data.data);
       }

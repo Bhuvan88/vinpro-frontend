@@ -33,9 +33,9 @@ function StaffingSolutionPage() {
                 <div className="col-lg-6 d-flex align-items-center">
                   <div className="section-title-4 home case-content">
                     <h2>Our Staffing <span>Services</span> Include </h2>
-                    <h5 style={{ marginBottom: 0 }}>1.Temporary Staffing</h5>
+                    <h5 style={{ marginBottom: 0 }}>1. Temporary Staffing</h5>
                     <p style={{ marginBottom: 30 }}>Need additional support for a short-term project or during peak seasons? Our temporary staffing solutions are tailored to provide your business with skilled professionals quickly and efficiently, ensuring you never miss a beat.</p>
-                    <h5 style={{ marginBottom: 0 }}>2.Permanent Placement</h5>
+                    <h5 style={{ marginBottom: 0 }}>2. Permanent Placement</h5>
                     <p style={{ marginBottom: 0 }}>Finding long-term talent is key to your business’s growth. Our permanent staffing service focuses on sourcing highly qualified candidates who not only meet your technical requirements but align with your company culture and values.</p>
                   </div>
                 </div>
@@ -58,9 +58,9 @@ function StaffingSolutionPage() {
                 </div>
                 <div className="col-lg-6 d-flex align-items-center">
                   <div className="section-title-4 home case-content">
-                    <h5 style={{ marginBottom: 0 }}>3.Contract Staffing</h5>
+                    <h5 style={{ marginBottom: 0 }}>3. Contract Staffing</h5>
                     <p style={{ marginBottom: 30 }}>If you need flexible staffing for specialized roles or for a limited period, our contract staffing service gives you access to experts on a short-term basis, helping you maintain operational efficiency without the commitment of permanent hires.</p>
-                    <h5 style={{ marginBottom: 0 }}>4.Executive Search</h5>
+                    <h5 style={{ marginBottom: 0 }}>4. Executive Search</h5>
                     <p style={{ marginBottom: 0 }}>For key leadership roles, our executive search team is skilled in identifying top-tier candidates who have the vision and expertise to lead your organization into the future.</p>
                   </div>
                 </div>

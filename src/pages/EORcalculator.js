@@ -62,13 +62,19 @@ export default function CalculatorSection() {
 
   const ctcCalcuation = async () => {
     try {
+      if(ctc<=100){
+        setCtcCalculation(null);
+        setShowEdit(false);
+        return;
+      }
       let params = 'country=' + country + '&salary=' + ctc + '&mode=' + mode + '&currency=' + currency;
       let respData = await axios.get(`${API_URL}calculation/salaryCalc?${params}`);
-      if (respData.status === 200) {
-        setInvoice('http://0.0.0.0:8055/invoice/invoicepdf?country=' + country + '&salary=' + ctc + '&mode=' + mode + '&currency=' + currency)
-
+      if (respData.status === 200)
+      {
+        setInvoice(API_URL+'invoice/invoicepdf?country=' + country + '&salary=' + ctc + '&mode=' + mode + '&currency=' + currency);
         setCtcCalculation(respData.data.data);
         setShowEdit(true);
+        
       } else {
         console.log('tstt not ok')
       }
@@ -120,7 +126,7 @@ export default function CalculatorSection() {
                     </div>*/}
                     <div className="col-lg-6 mb-20">
                       <div className="form-inner">
-                        <select onChange={(e) => setCurrency(e.target.value)} className="form-select" id="currency" aria-label="Currency">
+                        <select onChange={(e) =>{setCurrency(e.target.value); setCTC(null)}} className="form-select" id="currency" aria-label="Currency">
                           <option >Currency</option>
                           {currencylist &&
                             currencylist.map((item, i) => <option value={item.name}>{item.name}</option>)}
@@ -129,7 +135,7 @@ export default function CalculatorSection() {
                     </div>
                     <div className="col-lg-6 mb-20">
                       <div className="form-inner">
-                        <input type="text" placeholder="gross Annual salary" onChange={(e) => setCTC(e.target.value)} />
+                        {ctc ? <input type="text" onChange={(e) => setCTC(e.target.value)} value={ctc} placeholder="Gross Annual Salary" /> : <input type="text" onChange={(e) => setCTC(e.target.value)} value="" placeholder="Gross Annual Salary" />}
                       </div>
                     </div>
 
@@ -172,9 +178,9 @@ export default function CalculatorSection() {
                     <div className="form-inner">
                       {currency && country && ctc ?
                         <button className="calculatebtn primary-btn3" type="button" onClick={() => ctcCalcuation()}>
-                          Calculate Costs
+                          Calculate Cost
                         </button> :
-                        <button className="calculatebtn primary-btn1" type="button" disabled >Calculate Costs</button>
+                        <button className="calculatebtn primary-btn1" type="button" disabled >Calculate Cost</button>
                       }
                     </div>
                   </div>
@@ -208,24 +214,24 @@ export default function CalculatorSection() {
 
               {ctcCalculation && <div className="d-flex justify-content-between mt-3">
                 <h6  >Gross Salary</h6>
-                <h6 >{currency} {ctcCalculation.salary}</h6>
+                <h6 >{currency} {(ctcCalculation.salary).toLocaleString()}</h6>
               </div>
               }
               {ctcCalculation && <div className="d-flex justify-content-between">
-                <h6  >Employeer Contribution</h6>
-                <h6 >{currency} {ctcCalculation.contribution}</h6>
+                <h6  >Employeer Cost</h6>
+                <h6 >{currency} {(ctcCalculation.contribution).toLocaleString()}</h6>
               </div>
               }
 
               {ctcCalculation && <div className="d-flex justify-content-between">
                 <h6 >Vinpro Management Fee</h6>
-                <h6 >{currency} {ctcCalculation.managementfee}</h6>
+                <h6 >{currency} {(ctcCalculation.managementfee).toLocaleString()}</h6>
               </div>
               }
               <hr />
               {ctcCalculation && <div className="d-flex justify-content-between">
-                <h6  >Total cost of employee</h6>
-                <h6 >{currency} {ctcCalculation.takeHome}</h6>
+                <h6  >Total Cost Of Employee</h6>
+                <h6 >{currency} {(ctcCalculation.takeHome).toLocaleString()}</h6>
               </div>
               }
 

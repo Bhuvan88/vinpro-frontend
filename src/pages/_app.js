@@ -13,9 +13,12 @@ import "../../public/assets/css/style2.css";
 import "../../public/assets/css/customStyle.css";
 import "node_modules/react-modal-video/css/modal-video.css";
 import Preloader from "@/components/common/Preloader";
+import TermlyCMP from '@/components/termly'
 
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
+  const WEBSITE_UUID = '2b51dbd4-7982-43c1-9bf6-28a0cc4dd601';
+
   useEffect(() => {
     setLoading(false);
     setTimeout(() => {
@@ -30,6 +33,7 @@ export default function App({ Component, pageProps }) {
     <>
       {loading ? (
         <>
+          <TermlyCMP websiteUUID={WEBSITE_UUID} />
           <Component {...pageProps} />
           <Script id="wow" src="/js/wow.min.js"></Script>
           <Script

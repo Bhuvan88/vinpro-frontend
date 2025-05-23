@@ -61,6 +61,11 @@ export default function CalculatorSection() {
   }
 
   const ctcCalcuation = async () => {
+    if(ctc<=100){
+      setCtcCalculation(null);
+      setShowEdit(false);
+      return;
+    }
     try {
       let params = 'country=' + country + '&salary=' + ctc + '&mode=' + mode + '&currency=' + currency;
       let respData = await axios.get(`${API_URL}calculation/salaryCalc?${params}`);

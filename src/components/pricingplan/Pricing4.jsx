@@ -11,7 +11,7 @@ function Pricing4() {
       const API_URL = process.env.NEXT_PUBLIC_API_URL; //"http://localhost:8055/";
       const getTeamlist = async() => {
         try {
-          let respData = await axios.get(`${API_URL}items/price_list`);
+          let respData = await axios.get(`${API_URL}items/price_list?sort=-date_created`);
           console.log(respData);
           
           if (respData.status === 200 && respData.data.data.length > 0) {

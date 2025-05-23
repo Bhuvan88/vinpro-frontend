@@ -11,7 +11,7 @@ function Home3Team() {
     const API_URL = process.env.NEXT_PUBLIC_API_URL; //"http://localhost:8055/";
     const getTeamlist = async() => {
       try {
-        let respData = await axios.get(`${API_URL}items/team_members`);
+        let respData = await axios.get(`${API_URL}items/team_members?sort=-date_created`);
         console.log(respData);
         
         if (respData.status === 200 && respData.data.data.length > 0) {
@@ -34,10 +34,10 @@ function Home3Team() {
           </div>
         </div>
       </div> 
-      <div className="row">
+      <div className="row" style={{alignItems: "center", justifyContent: "center"}}>
       {members && members.map((item,i) =>{
         var delay = (100 * i) + 100;
-        return <div className="col-lg-3 col-sm-6 experts wow animate fadeInUp" data-wow-delay={delay+"ms"} data-wow-duration="1500ms">
+        return <div className="col-lg-3 col-sm-6 experts wow animate fadeInUp" style={{marginBottom: 30}} data-wow-delay={delay+"ms"} data-wow-duration="1500ms">
           <div className="experts-card magnetic-item">
             <div className="experts-img">
               <img className="img-fluid" src={API_URL+'assets/'+item?.image} alt="" />

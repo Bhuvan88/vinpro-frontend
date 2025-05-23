@@ -5991,7 +5991,7 @@ video {
   opacity: 1;
 }
 .home3-team-area .experts:nth-child(odd) {
-  margin-top: 30px;
+  margin-top: 0px;
 }
 @media (max-width: 991px) {
   .home3-team-area .experts {
@@ -8112,7 +8112,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
 }
 .home6-choose-section .choose-top .choose-right-img::after {
   content: "";
-  background-color: rgba(30, 28, 34, 0.5);
+  /* background-color: rgba(30, 28, 34, 0.5); */
   position: absolute;
   left: 0;
   top: 0;

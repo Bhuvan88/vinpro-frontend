@@ -246,6 +246,7 @@ video {
   margin-bottom: 7px;
 }
 .section-title-3 p {
+  text-align: justify;
   font-family: var(--font-saira);
   font-weight: 500;
   font-size: 15px;
@@ -331,6 +332,7 @@ video {
   color: var(--black-color);;
   margin-bottom: 0;
   padding-top: 20px;
+  
 }
 .section-title-4 .about-btn {
   padding-top: 35px;
@@ -3676,7 +3678,7 @@ video {
 }
 .home4-services-section .single-service-card .services-content h3 {
   margin-bottom: 10px;
-  color: #115a39;
+  color: var(--paragraph-color);
 }
 .home4-services-section .single-service-card .services-content h3 a {
   font-family: var(--font-saira);
@@ -4990,7 +4992,8 @@ video {
   font-weight: 400;
   font-size: 15px;
   line-height: 32px;
-  letter-spacing: 0.03em;
+  /* letter-spacing: 0.03em; */
+  text-align: justify;
   color: var(--paragraph-color);;
   margin-bottom: 50px;
 }
@@ -6116,6 +6119,7 @@ video {
   font-size: 15px;
   color: var(--paragraph-color);;
   padding-top: 5px;
+  text-align: justify;
 }
 .home3-blog-area .single-blog .blog-content .blog-footer {
   display: flex;
@@ -7412,7 +7416,7 @@ footer.four {
 footer .footer-top {
   border-top: 1px solid rgb(235 230 230 / 81%);
   border-bottom: 1px solid rgb(235 230 230 / 81%);
-  margin-bottom: 60px;
+  margin-bottom: 36px;
 }
 footer .footer-top .footer-top-content {
   display: flex;
@@ -7548,7 +7552,7 @@ footer .footer-widget .menu-container ul {
   list-style: none;
 }
 footer .footer-widget .menu-container ul li {
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 footer .footer-widget .menu-container ul li:last-child {
   margin-bottom: 0;
@@ -8168,9 +8172,10 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   font-weight: 500;
   font-size: 15px;
   line-height: 32px;
-  letter-spacing: 0.03em;
+  /* letter-spacing: 0.03em; */
   color: var(--black-color);;
   padding-left: 60px;
+  text-align: justify;
 }
 @media (max-width: 1199px) {
   .home6-choose-section .choose-btm .choose-left-content p {
@@ -9233,9 +9238,10 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   font-weight: 500;
   font-size: 15px;
   line-height: 28px;
-  letter-spacing: 0.03em;
+  /* letter-spacing: 0.03em; */
   color: var(--paragraph-color);;
   margin-bottom: 23px;
+  text-align: justify;
 }
 .case-study-pages .primary-btn3 {
   padding: 14px 50px;
@@ -10018,6 +10024,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
 }
 .case-study-details .case-content p:last-child {
   margin-bottom: 0;
+  text-align: justify;
 }
 .case-study-details .single-process {
   background: rgba(217, 217, 217, 0.05);
@@ -11322,6 +11329,7 @@ color: #0D3069;
 
 .section-title-4.home p{
   color: #102b71 !important;
+  text-align: justify;
 }
 
 .whyIndia{

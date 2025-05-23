@@ -155,7 +155,7 @@ function BlogPgage() {
                     <div className="row">
                       <div className="col-lg-7 d-flex align-items-center">
                         <div className="case-content">
-                          <h3>1.Payroll Services</h3>
+                          <h3>1. Payroll Services</h3>
                           <p>VINPRO Global provides flexible payroll solutions that help to simplify payroll, so you can scale up or down depending on your business needs. We manage the complexities and day-to-day tasks of payroll, so you can focus on running your business. By ensuring greater accuracy and seamless integration. Our extensive network of experts enables us to provide both local or global coverage, depending on where your business is based. </p>
                           <div className="linkfeature">
                               <ul>
@@ -185,7 +185,7 @@ function BlogPgage() {
                     <div className="row">
                       <div className="col-lg-7 d-flex align-items-center">
                         <div className="case-content">
-                        <h3>2.Process Payroll & HR</h3>
+                        <h3>2. Process Payroll & HR</h3>
                           <h5>We've Got Your Back For Payroll & HR Processing</h5>
                           <p>When It Comes To Managing Payroll And HR Tasks, You Can Count On Us To Be Your Reliable Support System. We Understand The Complexities Involved In These Critical Areas, And We're Here To Make Your Life Easier. Here's How We Support You
                             <br/>There Are Several Factors That Differentiate These Two Outsourcing Models. Here We Focus On The Main Differences:
@@ -234,7 +234,7 @@ function BlogPgage() {
                       </div>
                       <div className="col-lg-7 d-flex align-items-center">
                         <div className="case-content">
-                          <h3>3.Managed Payroll</h3>
+                          <h3>3. Managed Payroll</h3>
                           <h5>Relieve Your Payroll Burden with Our Managed Services</h5>
                           <p>Say goodbye to the hassle of payroll processing and let us handle it all for you. With our comprehensive Payroll Managed Services, we take care of the entire payroll process from start to finish, allowing you to redirect your valuable resources towards more valuable tasks</p>
                         </div>
@@ -258,7 +258,7 @@ function BlogPgage() {
                       </div>
                       <div className="col-lg-7 d-flex align-items-center">
                         <div className="case-content">
-                          <h3>4.Comprehensive Payroll</h3>
+                          <h3>4. Comprehensive Payroll</h3>
                           <h5>Leave Your Payroll in Our Capable Hands - We're Your Trusted Partner</h5>
                           <p>When it comes to running payroll smoothly and efficiently, count on us to take care of every detail. Our comprehensive payroll services cover everything from data capture to payment disbursal, including tax reporting. But we don't stop there. <br/>
                           We go the extra mile by acting as your dedicated payroll team, representing you and providing assistance to your employees.</p>

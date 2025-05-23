@@ -137,24 +137,24 @@ export default function Home() {
                   </div>
                   {ctcCalculation && <div className="d-flex justify-content-between mt-3">
                     <h6 style={{ color: '#fff' }} >Gross Salary</h6>
-                    <h6 style={{ color: '#fff' }}>{currency} {ctcCalculation.salary}</h6>
+                    <h6 style={{ color: '#fff' }}>{currency} {(ctcCalculation.salary).toLocaleString()}</h6>
                   </div>
                   }
                   {ctcCalculation && <div className="d-flex justify-content-between">
-                    <h6 style={{ color: '#fff' }} >Employeer Contribution</h6>
-                    <h6 style={{ color: '#fff' }}>{currency} {ctcCalculation.contribution}</h6>
+                    <h6 style={{ color: '#fff' }} >Employeer Cost</h6>
+                    <h6 style={{ color: '#fff' }}>{currency} {(ctcCalculation.contribution).toLocaleString()}</h6>
                   </div>
                   }
 
                   {ctcCalculation && <div className="d-flex justify-content-between">
                     <h6 style={{ color: '#fff' }}>Vinpro Management Fee</h6>
-                    <h6 style={{ color: '#fff' }}>{currency} {ctcCalculation.managementfee}</h6>
+                    <h6 style={{ color: '#fff' }}>{currency} {(ctcCalculation.managementfee).toLocaleString()}</h6>
                   </div>
                   }
                   <hr />
                   {ctcCalculation && <div className="d-flex justify-content-between">
-                    <h6 style={{ color: '#fff' }} >Total cost of employee</h6>
-                    <h6 style={{ color: '#fff' }}>{currency} {ctcCalculation.takeHome}</h6>
+                    <h6 style={{ color: '#fff' }} >Total Cost Of Employee</h6>
+                    <h6 style={{ color: '#fff' }}>{currency} {(ctcCalculation.takeHome).toLocaleString()}</h6>
                   </div>
                   }
 
@@ -168,7 +168,7 @@ export default function Home() {
                     <h6>INR 500</h6>
                   </div>
                   <div className="d-flex justify-content-between">
-                    <h6>Skuad fee</h6>
+                    <h6>Vinpro fee</h6>
                     <h6>INR 500</h6>
                   </div>
                   <div className="d-flex justify-content-between">
@@ -208,7 +208,7 @@ export default function Home() {
                         </div>
                         <div className="col-lg-6 mb-20">
                           <div className="form-inner">
-                            <select onChange={(e) => setCurrency(e.target.value)} className="form-select" id="currency" aria-label="Currency">
+                            <select onChange={(e) => {setCurrency(e.target.value); setCTC(null) }} className="form-select" id="currency" aria-label="Currency">
                               <option >Currency</option>
                               {currencylist &&
                                 currencylist.map((item, i) => <option value={item.name}>{item.name}</option>)}
@@ -217,7 +217,7 @@ export default function Home() {
                         </div>
                         <div className="col-lg-6 mb-20">
                           <div className="form-inner">
-                            <input type="text" onChange={(e) => setCTC(e.target.value)} placeholder="gross Annual salary" />
+                           {ctc ? <input type="text" onChange={(e) => setCTC(e.target.value)} value={ctc} placeholder="Gross Annual Salary" /> : <input type="text" onChange={(e) => setCTC(e.target.value)} value="" placeholder="Gross Annual Salary" />}
                           </div>
                         </div>
                         <div className="col-lg-12 mb-20 ">

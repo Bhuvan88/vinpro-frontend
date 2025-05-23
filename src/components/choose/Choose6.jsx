@@ -22,7 +22,7 @@ function Choose6() {
                 <div className="choose-right-img magnetic-item">
                   <img
                     className="img-fluid"
-                    src="assets/img/home-3/3.png"
+                    src="assets/img/home-3/vinpromember.jpg"
                     alt=""
                   />
                 </div>

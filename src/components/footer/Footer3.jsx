@@ -34,7 +34,7 @@ function Footer3() {
   </div>
   <div className="container">
     <div className="row g-lg-4 gy-5">
-      <div className="col-lg-4 col-sm-6 d-flex">
+      <div className="col-lg-3 col-sm-6 d-flex">
         <div className="footer-widget">
           <div className="footer-contact mb-40">
             <h4>
@@ -54,22 +54,10 @@ function Footer3() {
             </h4>
             <a href="mailto:ifo@example.com">Hr@vinproglobal.com</a>
           </div>
-          <div className="footer-contact">
-            <h6>See Our New updates</h6>
-            <form>
-              <div className="form-inner">
-                <input type="text" placeholder="Email here..." />
-                <button type="submit">
-                  <svg width={17} height={17} viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 1H12M12 1V13M12 1L0.5 12" />
-                  </svg>
-                </button>
-              </div>
-            </form>
-          </div>
+          
         </div>
       </div>
-      <div className="col-lg-3 col-sm-6 d-flex justify-content-lg-start justify-content-sm-end">
+      <div className="col-lg-4 col-sm-6 d-flex justify-content-lg-start justify-content-sm-end">
         <div className="footer-widget">
           <div className="widget-title">
             <h4>About Us</h4>
@@ -92,10 +80,10 @@ function Footer3() {
           <div className="menu-container">
             <ul>
               <li><Link legacyBehavior href="/about"><a>About Us</a></Link></li>
-              <li><Link legacyBehavior href="/case-study"><a>Employer of Records</a></Link></li>
-              <li><Link legacyBehavior href="/blog"><a>Staffing Solutions</a></Link></li>
-              <li><Link legacyBehavior href="/team1"><a>HR & Payroll Outsourcing</a></Link></li>
-              <li><Link legacyBehavior href="/project"><a>Contact Us</a></Link></li>
+              <li><Link legacyBehavior href="/employer-of-records"><a>Employer of Records</a></Link></li>
+              <li><Link legacyBehavior href="/staffing-solution"><a>Staffing Solutions</a></Link></li>
+              <li><Link legacyBehavior href="/hr-payroll"><a>HR & Payroll</a></Link></li>
+              <li><Link legacyBehavior href="/contact"><a>Contact Us</a></Link></li>
               <li><Link legacyBehavior href="/pricing"><a>Pricing Plan</a></Link></li>
             </ul>
           </div>
@@ -108,13 +96,25 @@ function Footer3() {
           </div>
           <div className="menu-container">
             <ul>
-              <li><a href="#">Support Area</a></li>
-              <li><a href="#">Support Policy</a></li>
-              <li><a href="#">Terms &amp; Conditions</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Career</a></li>
-              <li><Link legacyBehavior href="/pricing"><a>Pricing Plan</a></Link></li>
+              <li><a href="#" class="termly-display-preferences">Cookie Policy </a></li>
+              <li><a href="/termsandconditions">Terms &amp; Conditions</a></li>
+              <li><a href="/privacypolicy">Privacy Policy</a></li>
+             
             </ul>
+          </div>
+          <br/>
+          <div className="footer-contact mt-3">
+            <p>See Our New updates</p>
+            <form>
+              <div className="form-inner">
+                <input type="text" placeholder="Email here..." />
+                <button type="submit">
+                  <svg width={17} height={17} viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 1H12M12 1V13M12 1L0.5 12" />
+                  </svg>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -130,10 +130,10 @@ function Footer3() {
             </div>
             <div className="footer-social">
               <ul>
-                <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
-                <li><a href="https://twitter.com/"><i className="bx bxl-twitter" /></a></li>
-                <li><a href="https://www.linkedin.com/"><i className="bx bxl-pinterest-alt" /></a></li>
-                <li><a href="https://www.instagram.com/"><i className="bx bxl-instagram" /></a></li>
+                <li><a href="https://www.facebook.com/Vinproglobal/"><i className="bx bxl-facebook" /></a></li>
+                {/* <li><a href="https://twitter.com/"><i className="bx bxl-twitter" /></a></li> */}
+                <li><a href="https://in.linkedin.com/company/vinproglobal/"><i className="bx bxl-linkedin" /></a></li>
+                <li><a href="https://www.instagram.com/vinproglobal/"><i className="bx bxl-instagram" /></a></li>
               </ul>
             </div>
           </div>
@@ -141,6 +141,7 @@ function Footer3() {
       </div>
     </div>
   </div>
+  <script src="https://app.termly.io/resource-blocker/2b51dbd4-7982-43c1-9bf6-28a0cc4dd601?autoBlock=on"></script>
 </footer>
 
   )

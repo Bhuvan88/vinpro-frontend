@@ -242,9 +242,9 @@ const handleSizechange = (e) => {
                         <div className="form-inner">
                           <select id="help_description" name="how_can_we_help_you_new"  onChange={handleCountryChange}>
                             <option value="" selected="true" disabled="true">How can we help you?</option>
-                            <option value="Hire employees with Skuad as the legal employer (EoR)">Hire employees with Skuad as the legal employer (EoR)</option>
+                            <option value="Hire employees with Vinpro as the legal employer (EoR)">Hire employees with Vinpro as the legal employer (EoR)</option>
                             <option value="Recruitment of employees/contractors (Recruitment + EoR)">Recruitment of employees/contractors (Recruitment + EoR)</option>
-                            <option value="Hire contractors with Skuad as the contracting entity (AoR)">Hire contractors with Skuad as the contracting entity (AoR)</option>
+                            <option value="Hire contractors with Vinpro as the contracting entity (AoR)">Hire contractors with Vinpro as the contracting entity (AoR)</option>
                             <option value="Global payment solution for managing own contractors">Global payment solution for managing own contractors</option>
                             <option value="Seamlessly manage your freelancer network (FMS)">Seamlessly manage your freelancer network (FMS)</option>
                             <option value="Other">Other</option>

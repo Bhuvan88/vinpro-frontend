@@ -78,7 +78,7 @@ function Header() {
       <div
         className={`header-sidebar ${state.isLeftSidebarOpen ? "slide" : ""}`}
       >
-        <div className="siderbar-top" style={{marginBottom: 20}}>
+        <div className="siderbar-top" style={{ marginBottom: 20 }}>
           <div className="sidebar-log">
             <Link legacyBehavior href="/">
               <a>
@@ -87,12 +87,12 @@ function Header() {
             </Link>
           </div>
           <div className="close-btn" onClick={toggleLeftSidebar}>
-            <i className="bi bi-x-lg" style={{color: '#000'}}/>
+            <i className="bi bi-x-lg" style={{ color: '#000' }} />
           </div>
         </div>
         <div className="sidebar-content">
           <p>
-          At Vinpro Connect, we are dedicated to simplifying the complexities of global employment and HR management. Since our inception in 2011.
+            At Vinpro Connect, we are dedicated to simplifying the complexities of global employment and HR management. Since our inception in 2011.
           </p>
         </div>
         <div className="address-card">
@@ -104,8 +104,8 @@ function Header() {
                 </div>
                 <div className="info">
                   <p>
-                  5/4, Valluvar Salai, Ramapuram,
-                  Chennai - 600 089,
+                    5/4, Valluvar Salai, Ramapuram,
+                    Chennai - 600 089,
                   </p>
                 </div>
               </div>
@@ -135,23 +135,19 @@ function Header() {
           <div className="blog-widget-body">
             <ul className="follow-list d-flex flex-row align-items-start gap-4">
               <li>
-                <a href="https://www.facebook.com/">
+                <a href="https://www.facebook.com/Vinproglobal/">
                   <i className="bx bxl-facebook" />
                 </a>
               </li>
+
               <li>
-                <a href="https://www.twitter.com/">
-                  <i className="bx bxl-twitter" />
+                <a href="https://in.linkedin.com/company/vinproglobal">
+                  <i className="bx bxl-linkedin" />
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/">
+                <a href="https://www.instagram.com/vinproglobal/">
                   <i className="bx bxl-instagram" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.pinterest.com/">
-                  <i className="bx bxl-pinterest" />
                 </a>
               </li>
             </ul>
@@ -185,34 +181,34 @@ function Header() {
           </div>
           <ul className="menu-list">
 
-          <li className={`${currentRoute === "/"?"active":""}`}>
+            <li className={`${currentRoute === "/" ? "active" : ""}`}>
               <Link legacyBehavior href="/">
                 <a>Home</a>
               </Link>
             </li>
 
-            <li className={`${currentRoute === "/about"?"active":""}`}>
+            <li className={`${currentRoute === "/about" ? "active" : ""}`}>
               <Link legacyBehavior href="/about">
                 <a>About Us</a>
               </Link>
             </li>
 
-            <li className={`${currentRoute === "/employer-of-records"?"active":""}`}>
-              <Link  legacyBehavior href="/employer-of-records">
+            <li className={`${currentRoute === "/employer-of-records" ? "active" : ""}`}>
+              <Link legacyBehavior href="/employer-of-records">
                 <a>Employer Of Record</a>
               </Link>
             </li>
-            <li className={`${currentRoute === "/staffing-solution"?"active":""}`}>
+            <li className={`${currentRoute === "/staffing-solution" ? "active" : ""}`}>
               <Link legacyBehavior href="/staffing-solution">
                 <a>Staffing Solution</a>
               </Link>
             </li>
-            <li className={`${currentRoute === "/hr-payroll"?"active":""}`}>
+            <li className={`${currentRoute === "/hr-payroll" ? "active" : ""}`}>
               <Link legacyBehavior href="/hr-payroll">
                 <a>HR & Payroll</a>
               </Link>
             </li>
-            <li className={`${currentRoute === "/contact"?"active":""}`}>
+            <li className={`${currentRoute === "/contact" ? "active" : ""}`}>
               <Link legacyBehavior href="/contact">
                 <a>Contact Us</a>
               </Link>

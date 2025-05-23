@@ -38,7 +38,10 @@ function CaseStudyDetailsPage() {
                   big and small to employ and pay workers in other countries quickly and affordably. </p>
               </div>
 
-              <div className="row g-lg-4 gy-5 mb-120">
+              <div className="row g-lg-4 gy-5 mb-60">
+                <div className="section-title-4 home case-content">
+                  <h2>Employer of Record - <span>EOR</span></h2>
+                </div>
                 <div className="col-lg-6">
                   <div className="case-img magnetic-item">
                     <img
@@ -48,17 +51,145 @@ function CaseStudyDetailsPage() {
                     />
                   </div>
                 </div>
-                <div className="col-lg-6 d-flex align-items-center">
+                <div className="col-lg-6">
                   <div className="section-title-4 home case-content">
-                    <h2>Employer of Record - <span>EOR</span></h2>
-                    <p style={{ marginBottom: 0 }}>An Employer of Record is a company or organization that that helps you employ people legally in other countries and is legally responsible paying employees, including dealing with employee taxes, benefits, insurance, visa application, and sponsorship applications and a great many other transactions and operations concerning human resources.</p>
+                    <p style={{ marginBottom: 0, paddingTop: 0 }}>An Employer of Record is a company or organization that that helps you employ people legally in other countries and is legally responsible paying employees, including dealing with employee taxes, benefits, insurance, visa application, and sponsorship applications and a great many other transactions and operations concerning human resources.</p>
                     <p style={{ marginBottom: 0 }}>Businesses rely on EOR to help them hire employees in multiple countries. With an EOR, a company can expand operations into another country without having to set up a local entity, which can be expensive and take months or longer to accomplish. Working with an EOR allows businesses big and small to employ and pay workers in other countries quickly and affordably.</p>
-                    <p>Companies often hire EOR to decrease all the complications and hurdles related to human resources operations, market access, market understanding and market participation, and managing payroll for international employees.</p>
                   </div>
                 </div>
+                <div className="section-title-4 home case-content">
+                  <p style={{ marginBottom: 0, paddingTop: 0 }}>Companies often hire EOR to decrease all the complications and hurdles related to human resources operations, market access, market understanding and market participation, and managing payroll for international employees.</p>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
 
-              <div className="row g-lg-4 gy-5 mb-120">
+        <div className="whyIndia mb-120">
+          <div className="container">
+            <div className="row mb-60">
+              <div className="col-lg-12">
+                <div className="case-content mb-60">
+                  <div className="d-flex justify-content-between mt-3">
+                    <h2>why EOR?</h2>
+                    {/* <a className="closeicon" onClick={()=>setShow(!show)}>X</a> */}
+                  </div>
+                  <p>Availability of suitable human resources have made India one of the hotspots of KPO/IT industry, Finance/Banking, Shared Service Centers, back office etc. India is home to a vast pool of human resources consisting of educated, English speaking, tech-savvy personnel.
+                    Every year, more than 30 million graduates are enrolled in higher education in India. These figures very well give the idea of human resources availability in India
+                    Onboard Talents in India with VINPRO</p>
+                </div>
+                <div className="row justify-content-center">
+                  <div className="col-xl-3 col-sm-6">
+                    <div className="single-process magnetic-item" >
+                      {/* <div className="icon">
+                            <img src="assets/img/inner-pages/research.svg" alt="" />
+                          </div> */}
+                      <div className="work-icon">
+                        <img
+                          src="assets/img/inner-pages/work-icon-01.svg"
+                          alt=""
+                        />
+                      </div>
+                      <h3>Hire Remote Employees</h3>
+                    </div>
+                  </div>
+                  <div className="col-xl-3 col-sm-6">
+                    <div className="single-process magnetic-item" >
+                      {/* <div className="icon">
+                            <img src="assets/img/inner-pages/devlopment.svg" alt="" />
+                          </div> */}
+                      <div className="work-icon">
+                        <img
+                          src="assets/img/inner-pages/work-icon-02.svg"
+                          alt=""
+                        />
+                      </div>
+                      <h3>Full India Coverage, No Compliance Risk</h3>
+                    </div>
+                  </div>
+                  <div className="col-xl-3 col-sm-6">
+                    <div className="single-process magnetic-item" >
+                      {/* <div className="icon">
+                            <img src="assets/img/inner-pages/testing.svg" alt="" />
+                          </div> */}
+                      <div className="work-icon">
+                        <img
+                          src="assets/img/inner-pages/work-icon-03.svg"
+                          alt=""
+                        />
+                      </div>
+                      <h3>Skilled Resources At Very Competitive Salary In India</h3>
+                    </div>
+                  </div>
+                  <div className="col-xl-3 col-sm-6">
+                    <div className="single-process magnetic-item" >
+                      {/* <div className="icon">
+                            <img src="assets/img/inner-pages/deploy.svg" alt="" />
+                          </div> */}
+                      <div className="work-icon">
+                        <img
+                          src="assets/img/inner-pages/work-icon-04.svg"
+                          alt=""
+                        />
+                      </div>
+                      <h3>No Transfer Pricing.</h3>
+                    </div>
+                  </div>
+
+                  <div className="col-xl-3 col-sm-6">
+                    <div className="single-process magnetic-item" >
+                      {/* <div className="icon">
+                            <img src="assets/img/inner-pages/devlopment.svg" alt="" />
+                          </div> */}
+                      <div className="work-icon">
+                        <img
+                          src="assets/img/inner-pages/work-icon-02.svg"
+                          alt=""
+                        />
+                      </div>
+                      <h3>Hire The Best Full-Time Talent Without Setting Up A New Entity</h3>
+                    </div>
+                  </div>
+                  <div className="col-xl-3 col-sm-6">
+                    <div className="single-process magnetic-item" >
+                      {/* <div className="icon">
+                            <img src="assets/img/inner-pages/testing.svg" alt="" />
+                          </div> */}
+                      <div className="work-icon">
+                        <img
+                          src="assets/img/inner-pages/work-icon-03.svg"
+                          alt=""
+                        />
+                      </div>
+                      <h3>Access To Local Tax And Employment Expertise</h3>
+                    </div>
+                  </div>
+                  <div className="col-xl-3 col-sm-6">
+                    <div className="single-process magnetic-item" >
+                      {/* <div className="icon">
+                            <img src="assets/img/inner-pages/deploy.svg" alt="" />
+                          </div> */}
+                      <div className="work-icon">
+                        <img
+                          src="assets/img/inner-pages/work-icon-04.svg"
+                          alt=""
+                        />
+                      </div>
+                      <h3>Reduce Admin And Skip Costly Legal And Payroll Set-Up</h3>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+
+              {/*  <div className="row g-lg-4 gy-5 mb-120">
                 <div className="col-lg-6 d-flex align-items-center">
                   <div className="section-title-4 home case-content">
                     <h2><span>EOR</span> Service</h2>
@@ -77,7 +208,7 @@ function CaseStudyDetailsPage() {
                     />
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="row g-lg-4 gy-5 mb-120">
                 <div className="col-lg-6">
@@ -178,134 +309,8 @@ function CaseStudyDetailsPage() {
             </div>
           </div>
         </div>
-
-        {show ?
-          <div>
-            <div className="whyIndia">
-              <div className="container">
-                <div className="row mb-60">
-                  <div className="col-lg-12">
-                    <div className="case-content mb-60">
-                      <div className="d-flex justify-content-between mt-3">
-                        <h2>why India?</h2>
-                        <a className="closeicon" onClick={()=>setShow(!show)}>X</a>
-                      </div>
-                      <p>Availability of suitable human resources have made India one of the hotspots of KPO/IT industry, Finance/Banking, Shared Service Centers, back office etc. India is home to a vast pool of human resources consisting of educated, English speaking, tech-savvy personnel.
-                        Every year, more than 30 million graduates are enrolled in higher education in India. These figures very well give the idea of human resources availability in India
-                        Onboard Talents in India with VINPRO</p>
-                    </div>
-                    <div className="row justify-content-center">
-                      <div className="col-xl-3 col-sm-6">
-                        <div className="single-process magnetic-item" >
-                          {/* <div className="icon">
-                            <img src="assets/img/inner-pages/research.svg" alt="" />
-                          </div> */}
-                          <div className="work-icon">
-                            <img
-                              src="assets/img/inner-pages/work-icon-01.svg"
-                              alt=""
-                            />
-                          </div>
-                          <h3>Hire Remote Employees</h3>
-                        </div>
-                      </div>
-                      <div className="col-xl-3 col-sm-6">
-                        <div className="single-process magnetic-item" >
-                          {/* <div className="icon">
-                            <img src="assets/img/inner-pages/devlopment.svg" alt="" />
-                          </div> */}
-                          <div className="work-icon">
-                              <img
-                                src="assets/img/inner-pages/work-icon-02.svg"
-                                alt=""
-                              />
-                            </div>
-                          <h3>Full India Coverage, No Compliance Risk</h3>
-                        </div>
-                      </div>
-                      <div className="col-xl-3 col-sm-6">
-                        <div className="single-process magnetic-item" >
-                          {/* <div className="icon">
-                            <img src="assets/img/inner-pages/testing.svg" alt="" />
-                          </div> */}
-                          <div className="work-icon">
-                              <img
-                                src="assets/img/inner-pages/work-icon-03.svg"
-                                alt=""
-                              />
-                            </div>
-                          <h3>Skilled Resources At Very Competitive Salary In India</h3>
-                        </div>
-                      </div>
-                      <div className="col-xl-3 col-sm-6">
-                        <div className="single-process magnetic-item" >
-                          {/* <div className="icon">
-                            <img src="assets/img/inner-pages/deploy.svg" alt="" />
-                          </div> */}
-                          <div className="work-icon">
-                                  <img
-                                    src="assets/img/inner-pages/work-icon-04.svg"
-                                    alt=""
-                                  />
-                                </div>
-                          <h3>No Transfer Pricing.</h3>
-                        </div>
-                      </div>
-
-                      <div className="col-xl-3 col-sm-6">
-                        <div className="single-process magnetic-item" >
-                          {/* <div className="icon">
-                            <img src="assets/img/inner-pages/devlopment.svg" alt="" />
-                          </div> */}
-                          <div className="work-icon">
-                              <img
-                                src="assets/img/inner-pages/work-icon-02.svg"
-                                alt=""
-                              />
-                            </div>
-                          <h3>Hire The Best Full-Time Talent Without Setting Up A New Entity</h3>
-                        </div>
-                      </div>
-                      <div className="col-xl-3 col-sm-6">
-                        <div className="single-process magnetic-item" >
-                          {/* <div className="icon">
-                            <img src="assets/img/inner-pages/testing.svg" alt="" />
-                          </div> */}
-                          <div className="work-icon">
-                              <img
-                                src="assets/img/inner-pages/work-icon-03.svg"
-                                alt=""
-                              />
-                            </div>
-                          <h3>Access To Local Tax And Employment Expertise</h3>
-                        </div>
-                      </div>
-                      <div className="col-xl-3 col-sm-6">
-                        <div className="single-process magnetic-item" >
-                          {/* <div className="icon">
-                            <img src="assets/img/inner-pages/deploy.svg" alt="" />
-                          </div> */}
-                          <div className="work-icon">
-                                  <img
-                                    src="assets/img/inner-pages/work-icon-04.svg"
-                                    alt=""
-                                  />
-                                </div>
-                          <h3>Reduce Admin And Skip Costly Legal And Payroll Set-Up</h3>
-                        </div>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-            <EORcalculator />
-          </div>
-          :
-          <Citylist show={setShow} />
-        }
+        <Citylist show={setShow} />
+        <EORcalculator />
       </div>
       <Home3Contact />
 

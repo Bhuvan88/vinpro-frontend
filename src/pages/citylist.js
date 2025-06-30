@@ -40,8 +40,8 @@ function Citylist(props) {
                       />
                     </div>
                     <div className="learn-more-btn">
-                      
-                        <a className="primary-btn8" onClick={()=>setView(true)}>
+                     
+                        <Link className="primary-btn8" scroll={true} href="#calculator">
                           <svg
                             width={12}
                             height={12}
@@ -52,7 +52,7 @@ function Citylist(props) {
                             <path d="M0 1H12M12 1V13M12 1L0.5 12" />
                           </svg>
                           LEARN MORE
-                        </a>
+                        </Link>
                       
                     </div>
                   </div>
@@ -82,7 +82,7 @@ function Citylist(props) {
                       />
                     </div>
                     <div className="learn-more-btn">
-                        <a className="primary-btn8" onClick={()=>setView(true)}>
+                        <Link className="primary-btn8" scroll={true} href="#calculator">
                           <svg
                             width={12}
                             height={12}
@@ -93,7 +93,7 @@ function Citylist(props) {
                             <path d="M0 1H12M12 1V13M12 1L0.5 12" />
                           </svg>
                           LEARN MORE
-                        </a>
+                        </Link>
                     
                     </div>
                   </div>
@@ -122,7 +122,7 @@ function Citylist(props) {
                       />
                     </div>
                     <div className="learn-more-btn">
-                        <a className="primary-btn8" onClick={()=>setView(true)}>
+                         <Link className="primary-btn8" scroll={true} href="#calculator">
                           <svg
                             width={12}
                             height={12}
@@ -133,7 +133,7 @@ function Citylist(props) {
                             <path d="M0 1H12M12 1V13M12 1L0.5 12" />
                           </svg>
                           LEARN MORE
-                        </a>
+                        </Link>
                     </div>
                   </div>
                 </div>
@@ -143,6 +143,7 @@ function Citylist(props) {
           </div>
         </div>
       </div>
+      <div id="calculator"  style={{ marginTop: 10 }}></div>
     </div>);
 }
 

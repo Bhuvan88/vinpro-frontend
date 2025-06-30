@@ -253,7 +253,7 @@ function Header() {
                 <div className="email-info">
                   <span>Email Now</span>
                   <h6>
-                    <a href="mailto:example@gmail.com">example@gmail.com</a>
+                    <a href="mailto:hr@vinproglobal.com">hr@vinproglobal.com</a>
                   </h6>
                 </div>
               </div>

@@ -8,6 +8,8 @@ import Pricing from "@/components/pricingplan/Pricing4";
 import useBodyClass from "@/hooks/useBodyClass";
 import Head from "next/head";
 import axios from "axios";
+import Partnar4 from "@/components/partner/Partnar4";
+
 
 export default function Home() {
   useBodyClass("home-dark2");
@@ -22,9 +24,14 @@ export default function Home() {
   const [mode, setMode] = useState('yearly');
   const [ctcCalculation, setCtcCalculation] = useState(null);
   const [invoice, setInvoice] = useState(null);
+  const [section1, setSection1] = useState([]);
+
   const API_URL = process.env.NEXT_PUBLIC_API_URL; //"http://localhost:8055/";
+  const API_URL_IMAGE = process.env.NEXT_PUBLIC_API_URL_IMAGE; //"http://localhost:8055/uploads/";
+
 
   useEffect(() => {
+    getWebContent();
     getCountries();
   }, []);
 
@@ -33,15 +40,15 @@ export default function Home() {
       countries.map((item, i) => {
         if (item.id == country) {
           //console.log('item.currencynew', item);
-          let currenyArray=[]
-          if(item.currencynew.length > 0){
+          let currenyArray = []
+          if (item.currencynew.length > 0) {
             item.currencynew.map((item2, i) => {
               currenyArray.push({
                 name: item2.currency_id.name,
                 rate: item2.currency_id.rate
               })
             });
-            
+
           }
           setCurrencyList(currenyArray);
         }
@@ -56,10 +63,24 @@ export default function Home() {
     }
   }, [mode, currency]);
 
+  const getWebContent = async () => {
+    try {
+      let contentParams = process.env.NEXT_PUBLIC_API_URL + 'items/webcontent';
+
+      let respData = await axios.get(contentParams);
+      if (respData.status === 200 && respData.data.data.length > 0) {
+        //console.log('contetnrespData >>', respData);
+        setSection1(respData.data.data);
+      }
+    } catch (error) {
+      console.error("Error ", error);
+    }
+  }
+
   const getCountries = async () => {
     try {
-      let countryParams = process.env.NEXT_PUBLIC_API_URL+'items/countries?fields[]=*&fields[]=currency.name&fields[]=currency.rate&fields[]=currencynew.currency_id.name&fields[]=currencynew.currency_id.rate';
-    
+      let countryParams = process.env.NEXT_PUBLIC_API_URL + 'items/countries?fields[]=*&fields[]=currency.name&fields[]=currency.rate&fields[]=currencynew.currency_id.name&fields[]=currencynew.currency_id.rate';
+
       let respData = await axios.get(countryParams);
       if (respData.status === 200 && respData.data.data.length > 0) {
         //console.log('respData', respData);
@@ -72,7 +93,7 @@ export default function Home() {
 
   const ctcCalcuation = async () => {
     try {
-      if(ctc<=100){
+      if (ctc <= 100) {
         setCtcCalculation(null);
         setShowEdit(false);
         return;
@@ -82,7 +103,7 @@ export default function Home() {
 
       if (respData.status === 200) {
         setCtcCalculation(respData.data.data);
-        setInvoice(API_URL+'invoice/invoicepdf?country=' + country + '&salary=' + ctc + '&mode=' + mode + '&currency=' + currency)
+        setInvoice(API_URL + 'invoice/invoicepdf?country=' + country + '&salary=' + ctc + '&mode=' + mode + '&currency=' + currency)
         setShowEdit(true);
       } else {
         console.log('tstt not ok')
@@ -114,12 +135,22 @@ export default function Home() {
               className="col-lg-6 col-md-6 col-sm-10 wow animate fadeInUp"
               data-wow-delay="300ms"
               data-wow-duration="1500ms"
-              
             >
-              <div className="section-title-4 home">
-                <span>Higring Insights</span>
-                <h2 style={{ color: '#ffffff' }}>Calculate the cost too hire an employee in a new country</h2>
-              </div>
+              {section1.length > 0 ?
+                section1.map((item, i) => {
+                  if (item?.section_title == 'HomeSection1') {
+                    return <div className="section-title-4 home h2white" key={i}>
+                      <span>{item?.title}</span>
+                      <div dangerouslySetInnerHTML={{ __html: (item?.description) }} />
+                    </div>
+                  }
+                })
+                :
+                <div className="section-title-4 home">
+                  <span>Higring Insights</span>
+                  <h2 style={{ color: '#ffffff' }}>Calculate the cost to hire an employee in a new country</h2>
+                </div>
+              }
               {showEdit &&
 
                 <div className='estimateText mt-3'>
@@ -178,7 +209,7 @@ export default function Home() {
                   */}
                   <hr />
                   <div className="d-flex align-items-center justify-content-between">
-                    <h6 className="mt-3" style={{color:'#ffffff'}}>Want more detailed information?</h6>
+                    <h6 className="mt-3" style={{ color: '#ffffff' }}>Want more detailed information?</h6>
                     <div className="learn-btn"><a class="primary-btn8" href="#">TAlK TO EXPERT<svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 1H12M12 1V13M12 1L0.5 12"></path></svg></a></div>
                   </div>
                 </div>
@@ -189,7 +220,7 @@ export default function Home() {
               className="col-lg-6 col-md-6 col-sm-10 wow animate fadeInUp"
               data-wow-delay="400ms"
               data-wow-duration="1500ms"
-              style={{margin:'auto'}}
+              style={{ margin: 'auto' }}
             >
               <div className="faq-page">
                 <div className="contact-form-wrap" style={{ backgroundColor: '#f1f1f1' }}>
@@ -208,7 +239,7 @@ export default function Home() {
                         </div>
                         <div className="col-lg-6 mb-20">
                           <div className="form-inner">
-                            <select onChange={(e) => {setCurrency(e.target.value); setCTC(null) }} className="form-select" id="currency" aria-label="Currency">
+                            <select onChange={(e) => { setCurrency(e.target.value); setCTC(null) }} className="form-select" id="currency" aria-label="Currency">
                               <option >Currency</option>
                               {currencylist &&
                                 currencylist.map((item, i) => <option value={item.name}>{item.name}</option>)}
@@ -217,7 +248,7 @@ export default function Home() {
                         </div>
                         <div className="col-lg-6 mb-20">
                           <div className="form-inner">
-                           {ctc ? <input type="text" onChange={(e) => setCTC(e.target.value)} value={ctc} placeholder="Gross Annual Salary" /> : <input type="text" onChange={(e) => setCTC(e.target.value)} value="" placeholder="Gross Annual Salary" />}
+                            {ctc ? <input type="text" onChange={(e) => setCTC(e.target.value)} value={ctc} placeholder="Gross Annual Salary" /> : <input type="text" onChange={(e) => setCTC(e.target.value)} value="" placeholder="Gross Annual Salary" />}
                           </div>
                         </div>
                         <div className="col-lg-12 mb-20 ">
@@ -236,10 +267,10 @@ export default function Home() {
 
                         <div className="col-lg-12 text-center">
                           <div className="form-inner">
-                            { currency && country && ctc ? 
+                            {currency && country && ctc ?
                               <button className="primary-btn3" type="button" onClick={() => ctcCalcuation()}>
                                 Calculate
-                              </button> : 
+                              </button> :
                               <button className="primary-btn1" type="button" disabled >Calculate</button>
                             }
                           </div>
@@ -254,7 +285,10 @@ export default function Home() {
         </div>
       </div>
 
-      <About4 />
+      <About4 data={section1} />
+      <div className="home4-trusted-client-area" style={{ marginTop: 120, marginLeft:88, marginRight:88 }}>
+          <Partnar4 />
+        </div>
       <Pricing />
       <Home3Contact />
 

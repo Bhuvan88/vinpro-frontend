@@ -89,7 +89,7 @@ export default function CalculatorSection() {
   }
 
 
-  return <div className="home3-solution-section sec-mar" style={{ marginTop: 60 }}>
+  return <div className="home3-solution-section" style={{marginTop: 60}} >
     <div className="container">
       <h2>EOR Calculator</h2>
       <p style={{ marginBottom: 40 }}>Select the country you want to hire in, to explore and benchmark salaries for international roles</p>

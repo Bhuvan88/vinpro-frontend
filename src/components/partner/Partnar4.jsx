@@ -24,7 +24,7 @@ function Partnar4()
   }
   
   return (
-    <div className="home4-trusted-client-area sec-mar">
+    <div>
       <p>We take care of more than 1.5k Trusted Allies</p>
       <div className="marque-wrap">
         <div className="marquee_text">

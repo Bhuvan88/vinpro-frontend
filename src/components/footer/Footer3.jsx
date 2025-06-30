@@ -52,7 +52,7 @@ function Footer3() {
               </svg>
               Say Hello
             </h4>
-            <a href="mailto:ifo@example.com">Hr@vinproglobal.com</a>
+            <a href="mailto:hr@vinproglobal.com">hr@vinproglobal.com</a>
           </div>
           
         </div>

@@ -1,7 +1,10 @@
 import Link from "next/link";
 import React from "react";
 
-function Choose6() {
+const Choose6 = (props) => {
+  const API_URL_IMAGE = process.env.NEXT_PUBLIC_API_URL_IMAGE; 
+  const { data, records, achived } = props;
+
   return (
     <div className="home6-choose-section sec-mar">
       <div className="container">
@@ -14,16 +17,16 @@ function Choose6() {
                 data-wow-duration="1500ms"
               >
                 <div className="choose-title">
-                  <span>Why Choose Us</span>
-                  <h2>Unlock the potential of your business.</h2>
+                  <span>{data?.subtitle}</span>
+                  <h2>{data?.title}</h2>
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="choose-right-img magnetic-item">
                   <img
                     className="img-fluid"
-                    src="assets/img/home-3/vinpromember.jpg"
-                    alt=""
+                    src={data?.image1 ? API_URL_IMAGE + data?.image1 : "assets/img/home-3/vinpromember.jpg"}
+                    alt="Member Images"
                   />
                 </div>
               </div>
@@ -49,11 +52,11 @@ function Choose6() {
                     <img src="assets/img/logo1.png" alt="" />
                   </div>
                   <h4>
-                      At Vinpro Connect, we are dedicated to simplifying the complexities of global employment and HR management. <br />
+                     {records? records.title : "At Vinpro Connect, we are dedicated to simplifying the complexities of global employment and HR management."} <br />
                     <span>Since 2011.</span>
                   </h4>
-                  <p>
-                  Our team is our greatest asset. Comprising experienced HR specialists, legal advisors, and payroll experts, we bring a wealth of knowledge and expertise to every client engagement. We are passionate about helping businesses succeed by managing their HR needs efficiently and effectively. </p>
+                  <div dangerouslySetInnerHTML={{ __html: (records?.description) }} />
+                 
                   
                   <div className="sl">
                     <h2>#1</h2>
@@ -76,8 +79,27 @@ function Choose6() {
                   </div>
                 </div>
               </div>
+
               <div className="col-lg-5">
                 <div className="choose-feature">
+                  {achived && achived.length > 0 ?
+                    <ul>
+                    {JSON.parse(achived?.list_details).map((item, index) => <li>
+                      <div className="single-feature">
+                        <div className="progress">
+                          <h3>
+                            <span className="counter">{item?.title}</span>%
+                          </h3>
+                        </div>
+                        <div className="content">
+                          <h4>{item?.subtitle}</h4>
+                          <p>{item?.description}</p>
+                        </div>
+                      </div>
+                    </li>
+                    )}
+                    </ul>
+                  :
                   <ul>
                     <li>
                       <div className="single-feature">
@@ -140,6 +162,7 @@ function Choose6() {
                       </div>
                     </li>
                   </ul>
+                  }
                 </div>
               </div>
             </div>

@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout";
 import Pricing from "@/components/pricingplan/Pricing4";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+
 const intialFormValue = {
   first_name: "",
   last_name: "",
@@ -11,9 +12,33 @@ const intialFormValue = {
   message: "",  
   company: "",
 };
-const API_URL = process.env.NEXT_PUBLIC_API_URL; //"http://localhost:8055/";
+
 function Contactpage() {
   const [formValue, setFormValue] = useState(intialFormValue);
+  const API_URL = process.env.NEXT_PUBLIC_API_URL; //"http://localhost:8055/";
+  const API_URL_IMAGE = process.env.NEXT_PUBLIC_API_URL_IMAGE;
+  const [bannerSection, setBannerSection] = useState(null);
+
+  useEffect(() => {
+      const fetchData = async () => {
+          try {
+              let contentParams = API_URL + 'items/webcontent';
+
+              let respData = await axios.get(contentParams);
+              if (respData.status === 200 && respData.data.data.length > 0) {
+                //setSections(respData.data.data);
+                var mysections = respData.data.data.filter(section => section.section_title === `ContactSection1`);
+                  if (mysections) {
+                      setBannerSection(mysections[0]);
+                  }
+              }
+            } catch (error) {
+              console.error("Error ", error);
+            }
+        };
+        fetchData();
+    }, []);
+
   const handleChange = (e) => {
    // alert("hii")
     e.preventDefault();
@@ -87,8 +112,10 @@ function Contactpage() {
     <Layout>
       <Breadcrumb
         // pageList="Contact"
-        title="For Any Querry"
+        title={bannerSection ? bannerSection?.title : "For Any Querry"}
         pageName="CONTACT"
+        image1={bannerSection && bannerSection?.image1 ? API_URL_IMAGE + bannerSection?.image1 : null}
+        image2={bannerSection && bannerSection?.image2 ? API_URL_IMAGE + bannerSection?.image2 : null}
       />
       <div className="contact-page-wrap sec-mar">
         <div className="container">

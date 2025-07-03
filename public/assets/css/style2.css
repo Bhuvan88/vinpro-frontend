@@ -2016,7 +2016,7 @@ video {
 }
 .banner-area3 .banner-wrapper .banner-video-area .video-area::after {
   content: "";
-  background: rgba(29, 29, 29, 0.7);
+ /*  background: rgba(29, 29, 29, 0.7); */
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: absolute;
   left: 0;
@@ -11431,4 +11431,8 @@ color: #0D3069;
 .home3-solution-section .btn:focus,
 .home3-solution-section .btn-check:focus+.btn{
   box-shadow: none;
+}
+
+.h2white h2{
+  color : #ffffff !important;
 }

@@ -6,6 +6,7 @@ function Footer3() {
   const API_URL = process.env.NEXT_PUBLIC_API_URL; //"http://localhost:8055/";
   const API_URL_IMAGE = process.env.NEXT_PUBLIC_API_URL_IMAGE;
   const [footerSection, setFooterSection] = useState(null);
+  const [address, setAddress] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,7 +26,23 @@ function Footer3() {
       }
     };
     fetchData();
+    addressInfo();
   }, []);
+
+  const addressInfo = async () => {
+      try {
+        let contentParams = API_URL + 'items/website_address';
+        let respData = await axios.get(contentParams);
+        if (respData.status === 200 && respData.data.data.length > 0) 
+        {
+          //console.log("inof >>", respData.data.data[0]);
+          setAddress(respData.data.data[0]);
+        }
+      } catch (error) {
+        console.error("Error ", error);
+      }
+    };
+
   return (
     <footer>
       <div className="footer-top">
@@ -48,7 +65,7 @@ function Footer3() {
                   </div>
                   <div className="content">
                     <span>Call Any Time</span>
-                    <h6><a href="tel: 29658718617">+91 9884882693</a></h6>
+                    <h6><a href={"tel:+91"+address?.address1}>+91 {address?.mobile}</a></h6>
                   </div>
                 </div>
               </div>
@@ -67,7 +84,7 @@ function Footer3() {
                   </svg>
                   Address
                 </h4>
-                <a href="#"> 5/4, Valluvar Salai, Ramapuram, Chennai - 600 089</a>
+                <a href="#"> {address?.address1}, {address?.address2}, {address?.city} - {address?.pincode}</a>
               </div>
               <div className="footer-contact mb-40">
                 <h4>
@@ -76,7 +93,7 @@ function Footer3() {
                   </svg>
                   Say Hello
                 </h4>
-                <a href="mailto:hr@vinproglobal.com">hr@vinproglobal.com</a>
+                <a href={"mailto:"+address?.emailid}>{address?.emailid}</a>
               </div>
 
             </div>
@@ -156,10 +173,10 @@ function Footer3() {
                 </div>
                 <div className="footer-social">
                   <ul>
-                    <li><a href="https://www.facebook.com/Vinproglobal/"><i className="bx bxl-facebook" /></a></li>
+                    <li><a href={address?.facebook_link}><i className="bx bxl-facebook" /></a></li>
                     {/* <li><a href="https://twitter.com/"><i className="bx bxl-twitter" /></a></li> */}
-                    <li><a href="https://in.linkedin.com/company/vinproglobal/"><i className="bx bxl-linkedin" /></a></li>
-                    <li><a href="https://www.instagram.com/vinproglobal/"><i className="bx bxl-instagram" /></a></li>
+                    <li><a href={address?.linkedin_link}><i className="bx bxl-linkedin" /></a></li>
+                    <li><a href={address?.instagram_link}><i className="bx bxl-instagram" /></a></li>
                   </ul>
                 </div>
               </div>

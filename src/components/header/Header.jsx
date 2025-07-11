@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useReducer, useRef } from "react";
+import React, { useEffect, useReducer, useRef, useState } from "react";
+import axios from "axios";
 
 const initialState = {
   activeMenu: "",
@@ -44,6 +45,9 @@ function reducer(state, action) {
 
 function Header() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [address, setAddress] = useState(null);
+  const API_URL = process.env.NEXT_PUBLIC_API_URL; //"http://localhost:8055/";
+
   const headerRef = useRef(null);
   const handleScroll = () => {
     const { scrollY } = window;
@@ -51,11 +55,25 @@ function Header() {
   };
   const currentRoute = useRouter().pathname;
   useEffect(() => {
+    addressInfo();
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const addressInfo = async () => {
+    try {
+      let contentParams = API_URL + 'items/website_address';
+      let respData = await axios.get(contentParams);
+      if (respData.status === 200 && respData.data.data.length > 0) {
+        console.log("inof >>", respData.data.data[0]);
+        setAddress(respData.data.data[0]);
+      }
+    } catch (error) {
+      console.error("Error ", error);
+    }
+  };
 
   const toggleMenu = (menu) => {
     dispatch({ type: "TOGGLE_MENU", menu });
@@ -104,8 +122,7 @@ function Header() {
                 </div>
                 <div className="info">
                   <p>
-                    5/4, Valluvar Salai, Ramapuram,
-                    Chennai - 600 089,
+                    {address?.address1}, {address?.address2},<br /> {address?.city} - {address?.pincode}
                   </p>
                 </div>
               </div>
@@ -114,7 +131,7 @@ function Header() {
                   <i className="fas fa-phone-alt" />
                 </div>
                 <div className="info">
-                  <a href="tel:05661111985">+91 98848 82693</a>
+                  <a href={"tel:+91" + address?.address1}>+91 {address?.mobile}</a>
                 </div>
               </div>
               <div className="single-info">
@@ -122,7 +139,7 @@ function Header() {
                   <i className="far fa-envelope" />
                 </div>
                 <div className="info">
-                  <a href="mailto: info@example.com">Hr@vinproglobal.com</a>
+                  <a href={"mailto:" + address?.emailid}>{address?.emailid}</a>
                 </div>
               </div>
             </div>
@@ -134,22 +151,9 @@ function Header() {
           <p className="para">Follow us on Social Network</p>
           <div className="blog-widget-body">
             <ul className="follow-list d-flex flex-row align-items-start gap-4">
-              <li>
-                <a href="https://www.facebook.com/Vinproglobal/">
-                  <i className="bx bxl-facebook" />
-                </a>
-              </li>
-
-              <li>
-                <a href="https://in.linkedin.com/company/vinproglobal">
-                  <i className="bx bxl-linkedin" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/vinproglobal/">
-                  <i className="bx bxl-instagram" />
-                </a>
-              </li>
+              <li><a href={address?.facebook_link}><i className="bx bxl-facebook" /></a></li>
+              <li><a href={address?.linkedin_link}><i className="bx bxl-linkedin" /></a></li>
+              <li><a href={address?.instagram_link}><i className="bx bxl-instagram" /></a></li>
             </ul>
           </div>
         </div>
@@ -233,7 +237,7 @@ function Header() {
                 <div className="hotline-info">
                   <span>Call Us Now</span>
                   <h6>
-                    <a href="tel:+919884882693">+91 9884882693</a>
+                    <a href={"tel:+91" + address?.address1}>+91 {address?.mobile}</a>
                   </h6>
                 </div>
               </div>
@@ -253,7 +257,7 @@ function Header() {
                 <div className="email-info">
                   <span>Email Now</span>
                   <h6>
-                    <a href="mailto:hr@vinproglobal.com">hr@vinproglobal.com</a>
+                    <a href={"mailto:" + address?.emailid}>{address?.emailid}</a>
                   </h6>
                 </div>
               </div>

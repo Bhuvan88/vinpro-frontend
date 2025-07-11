@@ -18,6 +18,7 @@ function Contactpage() {
   const API_URL = process.env.NEXT_PUBLIC_API_URL; //"http://localhost:8055/";
   const API_URL_IMAGE = process.env.NEXT_PUBLIC_API_URL_IMAGE;
   const [bannerSection, setBannerSection] = useState(null);
+  const [address, setAddress] = useState(null);
 
   useEffect(() => {
       const fetchData = async () => {
@@ -37,7 +38,23 @@ function Contactpage() {
             }
         };
         fetchData();
+        addressInfo();
     }, []);
+
+     const addressInfo = async () => {
+      try {
+        let contentParams = API_URL + 'items/website_address';
+        let respData = await axios.get(contentParams);
+        if (respData.status === 200 && respData.data.data.length > 0) 
+        {
+          //console.log("inof >>", respData.data.data[0]);
+          setAddress(respData.data.data[0]);
+        }
+      } catch (error) {
+        console.error("Error ", error);
+      }
+    };
+
 
   const handleChange = (e) => {
    // alert("hii")
@@ -136,9 +153,7 @@ function Contactpage() {
                     </div>
                     <div className="info">
                       <p>
-                      5/4, Valluvar Salai,5/4, Valluvar Salai,<br/>
-                      Ramapuram, Chennai - 600 089
-
+                         {address?.address1}, {address?.address2},<br/> {address?.city} - {address?.pincode}
                       </p>
                     </div>
                   </div>
@@ -147,7 +162,7 @@ function Contactpage() {
                       <i className="fas fa-phone-alt" />
                     </div>
                     <div className="info">
-                      <a href="tel:+919884882693">+91 98848 82693</a>
+                      <a href={"tel:+91"+address?.address1}>+91 {address?.mobile}</a>
                     </div>
                   </div>
                   <div className="single-info">
@@ -155,7 +170,7 @@ function Contactpage() {
                       <i className="far fa-envelope" />
                     </div>
                     <div className="info">
-                      <a href="mailto: hr@vinproglobal.com">hr@vinproglobal.com</a>
+                      <a href={"mailto:"+address?.emailid}>{address?.emailid}</a>
                     </div>
                   </div>
                 </div>
@@ -164,22 +179,9 @@ function Contactpage() {
                   <p className="para">Follow us on Social Network</p>
                   <div className="blog-widget-body">
                     <ul className="follow-list d-flex flex-row align-items-start gap-4">
-                      <li>
-                        <a href="https://www.facebook.com/Vinproglobal/">
-                          <i className="bx bxl-facebook" />
-                        </a>
-                      </li>
-
-                      <li>
-                        <a href="https://in.linkedin.com/company/vinproglobal">
-                          <i className="bx bxl-linkedin" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.instagram.com/vinproglobal/">
-                          <i className="bx bxl-instagram" />
-                        </a>
-                      </li>
+                      <li><a href={address?.facebook_link}><i className="bx bxl-facebook" /></a></li>
+                      <li><a href={address?.linkedin_link}><i className="bx bxl-linkedin" /></a></li>
+                      <li><a href={address?.instagram_link}><i className="bx bxl-instagram" /></a></li>
                     </ul>
                   </div>
                 </div>

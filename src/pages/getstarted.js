@@ -90,7 +90,7 @@ const handleSizechange = (e) => {
     };
   
     try {
-      let respData = await axios.post(`${API_URL}demo_users`, encryptObj);
+      let respData = await axios.post(`${API_URL}items/demo_users`, encryptObj);
       
       if (respData.status === 200) {
         setFormValue(intialFormValue);
